@@ -81,14 +81,14 @@ export default function NewChat({
           {headerButtons}
 
           <TooltipAnchor
-            description={localize('com_ui_new_chat')}
+            description={localize('com_ui_new_conversation')}
             render={
               <Button
                 asChild
                 size="icon"
                 variant="outline"
                 data-testid="nav-new-chat-button"
-                aria-label={localize('com_ui_new_chat')}
+                aria-label={localize('com_ui_new_conversation')}
                 className="rounded-full border-none bg-transparent duration-0 hover:bg-surface-active-alt focus-visible:ring-inset focus-visible:ring-black focus-visible:ring-offset-0 dark:focus-visible:ring-white md:rounded-xl"
               >
                 <Link to="/c/new" state={{ focusChat: true }} onClick={clickHandler}>

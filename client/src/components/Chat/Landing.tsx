@@ -1,10 +1,12 @@
 import { useMemo, useCallback, useState, useEffect, useRef } from 'react';
 import { easings } from '@react-spring/web';
-import { EModelEndpoint } from 'librechat-data-provider';
+import { EModelEndpoint, SettingsTabValues } from 'librechat-data-provider';
+import { useUserKeyQuery } from 'librechat-data-provider/react-query';
 import { BirthdayIcon, TooltipAnchor, SplitText } from '@librechat/client';
 import { useChatContext, useAgentsMapContext, useAssistantsMapContext } from '~/Providers';
-import { useGetEndpointsQuery, useGetStartupConfig } from '~/data-provider';
+import { useGetEndpointsQuery, useGetStartupConfig, useGetAssistantProfile } from '~/data-provider';
 import ConvoIcon from '~/components/Endpoints/ConvoIcon';
+import Settings from '~/components/Nav/Settings';
 import { useLocalize, useAuthContext } from '~/hooks';
 import { getIconEndpoint, getEntity } from '~/utils';
 
@@ -34,6 +36,10 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
   const { data: startupConfig } = useGetStartupConfig();
   const { data: endpointsConfig } = useGetEndpointsQuery();
   const { user } = useAuthContext();
+  const { data: assistantProfile } = useGetAssistantProfile();
+  const { data: anthropicKey } = useUserKeyQuery(EModelEndpoint.anthropic);
+  const { data: openaiKey } = useUserKeyQuery(EModelEndpoint.openAI);
+  const [showSettings, setShowSettings] = useState(false);
   const localize = useLocalize();
 
   const [textHasMultipleLines, setTextHasMultipleLines] = useState(false);
@@ -132,6 +138,9 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
     return margin;
   }, [lineCount, description, textHasMultipleLines, contentHeight]);
 
+  const assistantName = assistantProfile?.name || 'Cortex';
+  const isDefaultState = !((isAgent || isAssistant) && name) && !name;
+
   const greetingText =
     typeof startupConfig?.interface?.customWelcome === 'string'
       ? getGreeting()
@@ -166,7 +175,35 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
               </TooltipAnchor>
             )}
           </div>
-          {((isAgent || isAssistant) && name) || name ? (
+          {isDefaultState ? (
+            <div className="flex flex-col items-center gap-1 p-2">
+              <SplitText
+                key={`split-text-assistant-${assistantName}`}
+                text={assistantName}
+                className="text-2xl font-semibold text-text-primary sm:text-4xl"
+                delay={50}
+                textAlign="center"
+                animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                easing={easings.easeOutCubic}
+                threshold={0}
+                rootMargin="0px"
+                onLineCountChange={handleLineCountChange}
+              />
+              <SplitText
+                key={`split-text-greeting-${greetingText}`}
+                text={greetingText}
+                className="text-base font-normal text-text-secondary sm:text-lg"
+                delay={80}
+                textAlign="center"
+                animationFrom={{ opacity: 0, transform: 'translate3d(0,20px,0)' }}
+                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                easing={easings.easeOutCubic}
+                threshold={0}
+                rootMargin="0px"
+              />
+            </div>
+          ) : name ? (
             <div className="flex flex-col items-center gap-0 p-2">
               <SplitText
                 key={`split-text-${name}`}
@@ -203,7 +240,27 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
             {description}
           </div>
         )}
+        {isDefaultState && !anthropicKey?.expiresAt && !openaiKey?.expiresAt && (
+          <div className="animate-fadeIn mt-6 flex flex-col items-center gap-2">
+            <p className="text-sm text-text-secondary">
+              {localize('com_onboarding_cta_text')}
+            </p>
+            <button
+              onClick={() => setShowSettings(true)}
+              className="rounded-lg bg-surface-contrast px-4 py-2 text-sm font-medium text-white transition-colors hover:opacity-90"
+            >
+              {localize('com_onboarding_cta_button')}
+            </button>
+          </div>
+        )}
       </div>
+      {showSettings && (
+        <Settings
+          open={showSettings}
+          onOpenChange={setShowSettings}
+          initialTab={SettingsTabValues.API_KEYS}
+        />
+      )}
     </div>
   );
 }

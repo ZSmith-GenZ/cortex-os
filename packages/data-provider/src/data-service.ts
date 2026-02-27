@@ -39,6 +39,22 @@ export function updateFavorites(favorites: FavoriteItem[]): Promise<FavoriteItem
   return request.post(`${endpoints.apiBaseUrl()}/api/user/settings/favorites`, { favorites });
 }
 
+export type AssistantProfile = {
+  name: string;
+  personality: string;
+  avatar: string | null;
+};
+
+export function getAssistantProfile(): Promise<AssistantProfile> {
+  return request.get(`${endpoints.apiBaseUrl()}/api/user/settings/assistant-profile`);
+}
+
+export function updateAssistantProfile(
+  profile: Partial<AssistantProfile>,
+): Promise<AssistantProfile> {
+  return request.put(`${endpoints.apiBaseUrl()}/api/user/settings/assistant-profile`, profile);
+}
+
 export function getSharedMessages(shareId: string): Promise<t.TSharedMessagesResponse> {
   return request.get(endpoints.shareMessages(shareId));
 }

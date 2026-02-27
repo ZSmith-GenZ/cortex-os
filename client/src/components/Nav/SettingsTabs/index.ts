@@ -6,3 +6,5 @@ export { default as General } from './General/General';
 export { default as Account } from './Account/Account';
 export { default as Commands } from './Commands/Commands';
 export { default as Personalization } from './Personalization';
+export { default as Assistant } from './Assistant/Assistant';
+export { default as ApiKeys } from './ApiKeys/ApiKeys';

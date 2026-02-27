@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import { SettingsTabValues } from 'librechat-data-provider';
-import { MessageSquare, Command, DollarSign } from 'lucide-react';
+import { MessageSquare, Command, DollarSign, Bot, Key } from 'lucide-react';
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import {
   GearIcon,
@@ -21,22 +21,30 @@ import {
   Data,
   Balance,
   Account,
+  Assistant,
+  ApiKeys,
 } from './SettingsTabs';
 import usePersonalizationAccess from '~/hooks/usePersonalizationAccess';
 import { useLocalize, TranslationKeys } from '~/hooks';
 import { useGetStartupConfig } from '~/data-provider';
 import { cn } from '~/utils';
 
-export default function Settings({ open, onOpenChange }: TDialogProps) {
+export default function Settings({
+  open,
+  onOpenChange,
+  initialTab,
+}: TDialogProps & { initialTab?: SettingsTabValues }) {
   const isSmallScreen = useMediaQuery('(max-width: 767px)');
   const { data: startupConfig } = useGetStartupConfig();
   const localize = useLocalize();
-  const [activeTab, setActiveTab] = useState(SettingsTabValues.GENERAL);
+  const [activeTab, setActiveTab] = useState(initialTab ?? SettingsTabValues.ASSISTANT);
   const tabRefs = useRef({});
   const { hasAnyPersonalizationFeature, hasMemoryOptOut } = usePersonalizationAccess();
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     const tabs: SettingsTabValues[] = [
+      SettingsTabValues.ASSISTANT,
+      SettingsTabValues.API_KEYS,
       SettingsTabValues.GENERAL,
       SettingsTabValues.CHAT,
       SettingsTabValues.COMMANDS,
@@ -73,6 +81,16 @@ export default function Settings({ open, onOpenChange }: TDialogProps) {
     icon: React.JSX.Element;
     label: TranslationKeys;
   }[] = [
+    {
+      value: SettingsTabValues.ASSISTANT,
+      icon: <Bot className="icon-sm" aria-hidden="true" />,
+      label: 'com_nav_setting_assistant' as TranslationKeys,
+    },
+    {
+      value: SettingsTabValues.API_KEYS,
+      icon: <Key className="icon-sm" aria-hidden="true" />,
+      label: 'com_nav_setting_api_keys' as TranslationKeys,
+    },
     {
       value: SettingsTabValues.GENERAL,
       icon: <GearIcon />,
@@ -220,6 +238,12 @@ export default function Settings({ open, onOpenChange }: TDialogProps) {
                     ))}
                   </Tabs.List>
                   <div className="overflow-auto sm:w-full sm:max-w-none md:pr-0.5 md:pt-0.5">
+                    <Tabs.Content value={SettingsTabValues.ASSISTANT} tabIndex={-1}>
+                      <Assistant />
+                    </Tabs.Content>
+                    <Tabs.Content value={SettingsTabValues.API_KEYS} tabIndex={-1}>
+                      <ApiKeys />
+                    </Tabs.Content>
                     <Tabs.Content value={SettingsTabValues.GENERAL} tabIndex={-1}>
                       <General />
                     </Tabs.Content>

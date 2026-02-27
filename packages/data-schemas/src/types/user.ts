@@ -39,6 +39,11 @@ export interface IUser extends Document {
     model?: string;
     endpoint?: string;
   }>;
+  assistantProfile?: {
+    name?: string;
+    personality?: string;
+    avatar?: string | null;
+  };
   createdAt?: Date;
   updatedAt?: Date;
   /** Field for external source identification (for consistency with TPrincipal schema) */

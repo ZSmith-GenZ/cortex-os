@@ -152,6 +152,14 @@ const userSchema = new Schema<IUser>(
       ],
       default: [],
     },
+    assistantProfile: {
+      type: {
+        name: { type: String, default: 'Cortex' },
+        personality: { type: String, default: '' },
+        avatar: { type: String, default: null },
+      },
+      default: { name: 'Cortex', personality: '', avatar: null },
+    },
     /** Field for external source identification (for consistency with TPrincipal schema) */
     idOnTheSource: {
       type: String,
