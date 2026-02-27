@@ -178,6 +178,24 @@ const loadEphemeralAgent = async ({ req, spec, endpoint, model_parameters: _m })
   if (ephemeralAgent?.artifacts != null && ephemeralAgent.artifacts) {
     result.artifacts = ephemeralAgent.artifacts;
   }
+
+  /** Auto-wire user's specialists as handoff targets for the ephemeral agent */
+  if (userId) {
+    try {
+      const userAgents = await getAgents({ author: userId });
+      if (userAgents.length > 0) {
+        result.edges = userAgents.map((agent) => ({
+          from: ephemeralId,
+          to: agent.id,
+          edgeType: 'handoff',
+          description: agent.description || agent.name || 'Specialist',
+        }));
+      }
+    } catch (err) {
+      logger.error('[loadEphemeralAgent] Error loading user agents for auto-wiring', err);
+    }
+  }
+
   return result;
 };
 

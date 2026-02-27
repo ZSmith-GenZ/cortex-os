@@ -61,11 +61,11 @@ export default defineConfig(({ command }) => ({
       },
       includeAssets: [],
       manifest: {
-        name: 'LibreChat',
-        short_name: 'LibreChat',
+        name: 'Cortex OS',
+        short_name: 'Cortex OS',
         display: 'standalone',
         background_color: '#000000',
-        theme_color: '#009688',
+        theme_color: '#6366f1',
         icons: [
           {
             src: 'assets/favicon-32x32.png',
