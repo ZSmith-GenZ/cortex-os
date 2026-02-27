@@ -462,6 +462,8 @@ class AgentClient extends BaseClient {
       return;
     }
 
+    /** Flag request as memory agent so initializeAnthropic can use dedicated key */
+    this.options.req._isMemoryAgent = true;
     const agent = await initializeAgent(
       {
         req: this.options.req,
@@ -484,6 +486,7 @@ class AgentClient extends BaseClient {
         getCodeGeneratedFiles: db.getCodeGeneratedFiles,
       },
     );
+    delete this.options.req._isMemoryAgent;
 
     if (!agent) {
       logger.warn(

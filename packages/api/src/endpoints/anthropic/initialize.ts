@@ -49,9 +49,18 @@ export async function initializeAnthropic({
   } else {
     const isUserProvided = ANTHROPIC_API_KEY === 'user_provided';
 
-    const anthropicApiKey = isUserProvided
-      ? await db.getUserKey({ userId: req.user?.id ?? '', name: EModelEndpoint.anthropic })
-      : ANTHROPIC_API_KEY;
+    /** Memory agent uses a dedicated server-side key when ANTHROPIC_API_KEY is user_provided */
+    const memoryAgentKey = process.env.MEMORY_AGENT_API_KEY;
+    const isMemoryAgent = (req as Record<string, unknown>)._isMemoryAgent === true;
+
+    let anthropicApiKey: string | null | undefined;
+    if (isMemoryAgent && isUserProvided && memoryAgentKey) {
+      anthropicApiKey = memoryAgentKey;
+    } else if (isUserProvided) {
+      anthropicApiKey = await db.getUserKey({ userId: req.user?.id ?? '', name: EModelEndpoint.anthropic });
+    } else {
+      anthropicApiKey = ANTHROPIC_API_KEY;
+    }
 
     if (!anthropicApiKey) {
       throw new Error('Anthropic API key not provided. Please provide it again.');
