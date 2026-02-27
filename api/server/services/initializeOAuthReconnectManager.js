@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { CacheKeys } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { CacheKeys } = require('@cortex-os/data-provider');
 const { createOAuthReconnectionManager, getFlowStateManager } = require('~/config');
 const { findToken, updateToken, createToken, deleteTokens } = require('~/models');
 const { getLogStores } = require('~/cache');

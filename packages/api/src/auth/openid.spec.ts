@@ -1,10 +1,10 @@
-import { ErrorTypes } from 'librechat-data-provider';
-import { logger } from '@librechat/data-schemas';
-import type { IUser, UserMethods } from '@librechat/data-schemas';
+import { ErrorTypes } from '@cortex-os/data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import type { IUser, UserMethods } from '@cortex-os/data-schemas';
 import { findOpenIDUser } from './openid';
 
-jest.mock('@librechat/data-schemas', () => ({
-  ...jest.requireActual('@librechat/data-schemas'),
+jest.mock('@cortex-os/data-schemas', () => ({
+  ...jest.requireActual('@cortex-os/data-schemas'),
   logger: {
     warn: jest.fn(),
     info: jest.fn(),

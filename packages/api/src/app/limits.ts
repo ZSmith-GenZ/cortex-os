@@ -1,5 +1,5 @@
-import { RateLimitPrefix } from 'librechat-data-provider';
-import type { TCustomConfig } from 'librechat-data-provider';
+import { RateLimitPrefix } from '@cortex-os/data-provider';
+import type { TCustomConfig } from '@cortex-os/data-provider';
 
 /**
  *

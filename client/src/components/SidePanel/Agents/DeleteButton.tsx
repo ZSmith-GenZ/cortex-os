@@ -7,8 +7,8 @@ import {
   useToastContext,
   OGDialogTrigger,
   OGDialogTemplate,
-} from '@librechat/client';
-import type { Agent, AgentCreateParams } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { Agent, AgentCreateParams } from '@cortex-os/data-provider';
 import type { UseMutationResult } from '@tanstack/react-query';
 import { logger, getDefaultAgentFormValues } from '~/utils';
 import { useLocalize, useSetIndexOptions } from '~/hooks';

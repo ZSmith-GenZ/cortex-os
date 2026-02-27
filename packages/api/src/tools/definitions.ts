@@ -5,9 +5,9 @@
  * @module packages/api/src/tools/definitions
  */
 
-import { Constants, actionDelimiter } from 'librechat-data-provider';
-import type { AgentToolOptions } from 'librechat-data-provider';
-import type { LCToolRegistry, JsonSchemaType, LCTool, GenericTool } from '@librechat/agents';
+import { Constants, actionDelimiter } from '@cortex-os/data-provider';
+import type { AgentToolOptions } from '@cortex-os/data-provider';
+import type { LCToolRegistry, JsonSchemaType, LCTool, GenericTool } from '@cortex-os/agents';
 import type { ToolDefinition } from './classification';
 import { resolveJsonSchemaRefs, normalizeJsonSchema } from '~/mcp/zod';
 import { buildToolClassification } from './classification';

@@ -1,8 +1,8 @@
 const axios = require('axios');
 const { tool } = require('@langchain/core/tools');
-const { logger } = require('@librechat/data-schemas');
-const { generateShortLivedToken } = require('@librechat/api');
-const { Tools, EToolResources } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { generateShortLivedToken } = require('@cortex-os/api');
+const { Tools, EToolResources } = require('@cortex-os/data-provider');
 const { filterFilesByAgentAccess } = require('~/server/services/Files/permissions');
 const { getFiles } = require('~/models');
 
@@ -97,7 +97,7 @@ const createFileSearchTool = async ({ userId, files, entity_id, fileCitations = 
       }
 
       /**
-       * @param {import('librechat-data-provider').TFile} file
+       * @param {import('@cortex-os/data-provider').TFile} file
        * @returns {{ file_id: string, query: string, k: number, entity_id?: string }}
        */
       const createQueryBody = (file) => {

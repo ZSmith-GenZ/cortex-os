@@ -1,9 +1,9 @@
 const cookies = require('cookie');
 const jwksRsa = require('jwks-rsa');
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-const { SystemRoles } = require('librechat-data-provider');
-const { isEnabled, findOpenIDUser, math } = require('@librechat/api');
+const { SystemRoles } = require('@cortex-os/data-provider');
+const { isEnabled, findOpenIDUser, math } = require('@cortex-os/api');
 const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
 const { getOpenIdEmail } = require('./openidStrategy');
 const { updateUser, findUser } = require('~/models');
@@ -43,7 +43,7 @@ const openIdJwtLogin = (openIdConfig) => {
       passReqToCallback: true,
     },
     /**
-     * @param {import('@librechat/api').ServerRequest} req
+     * @param {import('@cortex-os/api').ServerRequest} req
      * @param {import('openid-client').IDToken} payload
      * @param {import('passport-jwt').VerifyCallback} done
      */

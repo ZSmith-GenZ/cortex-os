@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { createContentAggregator } = require('@librechat/agents');
+const { logger } = require('@cortex-os/data-schemas');
+const { createContentAggregator } = require('@cortex-os/agents');
 const {
   initializeAgent,
   validateAgentModel,
@@ -8,13 +8,13 @@ const {
   GenerationJobManager,
   getCustomEndpointConfig,
   createSequentialChainEdges,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   EModelEndpoint,
   isAgentsEndpoint,
   getResponseSender,
   isEphemeralAgentId,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const {
   createToolEndCallback,
   getDefaultHandlers,
@@ -48,9 +48,9 @@ function createToolLoader(signal, streamId = null, definitionsOnly = false) {
    * @returns {Promise<{
    *   tools?: StructuredTool[],
    *   toolContextMap: Record<string, unknown>,
-   *   toolDefinitions?: import('@librechat/agents').LCTool[],
+   *   toolDefinitions?: import('@cortex-os/agents').LCTool[],
    *   userMCPAuthMap?: Record<string, Record<string, string>>,
-   *   toolRegistry?: import('@librechat/agents').LCToolRegistry
+   *   toolRegistry?: import('@cortex-os/agents').LCToolRegistry
    * } | undefined>}
    */
   return async function loadTools({
@@ -103,7 +103,7 @@ const initializeClient = async ({ req, res, signal, endpointOption }) => {
    *   userMCPAuthMap?: Record<string, Record<string, string>>,
    *   agent?: object,
    *   tool_resources?: object,
-   *   toolRegistry?: import('@librechat/agents').LCToolRegistry,
+   *   toolRegistry?: import('@cortex-os/agents').LCToolRegistry,
    *   openAIApiKey?: string
    * }>}
    */

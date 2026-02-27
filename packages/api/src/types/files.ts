@@ -1,5 +1,5 @@
-import type { BedrockDocumentFormat } from 'librechat-data-provider';
-import type { IMongoFile } from '@librechat/data-schemas';
+import type { BedrockDocumentFormat } from '@cortex-os/data-provider';
+import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { Readable } from 'stream';
 import type { ServerRequest } from './http';
 export interface STTService {

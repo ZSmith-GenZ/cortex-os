@@ -1,11 +1,11 @@
 const express = require('express');
 const request = require('supertest');
 
-jest.mock('@librechat/agents', () => ({
+jest.mock('@cortex-os/agents', () => ({
   sleep: jest.fn(),
 }));
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: jest.fn(),
   createAxiosInstance: jest.fn(() => ({
     get: jest.fn(),
@@ -16,7 +16,7 @@ jest.mock('@librechat/api', () => ({
   logAxiosError: jest.fn(),
 }));
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -87,7 +87,7 @@ jest.mock('multer', () => {
   }));
 });
 
-jest.mock('librechat-data-provider', () => ({
+jest.mock('@cortex-os/data-provider', () => ({
   CacheKeys: {
     GEN_TITLE: 'GEN_TITLE',
   },
@@ -192,7 +192,7 @@ describe('Convos Routes', () => {
       expect(response.text).toBe('Error clearing conversations');
 
       /** Verify error was logged */
-      const { logger } = require('@librechat/data-schemas');
+      const { logger } = require('@cortex-os/data-schemas');
       expect(logger.error).toHaveBeenCalledWith('Error clearing conversations', expect.any(Error));
     });
 
@@ -614,7 +614,7 @@ describe('Convos Routes', () => {
       expect(response.status).toBe(500);
       expect(response.text).toBe('Error archiving conversation');
 
-      const { logger } = require('@librechat/data-schemas');
+      const { logger } = require('@cortex-os/data-schemas');
       expect(logger.error).toHaveBeenCalledWith('Error archiving conversation', expect.any(Error));
     });
 

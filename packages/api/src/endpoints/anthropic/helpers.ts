@@ -1,12 +1,12 @@
-import { logger } from '@librechat/data-schemas';
-import { AnthropicClientOptions } from '@librechat/agents';
+import { logger } from '@cortex-os/data-schemas';
+import { AnthropicClientOptions } from '@cortex-os/agents';
 import {
   EModelEndpoint,
   AnthropicEffort,
   anthropicSettings,
   supportsContext1m,
   supportsAdaptiveThinking,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import { matchModelName } from '~/utils/tokens';
 
 /**

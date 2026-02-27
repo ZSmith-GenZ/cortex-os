@@ -27,7 +27,7 @@ export enum EModelEndpoint {
   bedrock = 'bedrock',
 }
 
-/** Mirrors `@librechat/agents` providers */
+/** Mirrors `@cortex-os/agents` providers */
 export enum Providers {
   OPENAI = 'openAI',
   ANTHROPIC = 'anthropic',
@@ -801,7 +801,7 @@ export const tConvoUpdateSchema = tConversationSchema.merge(
 
 export const tQueryParamsSchema = tConversationSchema
   .pick({
-    // librechat settings
+    // cortex-os settings
     /** The model spec to be used */
     spec: true,
     /** The AI context window, overrides the system-defined window as determined by `model` value */

@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { isEmailDomainAllowed } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { isEmailDomainAllowed } = require('@cortex-os/api');
 const { getAppConfig } = require('~/server/services/Config');
 
 /**

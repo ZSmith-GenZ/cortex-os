@@ -1,15 +1,15 @@
-jest.mock('librechat-data-provider', () => ({
+jest.mock('@cortex-os/data-provider', () => ({
   apiBaseUrl: jest.fn(),
 }));
 
-import { apiBaseUrl } from 'librechat-data-provider';
+import { apiBaseUrl } from '@cortex-os/data-provider';
 import { buildShareLinkUrl } from '../share';
 
 describe('buildShareLinkUrl', () => {
   it('includes the base path for subdirectory deployments', () => {
-    (apiBaseUrl as jest.Mock).mockReturnValue('/librechat');
+    (apiBaseUrl as jest.Mock).mockReturnValue('/cortex-os');
     expect(buildShareLinkUrl('reW8SsFGQEH1b1uzSHe4I')).toBe(
-      'http://localhost:3080/librechat/share/reW8SsFGQEH1b1uzSHe4I',
+      'http://localhost:3080/cortex-os/share/reW8SsFGQEH1b1uzSHe4I',
     );
   });
 

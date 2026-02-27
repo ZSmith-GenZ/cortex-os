@@ -1,9 +1,9 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
-const { logger } = require('@librechat/data-schemas');
-const { FileSources } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { FileSources } = require('@cortex-os/data-provider');
 const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
-const { initializeS3, deleteRagFile, isEnabled } = require('@librechat/api');
+const { initializeS3, deleteRagFile, isEnabled } = require('@cortex-os/api');
 const {
   PutObjectCommand,
   GetObjectCommand,

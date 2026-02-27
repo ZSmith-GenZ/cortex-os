@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pencil, PlugZap, SlidersHorizontal, RefreshCw, X, Trash2 } from 'lucide-react';
-import { Spinner, TooltipAnchor } from '@librechat/client';
-import type { MCPServerStatus } from 'librechat-data-provider';
+import { Spinner, TooltipAnchor } from '@cortex-os/client';
+import type { MCPServerStatus } from '@cortex-os/data-provider';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';
 

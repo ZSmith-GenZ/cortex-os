@@ -1,7 +1,7 @@
-import { logger } from '@librechat/data-schemas';
-import type { StandardGraph } from '@librechat/agents';
-import { parseTextParts } from 'librechat-data-provider';
-import type { Agents, TMessageContentParts } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import type { StandardGraph } from '@cortex-os/agents';
+import { parseTextParts } from '@cortex-os/data-provider';
+import type { Agents, TMessageContentParts } from '@cortex-os/data-provider';
 import type {
   SerializableJobData,
   IEventTransport,

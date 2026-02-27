@@ -1,12 +1,12 @@
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   countTokens,
   isEnabled,
   sendEvent,
   GenerationJobManager,
   sanitizeMessageForTransmit,
-} = require('@librechat/api');
-const { isAssistantsEndpoint, ErrorTypes } = require('librechat-data-provider');
+} = require('@cortex-os/api');
+const { isAssistantsEndpoint, ErrorTypes } = require('@cortex-os/data-provider');
 const { spendTokens, spendStructuredTokens } = require('~/models/spendTokens');
 const { truncateText, smartTruncateText } = require('~/app/clients/prompts');
 const clearPendingReq = require('~/cache/clearPendingReq');

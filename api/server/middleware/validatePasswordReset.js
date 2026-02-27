@@ -1,5 +1,5 @@
-const { isEnabled } = require('@librechat/api');
-const { logger } = require('@librechat/data-schemas');
+const { isEnabled } = require('@cortex-os/api');
+const { logger } = require('@cortex-os/data-schemas');
 
 function validatePasswordReset(req, res, next) {
   if (isEnabled(process.env.ALLOW_PASSWORD_RESET)) {

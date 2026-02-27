@@ -1,12 +1,12 @@
 const { Router } = require('express');
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   CacheKeys,
   Constants,
   PermissionBits,
   PermissionTypes,
   Permissions,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const {
   getBasePath,
   createSafeUser,
@@ -20,7 +20,7 @@ const {
   generateCheckAccess,
   validateOAuthSession,
   OAUTH_SESSION_COOKIE,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   createMCPServerController,
   updateMCPServerController,
@@ -51,7 +51,7 @@ const OAUTH_CSRF_COOKIE_PATH = '/api/mcp';
 
 /**
  * Get all MCP tools available to the user
- * Returns only MCP tools, completely decoupled from regular LibreChat tools
+ * Returns only MCP tools, completely decoupled from regular Cortex OS tools
  */
 router.get('/tools', requireJwtAuth, async (req, res) => {
   return getMCPTools(req, res);

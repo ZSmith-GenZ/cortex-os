@@ -1,8 +1,8 @@
 const passport = require('passport');
 const session = require('express-session');
-const { CacheKeys } = require('librechat-data-provider');
-const { isEnabled, shouldUseSecureCookie } = require('@librechat/api');
-const { logger, DEFAULT_SESSION_EXPIRY } = require('@librechat/data-schemas');
+const { CacheKeys } = require('@cortex-os/data-provider');
+const { isEnabled, shouldUseSecureCookie } = require('@cortex-os/api');
+const { logger, DEFAULT_SESSION_EXPIRY } = require('@cortex-os/data-schemas');
 const {
   openIdJwtLogin,
   facebookLogin,

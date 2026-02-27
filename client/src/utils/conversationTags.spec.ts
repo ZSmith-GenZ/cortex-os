@@ -1,4 +1,4 @@
-import type { TConversationTagsResponse } from 'librechat-data-provider';
+import type { TConversationTagsResponse } from '@cortex-os/data-provider';
 import { updateConversationTag } from './conversationTags';
 
 describe('ConversationTag Utilities', () => {

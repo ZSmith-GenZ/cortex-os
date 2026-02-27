@@ -11,7 +11,7 @@ import type {
   TCustomEndpoints,
   TAssistantEndpoint,
   TAnthropicEndpoint,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 
 export type JsonSchemaType = {
   type: 'string' | 'number' | 'integer' | 'float' | 'boolean' | 'array' | 'object';

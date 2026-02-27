@@ -1,6 +1,6 @@
-import { logger } from '@librechat/data-schemas';
-import { FileSources, mergeFileConfig } from 'librechat-data-provider';
-import type { IMongoFile } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
+import { FileSources, mergeFileConfig } from '@cortex-os/data-provider';
+import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { ServerRequest } from '~/types';
 import { processTextWithTokenLimit } from '~/utils/text';
 

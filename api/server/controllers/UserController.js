@@ -1,11 +1,11 @@
-const { logger, webSearchKeys } = require('@librechat/data-schemas');
-const { Tools, CacheKeys, Constants, FileSources } = require('librechat-data-provider');
+const { logger, webSearchKeys } = require('@cortex-os/data-schemas');
+const { Tools, CacheKeys, Constants, FileSources } = require('@cortex-os/data-provider');
 const {
   MCPOAuthHandler,
   MCPTokenStorage,
   normalizeHttpError,
   extractWebSearchEnvVars,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   deleteAllUserSessions,
   deleteAllSharedLinks,

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { EModelEndpoint } from 'librechat-data-provider';
-import type { MCP, Action, TPlugin } from 'librechat-data-provider';
+import { EModelEndpoint } from '@cortex-os/data-provider';
+import type { MCP, Action, TPlugin } from '@cortex-os/data-provider';
 import type { AgentPanelContextType, MCPServerInfo } from '~/common';
 import {
   useAvailableToolsQuery,

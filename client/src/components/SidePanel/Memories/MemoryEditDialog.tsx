@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { PermissionTypes, Permissions } from 'librechat-data-provider';
+import { PermissionTypes, Permissions } from '@cortex-os/data-provider';
 import {
   OGDialog,
   OGDialogTemplate,
@@ -8,8 +8,8 @@ import {
   Input,
   Spinner,
   useToastContext,
-} from '@librechat/client';
-import type { TUserMemory } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { TUserMemory } from '@cortex-os/data-provider';
 import { useUpdateMemoryMutation, useMemoriesQuery } from '~/data-provider';
 import { useLocalize, useHasAccess } from '~/hooks';
 import MemoryUsageBadge from './MemoryUsageBadge';

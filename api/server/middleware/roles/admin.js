@@ -1,4 +1,4 @@
-const { SystemRoles } = require('librechat-data-provider');
+const { SystemRoles } = require('@cortex-os/data-provider');
 
 function checkAdmin(req, res, next) {
   try {

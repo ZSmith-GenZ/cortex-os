@@ -1,4 +1,4 @@
-import { AnthropicEffort } from 'librechat-data-provider';
+import { AnthropicEffort } from '@cortex-os/data-provider';
 import type * as t from '~/types';
 import { getLLMConfig } from './llm';
 

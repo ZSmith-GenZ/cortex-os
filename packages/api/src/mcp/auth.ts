@@ -1,7 +1,7 @@
-import { logger } from '@librechat/data-schemas';
-import { Constants } from 'librechat-data-provider';
-import type { PluginAuthMethods } from '@librechat/data-schemas';
-import type { GenericTool } from '@librechat/agents';
+import { logger } from '@cortex-os/data-schemas';
+import { Constants } from '@cortex-os/data-provider';
+import type { PluginAuthMethods } from '@cortex-os/data-schemas';
+import type { GenericTool } from '@cortex-os/agents';
 import { getPluginAuthMap } from '~/agents/auth';
 
 export async function getUserMCPAuthMap({

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Input } from '@librechat/client';
+import { Input } from '@cortex-os/client';
 import { Cross1Icon } from '@radix-ui/react-icons';
-import type { TPrompt } from 'librechat-data-provider';
+import type { TPrompt } from '@cortex-os/data-provider';
 import { useUpdatePromptLabels } from '~/data-provider';
 
 const PromptForm = ({ selectedPrompt }: { selectedPrompt?: TPrompt }) => {

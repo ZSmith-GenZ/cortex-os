@@ -1,5 +1,5 @@
 const sharp = require('sharp');
-const { EModelEndpoint } = require('librechat-data-provider');
+const { EModelEndpoint } = require('@cortex-os/data-provider');
 
 /**
  * Resizes an image from a given buffer based on the specified resolution.

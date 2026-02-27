@@ -1,6 +1,6 @@
-const { sleep } = require('@librechat/agents');
-const { sendEvent } = require('@librechat/api');
-const { logger } = require('@librechat/data-schemas');
+const { sleep } = require('@cortex-os/agents');
+const { sendEvent } = require('@cortex-os/api');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   Constants,
   StepTypes,
@@ -8,7 +8,7 @@ const {
   ToolCallTypes,
   MessageContentTypes,
   AssistantStreamEvents,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const { retrieveAndProcessFile } = require('~/server/services/Files/process');
 const { processRequiredActions } = require('~/server/services/ToolService');
 const { processMessages } = require('~/server/services/Threads');

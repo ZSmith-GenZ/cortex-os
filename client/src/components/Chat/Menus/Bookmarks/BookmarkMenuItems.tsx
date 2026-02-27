@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookmarkPlusIcon } from 'lucide-react';
-import { OGDialogTrigger } from '@librechat/client';
+import { OGDialogTrigger } from '@cortex-os/client';
 import type { FC } from 'react';
 import { BookmarkEditDialog, BookmarkItems, BookmarkItem } from '~/components/Bookmarks';
 import { useLocalize } from '~/hooks';

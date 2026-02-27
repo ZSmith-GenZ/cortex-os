@@ -3,7 +3,7 @@ import type {
   TConversation,
   EModelEndpoint,
   TEndpointsConfig,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import { getLocalStorageItems } from './localStorage';
 import { mapEndpoints } from './endpoints';
 

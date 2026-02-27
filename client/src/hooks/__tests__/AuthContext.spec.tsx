@@ -14,8 +14,8 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockNavigate,
 }));
 
-jest.mock('librechat-data-provider', () => ({
-  ...jest.requireActual('librechat-data-provider'),
+jest.mock('@cortex-os/data-provider', () => ({
+  ...jest.requireActual('@cortex-os/data-provider'),
   setTokenHeader: jest.fn(),
 }));
 

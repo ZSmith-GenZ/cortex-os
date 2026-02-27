@@ -1,10 +1,10 @@
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   EnvVar,
   Calculator,
   createSearchTool,
   createCodeExecutionTool,
-} = require('@librechat/agents');
+} = require('@cortex-os/agents');
 const {
   checkAccess,
   createSafeUser,
@@ -12,7 +12,7 @@ const {
   loadWebSearchAuth,
   buildImageToolContext,
   buildWebSearchContext,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { getMCPServersRegistry } = require('~/config');
 const {
   Tools,
@@ -20,7 +20,7 @@ const {
   Permissions,
   EToolResources,
   PermissionTypes,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const {
   availableTools,
   manifestToolMap,

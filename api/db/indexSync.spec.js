@@ -32,7 +32,7 @@ const originalMessageModel = mongoose.models.Message;
 const originalConversationModel = mongoose.models.Conversation;
 
 // Mock external modules
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: mockLogger,
 }));
 
@@ -47,7 +47,7 @@ jest.mock('./utils', () => ({
   batchResetMeiliFlags: mockBatchResetMeiliFlags,
 }));
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: mockIsEnabled,
   FlowStateManager: jest.fn(),
 }));

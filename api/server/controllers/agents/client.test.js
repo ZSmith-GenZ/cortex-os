@@ -1,17 +1,17 @@
-const { Providers } = require('@librechat/agents');
-const { Constants, EModelEndpoint } = require('librechat-data-provider');
+const { Providers } = require('@cortex-os/agents');
+const { Constants, EModelEndpoint } = require('@cortex-os/data-provider');
 const AgentClient = require('./client');
 
-jest.mock('@librechat/agents', () => ({
-  ...jest.requireActual('@librechat/agents'),
+jest.mock('@cortex-os/agents', () => ({
+  ...jest.requireActual('@cortex-os/agents'),
   createMetadataAggregator: () => ({
     handleLLMEnd: jest.fn(),
     collected: [],
   }),
 }));
 
-jest.mock('@librechat/api', () => ({
-  ...jest.requireActual('@librechat/api'),
+jest.mock('@cortex-os/api', () => ({
+  ...jest.requireActual('@cortex-os/api'),
   checkAccess: jest.fn(),
   initializeAgent: jest.fn(),
   createMemoryProcessor: jest.fn(),
@@ -1543,7 +1543,7 @@ describe('AgentClient - titleConvo', () => {
 
     it('should handle mixed content types correctly', async () => {
       const { HumanMessage } = require('@langchain/core/messages');
-      const { ContentTypes } = require('librechat-data-provider');
+      const { ContentTypes } = require('@cortex-os/data-provider');
 
       const messages = [
         new HumanMessage({
@@ -2136,10 +2136,10 @@ describe('AgentClient - titleConvo', () => {
         agent: mockAgent,
       };
 
-      mockCheckAccess = require('@librechat/api').checkAccess;
+      mockCheckAccess = require('@cortex-os/api').checkAccess;
       mockLoadAgent = require('~/models/Agent').loadAgent;
-      mockInitializeAgent = require('@librechat/api').initializeAgent;
-      mockCreateMemoryProcessor = require('@librechat/api').createMemoryProcessor;
+      mockInitializeAgent = require('@cortex-os/api').initializeAgent;
+      mockCreateMemoryProcessor = require('@cortex-os/api').createMemoryProcessor;
     });
 
     it('should use current agent when memory config agent.id matches current agent id', async () => {

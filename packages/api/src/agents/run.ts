@@ -1,5 +1,5 @@
-import { Run, Providers, Constants } from '@librechat/agents';
-import { providerEndpointMap, KnownEndpoints } from 'librechat-data-provider';
+import { Run, Providers, Constants } from '@cortex-os/agents';
+import { providerEndpointMap, KnownEndpoints } from '@cortex-os/data-provider';
 import type { BaseMessage } from '@langchain/core/messages';
 import type {
   MultiAgentGraphConfig,
@@ -11,9 +11,9 @@ import type {
   RunConfig,
   IState,
   LCTool,
-} from '@librechat/agents';
-import type { IUser } from '@librechat/data-schemas';
-import type { Agent } from 'librechat-data-provider';
+} from '@cortex-os/agents';
+import type { IUser } from '@cortex-os/data-schemas';
+import type { Agent } from '@cortex-os/data-provider';
 import type * as t from '~/types';
 import { resolveHeaders, createSafeUser } from '~/utils/env';
 

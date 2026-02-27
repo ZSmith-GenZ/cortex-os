@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const { nanoid } = require('nanoid');
 const { v4: uuidv4 } = require('uuid');
-const { agentSchema } = require('@librechat/data-schemas');
-const { FileSources } = require('librechat-data-provider');
+const { agentSchema } = require('@cortex-os/data-schemas');
+const { FileSources } = require('@cortex-os/data-provider');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
 // Only mock the dependencies that are not database-related
@@ -79,7 +79,7 @@ const {
 const { refreshS3Url } = require('~/server/services/Files/S3/crud');
 
 /**
- * @type {import('mongoose').Model<import('@librechat/data-schemas').IAgent>}
+ * @type {import('mongoose').Model<import('@cortex-os/data-schemas').IAgent>}
  */
 let Agent;
 

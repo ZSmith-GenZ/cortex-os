@@ -1,4 +1,4 @@
-import { logger } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
 import { GenerationJobManager } from '~/stream';
 import { OAuthReconnectionManager } from '~/mcp/oauth/OAuthReconnectionManager';
 import { MCPManager } from '~/mcp/MCPManager';

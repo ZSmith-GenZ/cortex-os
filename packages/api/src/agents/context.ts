@@ -1,7 +1,7 @@
 import { DynamicStructuredTool } from '@langchain/core/tools';
-import { Constants } from 'librechat-data-provider';
-import type { Agent, TEphemeralAgent } from 'librechat-data-provider';
-import type { LCTool } from '@librechat/agents';
+import { Constants } from '@cortex-os/data-provider';
+import type { Agent, TEphemeralAgent } from '@cortex-os/data-provider';
+import type { LCTool } from '@cortex-os/agents';
 import type { Logger } from 'winston';
 import type { MCPManager } from '~/mcp/MCPManager';
 

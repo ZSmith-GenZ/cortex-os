@@ -1,4 +1,4 @@
-const { SystemRoles } = require('librechat-data-provider');
+const { SystemRoles } = require('@cortex-os/data-provider');
 
 // --- Capture the verify callback from JwtStrategy ---
 let capturedVerifyCallback;
@@ -17,10 +17,10 @@ jest.mock('jwks-rsa', () => ({
 jest.mock('https-proxy-agent', () => ({
   HttpsProxyAgent: jest.fn(),
 }));
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: { info: jest.fn(), warn: jest.fn(), debug: jest.fn(), error: jest.fn() },
 }));
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: jest.fn(() => false),
   findOpenIDUser: jest.fn(),
   math: jest.fn((val, fallback) => fallback),
@@ -41,7 +41,7 @@ jest.mock('~/cache/getLogStores', () =>
   jest.fn().mockReturnValue({ get: jest.fn(), set: jest.fn() }),
 );
 
-const { findOpenIDUser } = require('@librechat/api');
+const { findOpenIDUser } = require('@cortex-os/api');
 const openIdJwtLogin = require('./openIdJwtStrategy');
 const { findUser, updateUser } = require('~/models');
 
@@ -207,7 +207,7 @@ describe('openIdJwtStrategy – OPENID_EMAIL_CLAIM', () => {
     delete process.env.OPENID_EMAIL_CLAIM;
 
     // Use real findOpenIDUser so it delegates to the findUser mock
-    const realFindOpenIDUser = jest.requireActual('@librechat/api').findOpenIDUser;
+    const realFindOpenIDUser = jest.requireActual('@cortex-os/api').findOpenIDUser;
     findOpenIDUser.mockImplementation(realFindOpenIDUser);
 
     findUser.mockResolvedValue(null);

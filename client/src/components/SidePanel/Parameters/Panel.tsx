@@ -8,8 +8,8 @@ import {
   getEndpointField,
   SettingDefinition,
   tConvoUpdateSchema,
-} from 'librechat-data-provider';
-import type { TPreset } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TPreset } from '@cortex-os/data-provider';
 import { SaveAsPresetDialog } from '~/components/Endpoints';
 import { useSetIndexOptions, useLocalize } from '~/hooks';
 import { useGetEndpointsQuery } from '~/data-provider';

@@ -9,8 +9,8 @@ import {
   OGDialogHeader,
   OGDialogTitle,
   Progress,
-} from '@librechat/client';
-import type { TUser, TVerify2FARequest } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { TUser, TVerify2FARequest } from '@cortex-os/data-provider';
 import {
   useConfirmTwoFactorMutation,
   useDisableTwoFactorMutation,

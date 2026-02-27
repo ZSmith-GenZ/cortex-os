@@ -1,8 +1,8 @@
-const { CacheKeys } = require('librechat-data-provider');
+const { CacheKeys } = require('@cortex-os/data-provider');
 const { getCachedTools, getAppConfig } = require('~/server/services/Config');
 const { getLogStores } = require('~/cache');
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     error: jest.fn(),

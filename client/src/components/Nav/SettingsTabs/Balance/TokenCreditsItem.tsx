@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label, InfoHoverCard, ESide } from '@librechat/client';
+import { Label, InfoHoverCard, ESide } from '@cortex-os/client';
 import { useLocalize } from '~/hooks';
 
 interface TokenCreditsItemProps {

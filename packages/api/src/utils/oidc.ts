@@ -1,5 +1,5 @@
-import { logger } from '@librechat/data-schemas';
-import type { IUser } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
+import type { IUser } from '@cortex-os/data-schemas';
 
 export interface OpenIDTokenInfo {
   accessToken?: string;
@@ -39,7 +39,7 @@ const OPENID_TOKEN_FIELDS = [
  * This placeholder is resolved asynchronously via OBO (On-Behalf-Of) flow
  * and requires special handling outside the synchronous processMCPEnv pipeline.
  */
-export const GRAPH_TOKEN_PLACEHOLDER = '{{LIBRECHAT_GRAPH_ACCESS_TOKEN}}';
+export const GRAPH_TOKEN_PLACEHOLDER = '{{CORTEX_GRAPH_ACCESS_TOKEN}}';
 
 /**
  * Default Microsoft Graph API scopes for OBO token exchange.
@@ -134,7 +134,7 @@ export function processOpenIDPlaceholders(
   let processedValue = value;
 
   for (const field of OPENID_TOKEN_FIELDS) {
-    const placeholder = `{{LIBRECHAT_OPENID_${field}}}`;
+    const placeholder = `{{CORTEX_OPENID_${field}}}`;
     if (!processedValue.includes(placeholder)) {
       continue;
     }
@@ -165,7 +165,7 @@ export function processOpenIDPlaceholders(
     processedValue = processedValue.replace(new RegExp(placeholder, 'g'), replacementValue);
   }
 
-  const genericPlaceholder = '{{LIBRECHAT_OPENID_TOKEN}}';
+  const genericPlaceholder = '{{CORTEX_OPENID_TOKEN}}';
   if (processedValue.includes(genericPlaceholder)) {
     const replacementValue = tokenInfo.accessToken || '';
     processedValue = processedValue.replace(new RegExp(genericPlaceholder, 'g'), replacementValue);

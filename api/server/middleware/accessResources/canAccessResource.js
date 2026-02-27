@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { SystemRoles } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { SystemRoles } = require('@cortex-os/data-provider');
 const { checkPermission } = require('~/server/services/PermissionService');
 
 /**

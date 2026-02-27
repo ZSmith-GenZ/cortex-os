@@ -1,5 +1,5 @@
-import { Providers } from '@librechat/agents';
-import { AuthKeys } from 'librechat-data-provider';
+import { Providers } from '@cortex-os/agents';
+import { AuthKeys } from '@cortex-os/data-provider';
 import type * as t from '~/types';
 import { getGoogleConfig, getSafetySettings, knownGoogleParams } from './llm';
 

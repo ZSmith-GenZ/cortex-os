@@ -1,5 +1,5 @@
-import { logger } from '@librechat/data-schemas';
-import { SystemRoles } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import { SystemRoles } from '@cortex-os/data-provider';
 import type { NextFunction, Response } from 'express';
 import type { ServerRequest } from '~/types/http';
 

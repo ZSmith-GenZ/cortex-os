@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { Switch, InfoHoverCard, ESide } from '@librechat/client';
+import { Switch, InfoHoverCard, ESide } from '@cortex-os/client';
 import { useLocalize } from '~/hooks';
 import store from '~/store';
 

@@ -1,6 +1,6 @@
-const { logger } = require('@librechat/data-schemas');
-const { isEnabled, math } = require('@librechat/api');
-const { ViolationTypes } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { isEnabled, math } = require('@cortex-os/api');
+const { ViolationTypes } = require('@cortex-os/data-provider');
 const { deleteAllUserSessions } = require('~/models');
 const { removePorts } = require('~/server/utils');
 const getLogStores = require('./getLogStores');

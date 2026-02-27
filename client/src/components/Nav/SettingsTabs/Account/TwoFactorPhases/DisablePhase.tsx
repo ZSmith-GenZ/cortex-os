@@ -8,7 +8,7 @@ import {
   InputOTPSlot,
   InputOTPSeparator,
   Spinner,
-} from '@librechat/client';
+} from '@cortex-os/client';
 import { useLocalize } from '~/hooks';
 
 const fadeAnimation = {

@@ -1,5 +1,5 @@
-import { logger, decrypt } from '@librechat/data-schemas';
-import type { IPluginAuth, PluginAuthMethods } from '@librechat/data-schemas';
+import { logger, decrypt } from '@cortex-os/data-schemas';
+import type { IPluginAuth, PluginAuthMethods } from '@cortex-os/data-schemas';
 
 export interface GetPluginAuthMapParams {
   userId: string;

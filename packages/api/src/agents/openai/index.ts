@@ -1,12 +1,12 @@
 /**
- * OpenAI-compatible API for LibreChat agents.
+ * OpenAI-compatible API for Cortex OS agents.
  *
  * This module provides an OpenAI v1/chat/completions compatible interface
- * for interacting with LibreChat agents remotely via API.
+ * for interacting with Cortex OS agents remotely via API.
  *
  * @example
  * ```typescript
- * import { createAgentChatCompletion, listAgentModels } from '@librechat/api';
+ * import { createAgentChatCompletion, listAgentModels } from '@cortex-os/api';
  *
  * // POST /v1/chat/completions
  * app.post('/v1/chat/completions', async (req, res) => {

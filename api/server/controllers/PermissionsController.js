@@ -1,11 +1,11 @@
 /**
- * @import { TUpdateResourcePermissionsRequest, TUpdateResourcePermissionsResponse } from 'librechat-data-provider'
+ * @import { TUpdateResourcePermissionsRequest, TUpdateResourcePermissionsResponse } from '@cortex-os/data-provider'
  */
 
 const mongoose = require('mongoose');
-const { logger } = require('@librechat/data-schemas');
-const { ResourceType, PrincipalType, PermissionBits } = require('librechat-data-provider');
-const { enrichRemoteAgentPrincipals, backfillRemoteAgentPermissions } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { ResourceType, PrincipalType, PermissionBits } = require('@cortex-os/data-provider');
+const { enrichRemoteAgentPrincipals, backfillRemoteAgentPermissions } = require('@cortex-os/api');
 const {
   bulkUpdateResourcePermissions,
   ensureGroupPrincipalExists,

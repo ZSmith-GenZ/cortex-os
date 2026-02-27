@@ -1,5 +1,5 @@
 require('events').EventEmitter.defaultMaxListeners = 100;
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const { getBufferString, HumanMessage } = require('@langchain/core/messages');
 const {
   createRun,
@@ -23,7 +23,7 @@ const {
   createMemoryProcessor,
   createMultiAgentMapper,
   filterMalformedContentParts,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   Callback,
   Providers,
@@ -31,7 +31,7 @@ const {
   formatMessage,
   formatAgentMessages,
   createMetadataAggregator,
-} = require('@librechat/agents');
+} = require('@cortex-os/agents');
 const {
   Constants,
   Permissions,
@@ -42,7 +42,7 @@ const {
   isAgentsEndpoint,
   isEphemeralAgentId,
   removeNullishValues,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const { spendTokens, spendStructuredTokens } = require('~/models/spendTokens');
 const { encodeAndFormat } = require('~/server/services/Files/images/encode');
 const { createContextHandlers } = require('~/app/clients/prompts');
@@ -504,7 +504,7 @@ class AgentClient extends BaseClient {
       agent.model_parameters,
     );
 
-    /** @type {import('@librechat/api').MemoryConfig} */
+    /** @type {import('@cortex-os/api').MemoryConfig} */
     const config = {
       validKeys: memoryConfig.validKeys,
       instructions: agent.instructions,
@@ -987,7 +987,7 @@ class AgentClient extends BaseClient {
     const appConfig = req.config;
     let endpoint = agent.endpoint;
 
-    /** @type {import('@librechat/agents').ClientOptions} */
+    /** @type {import('@cortex-os/agents').ClientOptions} */
     let clientOptions = {
       model: agent.model || agent.model_parameters.model,
     };
@@ -1062,7 +1062,7 @@ class AgentClient extends BaseClient {
       provider = Providers.AZURE;
     }
 
-    /** @type {import('@librechat/agents').ClientOptions} */
+    /** @type {import('@cortex-os/agents').ClientOptions} */
     clientOptions = { ...options.llmConfig };
     if (options.configOptions) {
       clientOptions.configuration = options.configOptions;

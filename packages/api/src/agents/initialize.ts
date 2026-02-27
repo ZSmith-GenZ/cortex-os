@@ -1,4 +1,4 @@
-import { Providers } from '@librechat/agents';
+import { Providers } from '@cortex-os/agents';
 import {
   Constants,
   ErrorTypes,
@@ -8,7 +8,7 @@ import {
   isAgentsEndpoint,
   replaceSpecialVars,
   providerEndpointMap,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import type {
   AgentToolResources,
   AgentToolOptions,
@@ -16,14 +16,14 @@ import type {
   TFile,
   Agent,
   TUser,
-} from 'librechat-data-provider';
-import type { GenericTool, LCToolRegistry, ToolMap, LCTool } from '@librechat/agents';
+} from '@cortex-os/data-provider';
+import type { GenericTool, LCToolRegistry, ToolMap, LCTool } from '@cortex-os/agents';
 import type { Response as ServerResponse } from 'express';
-import type { IMongoFile } from '@librechat/data-schemas';
+import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { InitializeResultBase, ServerRequest, EndpointDbMethods } from '~/types';
 import {
   optionalChainWithEmptyCheck,
-  extractLibreChatParams,
+  extractCortex OSParams,
   getModelMaxTokens,
   getThreadData,
 } from '~/utils';
@@ -132,7 +132,7 @@ export interface InitializeAgentDbMethods extends EndpointDbMethods {
  * Initializes an agent for use in requests.
  * Handles file processing, tool loading, provider configuration, and context token calculations.
  *
- * This function is exported from @librechat/api and replaces the CJS version from
+ * This function is exported from @cortex-os/api and replaces the CJS version from
  * api/server/services/Endpoints/agents/agent.js
  *
  * @param params - Initialization parameters
@@ -181,7 +181,7 @@ export async function initializeAgent(
     ),
   );
 
-  const { resendFiles, maxContextTokens, modelOptions } = extractLibreChatParams(
+  const { resendFiles, maxContextTokens, modelOptions } = extractCortex OSParams(
     _modelOptions as Record<string, unknown>,
   );
 

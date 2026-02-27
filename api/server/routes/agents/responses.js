@@ -1,5 +1,5 @@
 /**
- * Open Responses API routes for LibreChat agents.
+ * Open Responses API routes for Cortex OS agents.
  *
  * Implements the Open Responses specification for a forward-looking,
  * agentic API that uses items as the fundamental unit and semantic
@@ -20,12 +20,12 @@
  * @see https://openresponses.org/specification
  */
 const express = require('express');
-const { PermissionTypes, Permissions } = require('librechat-data-provider');
+const { PermissionTypes, Permissions } = require('@cortex-os/data-provider');
 const {
   generateCheckAccess,
   createRequireApiKeyAuth,
   createCheckRemoteAgentAccess,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   createResponse,
   getResponse,

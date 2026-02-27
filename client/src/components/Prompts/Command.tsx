@@ -1,6 +1,6 @@
-import { Input } from '@librechat/client';
+import { Input } from '@cortex-os/client';
 import { SquareSlash } from 'lucide-react';
-import { Constants } from 'librechat-data-provider';
+import { Constants } from '@cortex-os/data-provider';
 import { useState, useEffect } from 'react';
 import { useLocalize } from '~/hooks';
 

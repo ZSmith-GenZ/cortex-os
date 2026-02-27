@@ -14,7 +14,7 @@ import {
   DropdownPopup,
   AttachmentIcon,
   SharePointIcon,
-} from '@librechat/client';
+} from '@cortex-os/client';
 import {
   Providers,
   EToolResources,
@@ -22,8 +22,8 @@ import {
   defaultAgentCapabilities,
   bedrockDocumentExtensions,
   isDocumentSupportedProvider,
-} from 'librechat-data-provider';
-import type { EndpointFileConfig } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { EndpointFileConfig } from '@cortex-os/data-provider';
 import {
   useAgentToolPermissions,
   useAgentCapabilities,

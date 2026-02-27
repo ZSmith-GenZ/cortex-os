@@ -1,4 +1,4 @@
-import { StopGeneratingIcon } from '@librechat/client';
+import { StopGeneratingIcon } from '@cortex-os/client';
 import type { TGenButtonProps } from '~/common';
 import { useLocalize } from '~/hooks';
 import Button from './Button';

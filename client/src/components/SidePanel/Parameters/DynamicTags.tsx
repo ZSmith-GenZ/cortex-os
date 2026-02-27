@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useRef } from 'react';
-import type { DynamicSettingProps } from 'librechat-data-provider';
-import { Label, Input, HoverCard, HoverCardTrigger, Tag, useToastContext } from '@librechat/client';
+import type { DynamicSettingProps } from '@cortex-os/data-provider';
+import { Label, Input, HoverCard, HoverCardTrigger, Tag, useToastContext } from '@cortex-os/client';
 import { TranslationKeys, useLocalize, useParameterEffects } from '~/hooks';
 import { useChatContext } from '~/Providers';
 import OptionHover from './OptionHover';

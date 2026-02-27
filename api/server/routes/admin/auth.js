@@ -1,14 +1,14 @@
 const express = require('express');
 const passport = require('passport');
 const { randomState } = require('openid-client');
-const { logger } = require('@librechat/data-schemas');
-const { CacheKeys } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { CacheKeys } = require('@cortex-os/data-provider');
 const {
   requireAdmin,
   getAdminPanelUrl,
   exchangeAdminCode,
   createSetBalanceConfig,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { loginController } = require('~/server/controllers/auth/LoginController');
 const { createOAuthHandler } = require('~/server/controllers/auth/oauth');
 const { getAppConfig } = require('~/server/services/Config');

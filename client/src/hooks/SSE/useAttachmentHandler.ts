@@ -1,12 +1,12 @@
 import { useSetRecoilState } from 'recoil';
 import type { QueryClient } from '@tanstack/react-query';
-import { QueryKeys, Tools } from 'librechat-data-provider';
+import { QueryKeys, Tools } from '@cortex-os/data-provider';
 import type {
   MemoriesResponse,
   EventSubmission,
   TAttachment,
   TFile,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import { handleMemoryArtifact } from '~/utils/memory';
 import store from '~/store';
 

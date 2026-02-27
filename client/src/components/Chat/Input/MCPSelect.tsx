@@ -1,8 +1,8 @@
 import React, { memo, useMemo, useCallback, useRef } from 'react';
 import * as Ariakit from '@ariakit/react';
 import { ChevronDown } from 'lucide-react';
-import { PermissionTypes, Permissions } from 'librechat-data-provider';
-import { TooltipAnchor } from '@librechat/client';
+import { PermissionTypes, Permissions } from '@cortex-os/data-provider';
+import { TooltipAnchor } from '@cortex-os/client';
 import MCPServerMenuItem from '~/components/MCP/MCPServerMenuItem';
 import MCPConfigDialog from '~/components/MCP/MCPConfigDialog';
 import StackedMCPIcons from '~/components/MCP/StackedMCPIcons';

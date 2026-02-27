@@ -1,4 +1,4 @@
-import { apiBaseUrl } from 'librechat-data-provider';
+import { apiBaseUrl } from '@cortex-os/data-provider';
 
 export const buildShareLinkUrl = (shareId: string): string => {
   const baseURL = apiBaseUrl();

@@ -1,5 +1,5 @@
-import { ComponentTypes } from 'librechat-data-provider';
-import type { DynamicSettingProps } from 'librechat-data-provider';
+import { ComponentTypes } from '@cortex-os/data-provider';
+import type { DynamicSettingProps } from '@cortex-os/data-provider';
 import {
   DynamicCombobox,
   DynamicDropdown,

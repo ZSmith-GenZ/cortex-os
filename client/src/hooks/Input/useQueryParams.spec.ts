@@ -77,9 +77,9 @@ jest.mock('~/utils', () => {
   };
 });
 
-// Use actual librechat-data-provider with minimal overrides
-jest.mock('librechat-data-provider', () => {
-  const actual = jest.requireActual('librechat-data-provider');
+// Use actual @cortex-os/data-provider with minimal overrides
+jest.mock('@cortex-os/data-provider', () => {
+  const actual = jest.requireActual('@cortex-os/data-provider');
   return {
     ...actual,
     // Override schema to avoid complex validation in tests

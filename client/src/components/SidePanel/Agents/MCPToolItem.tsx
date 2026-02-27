@@ -8,8 +8,8 @@ import {
   DropdownMenuContent,
   DropdownMenuSeparator,
   DropdownMenuCheckboxItem,
-} from '@librechat/client';
-import type { AgentToolType } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { AgentToolType } from '@cortex-os/data-provider';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';
 

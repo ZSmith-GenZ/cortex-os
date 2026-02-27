@@ -1,4 +1,4 @@
-const { encryptV3, logger } = require('@librechat/data-schemas');
+const { encryptV3, logger } = require('@cortex-os/data-schemas');
 const {
   generateBackupCodes,
   generateTOTPSecret,

@@ -1,10 +1,10 @@
-import { librechat } from 'librechat-data-provider';
-import type { DynamicSettingProps } from 'librechat-data-provider';
+import { cortex-os } from '@cortex-os/data-provider';
+import type { DynamicSettingProps } from '@cortex-os/data-provider';
 
-type LibreChatKeys = keyof typeof librechat;
+type Cortex OSKeys = keyof typeof cortex-os;
 
-type LibreChatParams = {
-  modelOptions: Omit<NonNullable<DynamicSettingProps['conversation']>, LibreChatKeys>;
+type Cortex OSParams = {
+  modelOptions: Omit<NonNullable<DynamicSettingProps['conversation']>, Cortex OSKeys>;
   resendFiles: boolean;
   promptPrefix?: string | null;
   maxContextTokens?: number;
@@ -13,16 +13,16 @@ type LibreChatParams = {
 };
 
 /**
- * Separates LibreChat-specific parameters from model options
+ * Separates Cortex OS-specific parameters from model options
  * @param options - The combined options object
  */
-export function extractLibreChatParams(
+export function extractCortex OSParams(
   options?: DynamicSettingProps['conversation'],
-): LibreChatParams {
+): Cortex OSParams {
   if (!options) {
     return {
-      modelOptions: {} as Omit<NonNullable<DynamicSettingProps['conversation']>, LibreChatKeys>,
-      resendFiles: librechat.resendFiles.default as boolean,
+      modelOptions: {} as Omit<NonNullable<DynamicSettingProps['conversation']>, Cortex OSKeys>,
+      resendFiles: cortex-os.resendFiles.default as boolean,
     };
   }
 
@@ -30,7 +30,7 @@ export function extractLibreChatParams(
 
   const resendFiles =
     (delete modelOptions.resendFiles, options.resendFiles) ??
-    (librechat.resendFiles.default as boolean);
+    (cortex-os.resendFiles.default as boolean);
   const promptPrefix = (delete modelOptions.promptPrefix, options.promptPrefix);
   const maxContextTokens = (delete modelOptions.maxContextTokens, options.maxContextTokens);
   const fileTokenLimit = (delete modelOptions.fileTokenLimit, options.fileTokenLimit);
@@ -39,7 +39,7 @@ export function extractLibreChatParams(
   return {
     modelOptions: modelOptions as Omit<
       NonNullable<DynamicSettingProps['conversation']>,
-      LibreChatKeys
+      Cortex OSKeys
     >,
     maxContextTokens,
     fileTokenLimit,

@@ -1,7 +1,7 @@
 const path = require('path');
 const mongoose = require('mongoose');
-const { User } = require('@librechat/data-schemas').createModels(mongoose);
-const { ViolationTypes } = require('librechat-data-provider');
+const { User } = require('@cortex-os/data-schemas').createModels(mongoose);
+const { ViolationTypes } = require('@cortex-os/data-provider');
 require('module-alias')({ base: path.resolve(__dirname, '..', 'api') });
 const { askQuestion, silentExit } = require('./helpers');
 const banViolation = require('~/cache/banViolation');

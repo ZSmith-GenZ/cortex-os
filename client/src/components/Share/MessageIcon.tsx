@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { UserIcon } from '@librechat/client';
-import type { TMessage, Assistant, Agent } from 'librechat-data-provider';
+import { UserIcon } from '@cortex-os/client';
+import type { TMessage, Assistant, Agent } from '@cortex-os/data-provider';
 import type { TMessageProps } from '~/common';
 import MessageEndpointIcon from '../Endpoints/MessageEndpointIcon';
 import ConvoIconURL from '~/components/Endpoints/ConvoIconURL';

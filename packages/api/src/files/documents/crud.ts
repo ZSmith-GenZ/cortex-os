@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { excelMimeTypes, FileSources } from 'librechat-data-provider';
+import { excelMimeTypes, FileSources } from '@cortex-os/data-provider';
 import type { TextItem } from 'pdfjs-dist/types/src/display/api';
 import type { MistralOCRUploadResult } from '~/types';
 

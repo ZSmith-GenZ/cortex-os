@@ -1,5 +1,5 @@
 import React from 'react';
-import type { TModelSpec } from 'librechat-data-provider';
+import type { TModelSpec } from '@cortex-os/data-provider';
 import { CustomMenu as Menu } from '../CustomMenu';
 import { ModelSpecItem } from './ModelSpecItem';
 import { useModelSelectorContext } from '../ModelSelectorContext';

@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
-import { useGetModelsQuery } from 'librechat-data-provider/react-query';
+import { useGetModelsQuery } from '@cortex-os/data-provider/react-query';
 import {
   getEndpointField,
   LocalStorageKeys,
   isAssistantsEndpoint,
   getDefaultParamsEndpoint,
-} from 'librechat-data-provider';
-import type { TEndpointsConfig, EModelEndpoint, TConversation } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TEndpointsConfig, EModelEndpoint, TConversation } from '@cortex-os/data-provider';
 import type { AssistantListItem, NewConversationParams } from '~/common';
 import useAssistantListMap from '~/hooks/Assistants/useAssistantListMap';
 import { buildDefaultConvo, getDefaultEndpoint } from '~/utils';

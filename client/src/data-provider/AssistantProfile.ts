@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import type { UseQueryOptions } from '@tanstack/react-query';
-import { dataService } from 'librechat-data-provider';
+import { dataService } from '@cortex-os/data-provider';
 
 export type AssistantProfile = {
   name: string;

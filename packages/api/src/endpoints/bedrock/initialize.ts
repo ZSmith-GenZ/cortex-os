@@ -8,7 +8,7 @@ import {
   bedrockInputParser,
   bedrockOutputParser,
   removeNullishValues,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import type {
   BaseInitializeParams,
   InitializeResultBase,

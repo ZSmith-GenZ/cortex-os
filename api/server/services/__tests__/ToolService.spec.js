@@ -1,4 +1,4 @@
-const { AgentCapabilities, defaultAgentCapabilities } = require('librechat-data-provider');
+const { AgentCapabilities, defaultAgentCapabilities } = require('@cortex-os/data-provider');
 
 /**
  * Tests for ToolService capability checking logic.

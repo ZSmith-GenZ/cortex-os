@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { AttachmentIcon } from '@librechat/client';
+import { AttachmentIcon } from '@cortex-os/client';
 import {
   EToolResources,
   EModelEndpoint,
   mergeFileConfig,
   AgentCapabilities,
   getEndpointFileConfig,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import type { ExtendedFile, AgentForm } from '~/common';
 import { useFileHandling, useLocalize, useLazyEffect } from '~/hooks';
 import FileRow from '~/components/Chat/Input/Files/FileRow';

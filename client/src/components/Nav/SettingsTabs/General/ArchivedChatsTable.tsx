@@ -23,8 +23,8 @@ import {
   OGDialogHeader,
   useToastContext,
   OGDialogContent,
-} from '@librechat/client';
-import type { ConversationListParams, TConversation } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { ConversationListParams, TConversation } from '@cortex-os/data-provider';
 import {
   useConversationsInfiniteQuery,
   useDeleteConversationMutation,

@@ -8,8 +8,8 @@ import {
   Checkbox,
   Dropdown,
   OGDialogTemplate,
-} from '@librechat/client';
-import type { TConversation } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { TConversation } from '@cortex-os/data-provider';
 import { useLocalize, useExportConversation } from '~/hooks';
 
 const TYPE_OPTIONS = [

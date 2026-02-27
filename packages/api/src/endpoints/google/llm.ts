@@ -1,6 +1,6 @@
-import { Providers } from '@librechat/agents';
-import { googleSettings, AuthKeys, removeNullishValues } from 'librechat-data-provider';
-import type { GoogleClientOptions, VertexAIClientOptions } from '@librechat/agents';
+import { Providers } from '@cortex-os/agents';
+import { googleSettings, AuthKeys, removeNullishValues } from '@cortex-os/data-provider';
+import type { GoogleClientOptions, VertexAIClientOptions } from '@cortex-os/agents';
 import type { GoogleAIToolType } from '@langchain/google-common';
 import type * as t from '~/types';
 import { isEnabled } from '~/utils';

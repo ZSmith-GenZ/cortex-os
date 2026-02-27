@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil';
-import { useGetModelsQuery } from 'librechat-data-provider/react-query';
-import { getEndpointField, SettingsViews } from 'librechat-data-provider';
-import type { TConversation } from 'librechat-data-provider';
+import { useGetModelsQuery } from '@cortex-os/data-provider/react-query';
+import { getEndpointField, SettingsViews } from '@cortex-os/data-provider';
+import type { TConversation } from '@cortex-os/data-provider';
 import type { TSettingsProps } from '~/common';
 import { useGetEndpointsQuery } from '~/data-provider';
 import { getSettings } from './Settings';

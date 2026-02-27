@@ -7,11 +7,11 @@ import {
   defaultSocialLogins,
   validateAzureGroups,
   defaultAgentCapabilities,
-} from 'librechat-data-provider';
-import type { TCustomConfig } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TCustomConfig } from '@cortex-os/data-provider';
 
-jest.mock('@librechat/data-schemas', () => ({
-  ...jest.requireActual('@librechat/data-schemas'),
+jest.mock('@cortex-os/data-schemas', () => ({
+  ...jest.requireActual('@cortex-os/data-schemas'),
   logger: {
     info: jest.fn(),
     warn: jest.fn(),
@@ -20,13 +20,13 @@ jest.mock('@librechat/data-schemas', () => ({
   },
 }));
 
-import { AppService } from '@librechat/data-schemas';
+import { AppService } from '@cortex-os/data-schemas';
 
 const azureGroups = [
   {
-    group: 'librechat-westus',
+    group: 'cortex-os-westus',
     apiKey: '${WESTUS_API_KEY}',
-    instanceName: 'librechat-westus',
+    instanceName: 'cortex-os-westus',
     version: '2023-12-01-preview',
     models: {
       'gpt-4-vision-preview': {
@@ -48,9 +48,9 @@ const azureGroups = [
     },
   },
   {
-    group: 'librechat-eastus',
+    group: 'cortex-os-eastus',
     apiKey: '${EASTUS_API_KEY}',
-    instanceName: 'librechat-eastus',
+    instanceName: 'cortex-os-eastus',
     deploymentName: 'gpt-4-turbo',
     version: '2024-02-15-preview',
     models: {

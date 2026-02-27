@@ -3,8 +3,8 @@ const axios = require('axios');
 const FormData = require('form-data');
 const nodemailer = require('nodemailer');
 const handlebars = require('handlebars');
-const { logger } = require('@librechat/data-schemas');
-const { logAxiosError, isEnabled, readFileAsString } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { logAxiosError, isEnabled, readFileAsString } = require('@cortex-os/api');
 
 /**
  * Sends an email using Mailgun API.

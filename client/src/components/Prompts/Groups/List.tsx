@@ -1,8 +1,8 @@
 import { FileText, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Button, Skeleton } from '@librechat/client';
-import { PermissionTypes, Permissions } from 'librechat-data-provider';
-import type { TPromptGroup, TStartupConfig } from 'librechat-data-provider';
+import { Button, Skeleton } from '@cortex-os/client';
+import { PermissionTypes, Permissions } from '@cortex-os/data-provider';
+import type { TPromptGroup, TStartupConfig } from '@cortex-os/data-provider';
 import DashGroupItem from '~/components/Prompts/Groups/DashGroupItem';
 import ChatGroupItem from '~/components/Prompts/Groups/ChatGroupItem';
 import { useGetStartupConfig } from '~/data-provider';

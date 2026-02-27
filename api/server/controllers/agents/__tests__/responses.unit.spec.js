@@ -19,7 +19,7 @@ jest.mock('uuid', () => ({
   v4: jest.fn(() => 'mock-uuid-456'),
 }));
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     error: jest.fn(),
@@ -27,7 +27,7 @@ jest.mock('@librechat/data-schemas', () => ({
   },
 }));
 
-jest.mock('@librechat/agents', () => ({
+jest.mock('@cortex-os/agents', () => ({
   Callback: { TOOL_ERROR: 'TOOL_ERROR' },
   ToolEndHandler: jest.fn(),
   formatAgentMessages: jest.fn().mockReturnValue({
@@ -36,7 +36,7 @@ jest.mock('@librechat/agents', () => ({
   }),
 }));
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   createRun: jest.fn().mockResolvedValue({
     processStream: jest.fn().mockResolvedValue(undefined),
   }),
@@ -233,7 +233,7 @@ describe('createResponse controller', () => {
     beforeEach(() => {
       req.body.stream = true;
 
-      const api = require('@librechat/api');
+      const api = require('@cortex-os/api');
       api.validateResponseRequest.mockReturnValue({
         request: { model: 'agent-123', input: 'Hello', stream: true },
       });
@@ -255,7 +255,7 @@ describe('createResponse controller', () => {
 
   describe('collectedUsage population', () => {
     it('should collect usage from on_chat_model_end events', async () => {
-      const api = require('@librechat/api');
+      const api = require('@cortex-os/api');
 
       let capturedOnChatModelEnd;
       api.createAggregatorEventHandlers.mockImplementation(() => {

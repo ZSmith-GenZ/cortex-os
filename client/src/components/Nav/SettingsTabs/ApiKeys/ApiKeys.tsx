@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { EModelEndpoint } from 'librechat-data-provider';
-import { useUserKeyQuery } from 'librechat-data-provider/react-query';
+import { EModelEndpoint } from '@cortex-os/data-provider';
+import { useUserKeyQuery } from '@cortex-os/data-provider/react-query';
 import { useLocalize } from '~/hooks';
 import { SetKeyDialog } from '~/components/Input/SetKeyDialog';
 

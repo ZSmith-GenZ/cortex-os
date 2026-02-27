@@ -1,17 +1,17 @@
 /**
  * MCP Tools Controller
- * Handles MCP-specific tool endpoints, decoupled from regular LibreChat tools
+ * Handles MCP-specific tool endpoints, decoupled from regular Cortex OS tools
  *
- * @import { MCPServerRegistry } from '@librechat/api'
- * @import { MCPServerDocument } from 'librechat-data-provider'
+ * @import { MCPServerRegistry } from '@cortex-os/api'
+ * @import { MCPServerDocument } from '@cortex-os/data-provider'
  */
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   isMCPDomainNotAllowedError,
   isMCPInspectionFailedError,
   MCPErrorCodes,
-} = require('@librechat/api');
-const { Constants, MCPServerUserInputSchema } = require('librechat-data-provider');
+} = require('@cortex-os/api');
+const { Constants, MCPServerUserInputSchema } = require('@cortex-os/data-provider');
 const { cacheMCPServerTools, getMCPServerTools } = require('~/server/services/Config');
 const { getMCPManager, getMCPServersRegistry } = require('~/config');
 

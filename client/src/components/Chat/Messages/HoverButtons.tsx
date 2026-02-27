@@ -1,7 +1,7 @@
 import React, { useState, useMemo, memo } from 'react';
 import { useRecoilState } from 'recoil';
-import type { TConversation, TMessage, TFeedback } from 'librechat-data-provider';
-import { EditIcon, Clipboard, CheckMark, ContinueIcon, RegenerateIcon } from '@librechat/client';
+import type { TConversation, TMessage, TFeedback } from '@cortex-os/data-provider';
+import { EditIcon, Clipboard, CheckMark, ContinueIcon, RegenerateIcon } from '@cortex-os/client';
 import { useGenerationsByLatest, useLocalize } from '~/hooks';
 import { Fork } from '~/components/Conversations';
 import MessageAudio from './MessageAudio';

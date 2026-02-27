@@ -71,8 +71,8 @@ bower_components/
 .flooignore
 
 #config file
-librechat.yaml
-librechat.yml
+cortex-os.yaml
+cortex-os.yml
 
 # Environment
 .npmrc
@@ -124,7 +124,7 @@ uploads/
 release/
 
 # Helm
-helm/librechat/Chart.lock
+helm/cortex-os/Chart.lock
 helm/**/charts/
 helm/**/.values.yaml
 

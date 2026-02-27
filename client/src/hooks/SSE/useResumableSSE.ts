@@ -13,8 +13,8 @@ import {
   ViolationTypes,
   LocalStorageKeys,
   removeNullishValues,
-} from 'librechat-data-provider';
-import type { TMessage, TPayload, TSubmission, EventSubmission } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TMessage, TPayload, TSubmission, EventSubmission } from '@cortex-os/data-provider';
 import type { EventHandlerParams } from './useEventHandlers';
 import { useGetStartupConfig, useGetUserBalance, queueTitleGeneration } from '~/data-provider';
 import type { ActiveJobsResponse } from '~/data-provider';

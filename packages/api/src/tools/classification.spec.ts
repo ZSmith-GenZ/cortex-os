@@ -1,5 +1,5 @@
-import type { AgentToolOptions } from 'librechat-data-provider';
-import type { GenericTool } from '@librechat/agents';
+import type { AgentToolOptions } from '@cortex-os/data-provider';
+import type { GenericTool } from '@cortex-os/agents';
 import type { LCToolRegistry } from './classification';
 import {
   buildToolRegistryFromAgentOptions,

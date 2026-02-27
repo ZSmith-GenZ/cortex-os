@@ -2,9 +2,9 @@
 const express = require('express');
 const passport = require('passport');
 const { randomState } = require('openid-client');
-const { logger } = require('@librechat/data-schemas');
-const { ErrorTypes } = require('librechat-data-provider');
-const { createSetBalanceConfig } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { ErrorTypes } = require('@cortex-os/data-provider');
+const { createSetBalanceConfig } = require('@cortex-os/api');
 const { checkDomainAllowed, loginLimiter, logHeaders } = require('~/server/middleware');
 const { createOAuthHandler } = require('~/server/controllers/auth/oauth');
 const { getAppConfig } = require('~/server/services/Config');

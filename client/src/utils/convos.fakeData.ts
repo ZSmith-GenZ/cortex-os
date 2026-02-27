@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { EModelEndpoint, ImageDetail } from 'librechat-data-provider';
-import type { ConversationData } from 'librechat-data-provider';
+import { EModelEndpoint, ImageDetail } from '@cortex-os/data-provider';
+import type { ConversationData } from '@cortex-os/data-provider';
 
 const today = new Date();
 today.setDate(today.getDate() - 3);

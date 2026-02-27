@@ -1,6 +1,6 @@
 /** Note: No hard-coded values should be used in this file. */
-const { maxTokensMap } = require('@librechat/api');
-const { EModelEndpoint } = require('librechat-data-provider');
+const { maxTokensMap } = require('@cortex-os/api');
+const { EModelEndpoint } = require('@cortex-os/data-provider');
 const {
   defaultRate,
   tokenValues,

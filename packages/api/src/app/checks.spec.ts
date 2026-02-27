@@ -1,10 +1,10 @@
-jest.mock('librechat-data-provider', () => ({
-  ...jest.requireActual('librechat-data-provider'),
+jest.mock('@cortex-os/data-provider', () => ({
+  ...jest.requireActual('@cortex-os/data-provider'),
   extractVariableName: jest.fn(),
 }));
 
-jest.mock('@librechat/data-schemas', () => ({
-  ...jest.requireActual('@librechat/data-schemas'),
+jest.mock('@cortex-os/data-schemas', () => ({
+  ...jest.requireActual('@cortex-os/data-schemas'),
   logger: {
     debug: jest.fn(),
     warn: jest.fn(),
@@ -13,8 +13,8 @@ jest.mock('@librechat/data-schemas', () => ({
 
 import { handleRateLimits } from './limits';
 import { checkWebSearchConfig } from './checks';
-import { logger } from '@librechat/data-schemas';
-import { extractVariableName as extract } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import { extractVariableName as extract } from '@cortex-os/data-provider';
 
 const extractVariableName = extract as jest.MockedFunction<typeof extract>;
 
@@ -147,7 +147,7 @@ describe('checkWebSearchConfig', () => {
 
       expect(logger.warn).toHaveBeenCalledWith(
         expect.stringContaining(
-          'More info: https://www.librechat.ai/docs/configuration/librechat_yaml/web_search',
+          'More info: https://www.cortexos.ai/docs/configuration/cortex-os_yaml/web_search',
         ),
       );
     });

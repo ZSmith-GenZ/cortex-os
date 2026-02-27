@@ -5,15 +5,15 @@ const {
   logger,
   DEFAULT_SESSION_EXPIRY,
   DEFAULT_REFRESH_TOKEN_EXPIRY,
-} = require('@librechat/data-schemas');
-const { ErrorTypes, SystemRoles, errorsToString } = require('librechat-data-provider');
+} = require('@cortex-os/data-schemas');
+const { ErrorTypes, SystemRoles, errorsToString } = require('@cortex-os/data-provider');
 const {
   math,
   isEnabled,
   checkEmailConfig,
   isEmailDomainAllowed,
   shouldUseSecureCookie,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   findUser,
   findToken,
@@ -400,7 +400,7 @@ const setAuthTokens = async (userId, res, _session = null) => {
       secure: shouldUseSecureCookie(),
       sameSite: 'strict',
     });
-    res.cookie('token_provider', 'librechat', {
+    res.cookie('token_provider', 'cortex-os', {
       expires: new Date(refreshTokenExpires),
       httpOnly: true,
       secure: shouldUseSecureCookie(),

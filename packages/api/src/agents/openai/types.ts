@@ -71,9 +71,9 @@ export interface ChatCompletionRequest {
   stop?: string | string[];
   /** User identifier */
   user?: string;
-  /** Conversation ID (LibreChat extension) */
+  /** Conversation ID (Cortex OS extension) */
   conversation_id?: string;
-  /** Parent message ID (LibreChat extension) */
+  /** Parent message ID (Cortex OS extension) */
   parent_message_id?: string;
 }
 

@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { initializeAgent, validateAgentModel } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { initializeAgent, validateAgentModel } = require('@cortex-os/api');
 const { loadAddedAgent, setGetAgent, ADDED_AGENT_ID } = require('~/models/loadAddedAgent');
 const { getConvoFiles } = require('~/models/Conversation');
 const { getAgent } = require('~/models/Agent');

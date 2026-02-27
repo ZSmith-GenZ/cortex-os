@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, TrashIcon } from '@librechat/client';
-import type { TFile } from 'librechat-data-provider';
+import { Button, TrashIcon } from '@cortex-os/client';
+import type { TFile } from '@cortex-os/data-provider';
 
 type FileListItemProps = {
   file: TFile;

@@ -1,4 +1,4 @@
-import { LocalStorageKeys, TConversation, isUUID } from 'librechat-data-provider';
+import { LocalStorageKeys, TConversation, isUUID } from '@cortex-os/data-provider';
 
 export function getLocalStorageItems() {
   const items = {

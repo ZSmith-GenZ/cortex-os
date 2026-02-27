@@ -1,4 +1,4 @@
-import { EModelEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
+import { EModelEndpoint, isAssistantsEndpoint } from '@cortex-os/data-provider';
 
 type TUseGenerations = {
   error?: boolean;

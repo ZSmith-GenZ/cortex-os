@@ -1,6 +1,6 @@
 import logger from '~/config/winston';
-import { removeNullishValues } from 'librechat-data-provider';
-import type { TCustomConfig, TConfigDefaults } from 'librechat-data-provider';
+import { removeNullishValues } from '@cortex-os/data-provider';
+import type { TCustomConfig, TConfigDefaults } from '@cortex-os/data-provider';
 
 /**
  * Loads and maps the Cloudflare Turnstile configuration.

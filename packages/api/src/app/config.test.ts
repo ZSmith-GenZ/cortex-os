@@ -1,8 +1,8 @@
 import { getTransactionsConfig, getBalanceConfig, getCustomEndpointConfig } from './config';
-import { logger } from '@librechat/data-schemas';
-import { FileSources, EModelEndpoint } from 'librechat-data-provider';
-import type { TCustomConfig, TEndpoint } from 'librechat-data-provider';
-import type { AppConfig } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
+import { FileSources, EModelEndpoint } from '@cortex-os/data-provider';
+import type { TCustomConfig, TEndpoint } from '@cortex-os/data-provider';
+import type { AppConfig } from '@cortex-os/data-schemas';
 
 // Helper function to create a minimal AppConfig for testing
 const createTestAppConfig = (overrides: Partial<AppConfig> = {}): AppConfig => {
@@ -32,7 +32,7 @@ const createTestAppConfig = (overrides: Partial<AppConfig> = {}): AppConfig => {
   };
 };
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     warn: jest.fn(),
   },

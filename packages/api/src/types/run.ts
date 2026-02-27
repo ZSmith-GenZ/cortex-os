@@ -1,5 +1,5 @@
-import type { Providers, ClientOptions } from '@librechat/agents';
-import type { AgentModelParameters } from 'librechat-data-provider';
+import type { Providers, ClientOptions } from '@cortex-os/agents';
+import type { AgentModelParameters } from '@cortex-os/data-provider';
 import type { OpenAIConfiguration } from './openai';
 
 export type RunLLMConfig = {

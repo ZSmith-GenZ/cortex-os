@@ -1,6 +1,6 @@
 import React, { useRef, Dispatch, SetStateAction } from 'react';
-import { TConversationTag } from 'librechat-data-provider';
-import { OGDialogTemplate, OGDialog, Button, Spinner, useToastContext } from '@librechat/client';
+import { TConversationTag } from '@cortex-os/data-provider';
+import { OGDialogTemplate, OGDialog, Button, Spinner, useToastContext } from '@cortex-os/client';
 import { useConversationTagMutation } from '~/data-provider';
 import { NotificationSeverity } from '~/common';
 import BookmarkForm from './BookmarkForm';

@@ -1,4 +1,4 @@
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 
 /**
  * Middleware to log Forwarded Headers

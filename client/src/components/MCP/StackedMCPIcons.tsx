@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { MCPIcon } from '@librechat/client';
+import { MCPIcon } from '@cortex-os/client';
 import type { MCPServerDefinition } from '~/hooks/MCP/useMCPServerManager';
 import { getSelectedServerIcons } from './mcpServerUtils';
 import { cn } from '~/utils';

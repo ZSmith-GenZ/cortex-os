@@ -1,6 +1,6 @@
 // Mock all dependencies - define mocks before imports
 // Mock all dependencies
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     error: jest.fn(),
@@ -21,8 +21,8 @@ const mockIsMCPDomainAllowed = jest.fn(() => Promise.resolve(true));
 
 const mockGetAppConfig = jest.fn(() => Promise.resolve({}));
 
-jest.mock('@librechat/api', () => {
-  const actual = jest.requireActual('@librechat/api');
+jest.mock('@cortex-os/api', () => {
+  const actual = jest.requireActual('@cortex-os/api');
   return {
     ...actual,
     sendEvent: jest.fn(),
@@ -35,9 +35,9 @@ jest.mock('@librechat/api', () => {
   };
 });
 
-const { logger } = require('@librechat/data-schemas');
-const { MCPOAuthHandler } = require('@librechat/api');
-const { CacheKeys, Constants } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { MCPOAuthHandler } = require('@cortex-os/api');
+const { CacheKeys, Constants } = require('@cortex-os/data-provider');
 const D = Constants.mcp_delimiter;
 const {
   createMCPTool,

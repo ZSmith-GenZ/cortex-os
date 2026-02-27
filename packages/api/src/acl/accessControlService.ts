@@ -1,6 +1,6 @@
 import { Types, ClientSession, DeleteResult } from 'mongoose';
-import { AllMethods, IAclEntry, createMethods, logger } from '@librechat/data-schemas';
-import { AccessRoleIds, PrincipalType, ResourceType } from 'librechat-data-provider';
+import { AllMethods, IAclEntry, createMethods, logger } from '@cortex-os/data-schemas';
+import { AccessRoleIds, PrincipalType, ResourceType } from '@cortex-os/data-provider';
 
 export class AccessControlService {
   private _dbMethods: AllMethods;

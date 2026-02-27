@@ -1,8 +1,8 @@
 jest.mock('@microsoft/microsoft-graph-client');
 jest.mock('~/strategies/openidStrategy');
 jest.mock('~/cache/getLogStores');
-jest.mock('@librechat/data-schemas', () => ({
-  ...jest.requireActual('@librechat/data-schemas'),
+jest.mock('@cortex-os/data-schemas', () => ({
+  ...jest.requireActual('@cortex-os/data-schemas'),
   logger: {
     error: jest.fn(),
     debug: jest.fn(),

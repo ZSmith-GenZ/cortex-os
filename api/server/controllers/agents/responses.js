@@ -1,8 +1,8 @@
 const { nanoid } = require('nanoid');
 const { v4: uuidv4 } = require('uuid');
-const { logger } = require('@librechat/data-schemas');
-const { Callback, ToolEndHandler, formatAgentMessages } = require('@librechat/agents');
-const { EModelEndpoint, ResourceType, PermissionBits } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { Callback, ToolEndHandler, formatAgentMessages } = require('@cortex-os/agents');
+const { EModelEndpoint, ResourceType, PermissionBits } = require('@cortex-os/data-provider');
 const {
   createRun,
   buildToolSet,
@@ -29,7 +29,7 @@ const {
   sendResponsesErrorResponse,
   createResponsesEventHandlers,
   createAggregatorEventHandlers,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   createResponsesToolEndCallback,
   createToolEndCallback,
@@ -41,12 +41,12 @@ const { spendTokens, spendStructuredTokens } = require('~/models/spendTokens');
 const { getAgent, getAgents } = require('~/models/Agent');
 const db = require('~/models');
 
-/** @type {import('@librechat/api').AppConfig | null} */
+/** @type {import('@cortex-os/api').AppConfig | null} */
 let appConfig = null;
 
 /**
  * Set the app config for the controller
- * @param {import('@librechat/api').AppConfig} config
+ * @param {import('@cortex-os/api').AppConfig} config
  */
 function setAppConfig(config) {
   appConfig = config;
@@ -88,7 +88,7 @@ function createToolLoader(signal, definitionsOnly = true) {
 
 /**
  * Convert Open Responses input items to internal messages
- * @param {import('@librechat/api').InputItem[]} input
+ * @param {import('@cortex-os/api').InputItem[]} input
  * @returns {Array} Internal messages
  */
 function convertToInternalMessages(input) {
@@ -168,7 +168,7 @@ async function saveInputMessages(req, conversationId, inputMessages, agentId) {
  * @param {import('express').Request} req
  * @param {string} conversationId
  * @param {string} responseId
- * @param {import('@librechat/api').Response} response
+ * @param {import('@cortex-os/api').Response} response
  * @param {string} agentId
  * @returns {Promise<void>}
  */
@@ -406,9 +406,9 @@ const createResponse = async (req, res) => {
       const collectedUsage = [];
 
       // Artifact promises for processing tool outputs
-      /** @type {Promise<import('librechat-data-provider').TAttachment | null>[]} */
+      /** @type {Promise<import('@cortex-os/data-provider').TAttachment | null>[]} */
       const artifactPromises = [];
-      // Use Responses API-specific callback that emits librechat:attachment events
+      // Use Responses API-specific callback that emits cortex-os:attachment events
       const toolEndCallback = createResponsesToolEndCallback({
         req,
         res,
@@ -560,7 +560,7 @@ const createResponse = async (req, res) => {
       // Collect usage for balance tracking
       const collectedUsage = [];
 
-      /** @type {Promise<import('librechat-data-provider').TAttachment | null>[]} */
+      /** @type {Promise<import('@cortex-os/data-provider').TAttachment | null>[]} */
       const artifactPromises = [];
       const toolEndCallback = createToolEndCallback({ req, res, artifactPromises, streamId: null });
 
@@ -754,7 +754,7 @@ const listModels = async (req, res) => {
       id: agent.id,
       object: 'model',
       created: Math.floor(new Date(agent.createdAt).getTime() / 1000),
-      owned_by: agent.author ?? 'librechat',
+      owned_by: agent.author ?? 'cortex-os',
       // Additional metadata
       name: agent.name,
       description: agent.description,
@@ -780,7 +780,7 @@ const listModels = async (req, res) => {
  * Get Response - GET /v1/responses/:id
  *
  * Retrieves a stored response by its ID.
- * The response ID maps to a conversationId in LibreChat's storage.
+ * The response ID maps to a conversationId in Cortex OS's storage.
  *
  * @param {import('express').Request} req
  * @param {import('express').Response} res

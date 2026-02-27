@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { ErrorTypes, registerPage } from 'librechat-data-provider';
-import { OpenIDIcon, useToastContext } from '@librechat/client';
+import { ErrorTypes, registerPage } from '@cortex-os/data-provider';
+import { OpenIDIcon, useToastContext } from '@cortex-os/client';
 import { useOutletContext, useSearchParams, useLocation } from 'react-router-dom';
 import type { TLoginLayoutContext } from '~/common';
 import { getLoginError, persistRedirectToSession } from '~/utils';

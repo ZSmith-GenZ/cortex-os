@@ -1,12 +1,12 @@
-const { handleError } = require('@librechat/api');
-const { logger } = require('@librechat/data-schemas');
+const { handleError } = require('@cortex-os/api');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   EndpointURLs,
   EModelEndpoint,
   isAgentsEndpoint,
   parseCompactConvo,
   getDefaultParamsEndpoint,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const azureAssistants = require('~/server/services/Endpoints/azureAssistants');
 const assistants = require('~/server/services/Endpoints/assistants');
 const { getEndpointsConfig } = require('~/server/services/Config');

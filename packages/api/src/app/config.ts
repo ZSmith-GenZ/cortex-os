@@ -1,11 +1,11 @@
-import { logger } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
 import {
   EModelEndpoint,
   removeNullishValues,
   normalizeEndpointName,
-} from 'librechat-data-provider';
-import type { TCustomConfig, TEndpoint, TTransactionsConfig } from 'librechat-data-provider';
-import type { AppConfig } from '@librechat/data-schemas';
+} from '@cortex-os/data-provider';
+import type { TCustomConfig, TEndpoint, TTransactionsConfig } from '@cortex-os/data-provider';
+import type { AppConfig } from '@cortex-os/data-schemas';
 import { isEnabled } from '~/utils';
 
 /**

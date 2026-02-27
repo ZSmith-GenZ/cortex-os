@@ -1,6 +1,6 @@
 const express = require('express');
-const { isEnabled, GenerationJobManager } = require('@librechat/api');
-const { logger } = require('@librechat/data-schemas');
+const { isEnabled, GenerationJobManager } = require('@cortex-os/api');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   uaParser,
   checkBan,

@@ -1,4 +1,4 @@
-import { Tools, replaceSpecialVars } from 'librechat-data-provider';
+import { Tools, replaceSpecialVars } from '@cortex-os/data-provider';
 
 /** Builds the web search tool context with citation format instructions. */
 export function buildWebSearchContext(): string {

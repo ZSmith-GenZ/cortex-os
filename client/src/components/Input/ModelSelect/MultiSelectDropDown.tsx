@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Wrench, ArrowRight } from 'lucide-react';
-import { CheckMark, useOnClickOutside, useMultiSearch } from '@librechat/client';
+import { CheckMark, useOnClickOutside, useMultiSearch } from '@cortex-os/client';
 import {
   Listbox,
   ListboxButton,
@@ -9,7 +9,7 @@ import {
   ListboxOption,
   Transition,
 } from '@headlessui/react';
-import type { TPlugin } from 'librechat-data-provider';
+import type { TPlugin } from '@cortex-os/data-provider';
 import { cn } from '~/utils/';
 
 export type TMultiSelectDropDownProps = {

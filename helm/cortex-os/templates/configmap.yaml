@@ -1,0 +1,10 @@
+{{- if .Values.cortex-os.configYamlContent }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "cortex-os.fullname" $ }}-config
+data:
+  cortex-os.yaml: |
+{{ .Values.cortex-os.configYamlContent | toYaml | indent 4 }}
+
+{{- end }}

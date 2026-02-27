@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilCallback, useRecoilValue } from 'recoil';
-import { Spinner, useToastContext } from '@librechat/client';
-import { Constants, EModelEndpoint } from 'librechat-data-provider';
-import { useGetModelsQuery } from 'librechat-data-provider/react-query';
-import type { TPreset } from 'librechat-data-provider';
+import { Spinner, useToastContext } from '@cortex-os/client';
+import { Constants, EModelEndpoint } from '@cortex-os/data-provider';
+import { useGetModelsQuery } from '@cortex-os/data-provider/react-query';
+import type { TPreset } from '@cortex-os/data-provider';
 import {
   useNewConvo,
   useAppStartup,

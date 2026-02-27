@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { updateInterfacePermissions: updateInterfacePerms } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { updateInterfacePermissions: updateInterfacePerms } = require('@cortex-os/api');
 const { getRoleByName, updateAccessPermissions } = require('./Role');
 
 /**

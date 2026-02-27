@@ -4,7 +4,7 @@ const {
   SEPARATORS,
   parseTextParts,
   findLastSeparatorIndex,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const { getMessage } = require('~/models/Message');
 const { getLogStores } = require('~/cache');
 

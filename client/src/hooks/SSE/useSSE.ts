@@ -9,8 +9,8 @@ import {
   createPayload,
   LocalStorageKeys,
   removeNullishValues,
-} from 'librechat-data-provider';
-import type { TMessage, TPayload, TSubmission, EventSubmission } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TMessage, TPayload, TSubmission, EventSubmission } from '@cortex-os/data-provider';
 import type { EventHandlerParams } from './useEventHandlers';
 import type { TResData } from '~/common';
 import { useGetStartupConfig, useGetUserBalance } from '~/data-provider';

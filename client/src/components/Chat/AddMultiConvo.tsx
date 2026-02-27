@@ -1,7 +1,7 @@
 import { PlusCircle } from 'lucide-react';
-import { TooltipAnchor } from '@librechat/client';
-import { isAssistantsEndpoint } from 'librechat-data-provider';
-import type { TConversation } from 'librechat-data-provider';
+import { TooltipAnchor } from '@cortex-os/client';
+import { isAssistantsEndpoint } from '@cortex-os/data-provider';
+import type { TConversation } from '@cortex-os/data-provider';
 import { useChatContext, useAddedChatContext } from '~/Providers';
 import { mainTextareaId } from '~/common';
 import { useLocalize } from '~/hooks';

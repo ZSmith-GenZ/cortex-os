@@ -1,6 +1,6 @@
-import { Providers } from '@librechat/agents';
-import { isDocumentSupportedProvider } from 'librechat-data-provider';
-import type { IMongoFile } from '@librechat/data-schemas';
+import { Providers } from '@cortex-os/agents';
+import { isDocumentSupportedProvider } from '@cortex-os/data-provider';
+import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { ServerRequest, StrategyFunctions, AudioResult } from '~/types';
 import { getFileStream, getConfiguredFileSizeLimit } from './utils';
 import { validateAudio } from '~/files/validation';

@@ -8,8 +8,8 @@ import {
   isAgentsEndpoint,
   isEphemeralAgentId,
   isAssistantsEndpoint,
-} from 'librechat-data-provider';
-import type * as t from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type * as t from '@cortex-os/data-provider';
 import type { LocalizeFunction, IconsRecord } from '~/common';
 import { getTimestampedValue } from './timestamps';
 

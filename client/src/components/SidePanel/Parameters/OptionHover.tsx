@@ -1,5 +1,5 @@
 import React from 'react';
-import { HoverCardPortal, HoverCardContent } from '@librechat/client';
+import { HoverCardPortal, HoverCardContent } from '@cortex-os/client';
 import { TranslationKeys, useLocalize } from '~/hooks';
 import { ESide } from '~/common';
 

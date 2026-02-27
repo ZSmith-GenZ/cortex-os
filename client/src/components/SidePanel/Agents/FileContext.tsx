@@ -6,7 +6,7 @@ import {
   EToolResources,
   mergeFileConfig,
   getEndpointFileConfig,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import {
   HoverCard,
   DropdownPopup,
@@ -16,7 +16,7 @@ import {
   HoverCardPortal,
   HoverCardContent,
   HoverCardTrigger,
-} from '@librechat/client';
+} from '@cortex-os/client';
 import type { ExtendedFile } from '~/common';
 import { useFileHandling, useLocalize, useLazyEffect, useSharePointFileHandling } from '~/hooks';
 import { useGetFileConfig, useGetStartupConfig } from '~/data-provider';

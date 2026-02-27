@@ -1,11 +1,11 @@
-import { logger } from '@librechat/data-schemas';
-import { SystemRoles } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import { SystemRoles } from '@cortex-os/data-provider';
 import { requireAdmin } from './admin';
 import type { Response } from 'express';
 import type { ServerRequest } from '~/types/http';
 
-jest.mock('@librechat/data-schemas', () => ({
-  ...jest.requireActual('@librechat/data-schemas'),
+jest.mock('@cortex-os/data-schemas', () => ({
+  ...jest.requireActual('@cortex-os/data-schemas'),
   logger: {
     warn: jest.fn(),
     debug: jest.fn(),

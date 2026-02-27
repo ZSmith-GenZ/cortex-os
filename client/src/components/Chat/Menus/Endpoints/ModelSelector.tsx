@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { TooltipAnchor } from '@librechat/client';
-import { getConfigDefaults } from 'librechat-data-provider';
+import { TooltipAnchor } from '@cortex-os/client';
+import { getConfigDefaults } from '@cortex-os/data-provider';
 import type { ModelSelectorProps } from '~/common';
 import {
   renderModelSpecs,
@@ -19,7 +19,7 @@ function ModelSelectorContent() {
   const localize = useLocalize();
 
   const {
-    // LibreChat
+    // Cortex OS
     agentsMap,
     modelSpecs,
     mappedEndpoints,

@@ -1,12 +1,12 @@
-import { webSearchAuth } from '@librechat/data-schemas';
-import { SafeSearchTypes, AuthType } from 'librechat-data-provider';
+import { webSearchAuth } from '@cortex-os/data-schemas';
+import { SafeSearchTypes, AuthType } from '@cortex-os/data-provider';
 import type {
   ScraperProviders,
   TWebSearchConfig,
   SearchProviders,
   TCustomConfig,
   RerankerTypes,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import { loadWebSearchAuth, extractWebSearchEnvVars } from './web';
 
 // Mock the extractVariableName function

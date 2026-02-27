@@ -1,9 +1,9 @@
 const path = require('path');
 const { v4 } = require('uuid');
 const axios = require('axios');
-const { logger } = require('@librechat/data-schemas');
-const { getCodeBaseURL } = require('@librechat/agents');
-const { logAxiosError, getBasePath } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { getCodeBaseURL } = require('@cortex-os/agents');
+const { logAxiosError, getBasePath } = require('@cortex-os/api');
 const {
   Tools,
   megabyte,
@@ -16,7 +16,7 @@ const {
   EModelEndpoint,
   mergeFileConfig,
   getEndpointFileConfig,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const { filterFilesByAgentAccess } = require('~/server/services/Files/permissions');
 const { createFile, getFiles, updateFile, claimCodeFile } = require('~/models');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');

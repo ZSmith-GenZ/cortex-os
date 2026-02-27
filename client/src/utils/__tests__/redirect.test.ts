@@ -120,9 +120,9 @@ describe('buildLoginRedirectUrl', () => {
     expect(result).toBe('/login');
   });
 
-  it('returns plain /login for basename-prefixed /login (e.g. /librechat/login)', () => {
+  it('returns plain /login for basename-prefixed /login (e.g. /cortex-os/login)', () => {
     Object.defineProperty(window, 'location', {
-      value: { pathname: '/librechat/login', search: '?redirect_to=%2Fc%2Fabc', hash: '' },
+      value: { pathname: '/cortex-os/login', search: '?redirect_to=%2Fc%2Fabc', hash: '' },
       writable: true,
     });
     const result = buildLoginRedirectUrl();
@@ -130,7 +130,7 @@ describe('buildLoginRedirectUrl', () => {
   });
 
   it('returns plain /login for basename-prefixed /login sub-paths', () => {
-    const result = buildLoginRedirectUrl('/librechat/login/2fa', '', '');
+    const result = buildLoginRedirectUrl('/cortex-os/login/2fa', '', '');
     expect(result).toBe('/login');
   });
 

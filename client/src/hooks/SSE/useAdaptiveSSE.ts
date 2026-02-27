@@ -1,5 +1,5 @@
-import { isAssistantsEndpoint } from 'librechat-data-provider';
-import type { TSubmission } from 'librechat-data-provider';
+import { isAssistantsEndpoint } from '@cortex-os/data-provider';
+import type { TSubmission } from '@cortex-os/data-provider';
 import type { EventHandlerParams } from './useEventHandlers';
 import useResumableSSE from './useResumableSSE';
 import useSSE from './useSSE';

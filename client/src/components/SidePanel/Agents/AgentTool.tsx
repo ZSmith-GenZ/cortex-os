@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { useUpdateUserPluginsMutation } from 'librechat-data-provider/react-query';
+import { useUpdateUserPluginsMutation } from '@cortex-os/data-provider/react-query';
 import {
   OGDialog,
   TrashIcon,
@@ -8,8 +8,8 @@ import {
   useToastContext,
   OGDialogTrigger,
   OGDialogTemplate,
-} from '@librechat/client';
-import type { TPlugin } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { TPlugin } from '@cortex-os/data-provider';
 import type { AgentForm } from '~/common';
 import { useLocalize } from '~/hooks';
 import { cn } from '~/utils';

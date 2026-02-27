@@ -3,7 +3,7 @@ import {
   EModelEndpoint,
   ReasoningEffort,
   ReasoningSummary,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import { getOpenAIConfig } from './config';
 
 describe('getOpenAIConfig - Backward Compatibility', () => {
@@ -66,7 +66,7 @@ describe('getOpenAIConfig - Backward Compatibility', () => {
         },
         reverseProxyUrl: 'https://gateway.ai.cloudflare.com/v1/account-id/gateway-id/openrouter',
         headers: {
-          'x-librechat-thread-id': '{{LIBRECHAT_BODY_CONVERSATIONID}}',
+          'x-cortex-os-thread-id': '{{CORTEX_BODY_CONVERSATIONID}}',
           'x-test-key': '{{TESTING_USER_VAR}}',
         },
         proxy: '',
@@ -85,9 +85,9 @@ describe('getOpenAIConfig - Backward Compatibility', () => {
         configOptions: {
           baseURL: 'https://gateway.ai.cloudflare.com/v1/account-id/gateway-id/openrouter',
           defaultHeaders: {
-            'HTTP-Referer': 'https://librechat.ai',
-            'X-Title': 'LibreChat',
-            'x-librechat-thread-id': '{{LIBRECHAT_BODY_CONVERSATIONID}}',
+            'HTTP-Referer': 'https://cortexos.ai',
+            'X-Title': 'Cortex OS',
+            'x-cortex-os-thread-id': '{{CORTEX_BODY_CONVERSATIONID}}',
             'x-test-key': '{{TESTING_USER_VAR}}',
           },
         },
@@ -396,7 +396,7 @@ describe('getOpenAIConfig - Backward Compatibility', () => {
           'https://gateway.ai.cloudflare.com/v1/${CF_ACCOUNT_ID}/${CF_GATEWAY_ID}/workers-ai/v1',
         proxy: '',
         headers: {
-          'x-librechat-thread-id': '{{LIBRECHAT_BODY_CONVERSATIONID}}',
+          'x-cortex-os-thread-id': '{{CORTEX_BODY_CONVERSATIONID}}',
           'x-test-key': '{{TESTING_USER_VAR}}',
         },
         addParams: {
@@ -420,7 +420,7 @@ describe('getOpenAIConfig - Backward Compatibility', () => {
           baseURL:
             'https://gateway.ai.cloudflare.com/v1/${CF_ACCOUNT_ID}/${CF_GATEWAY_ID}/workers-ai/v1',
           defaultHeaders: {
-            'x-librechat-thread-id': '{{LIBRECHAT_BODY_CONVERSATIONID}}',
+            'x-cortex-os-thread-id': '{{CORTEX_BODY_CONVERSATIONID}}',
             'x-test-key': '{{TESTING_USER_VAR}}',
           },
         },

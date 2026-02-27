@@ -1,10 +1,10 @@
 const { z } = require('zod');
 const axios = require('axios');
 const { Ollama } = require('ollama');
-const { sleep } = require('@librechat/agents');
-const { logger } = require('@librechat/data-schemas');
-const { Constants } = require('librechat-data-provider');
-const { resolveHeaders, deriveBaseURL } = require('@librechat/api');
+const { sleep } = require('@cortex-os/agents');
+const { logger } = require('@cortex-os/data-schemas');
+const { Constants } = require('@cortex-os/data-provider');
+const { resolveHeaders, deriveBaseURL } = require('@cortex-os/api');
 
 const ollamaPayloadSchema = z.object({
   mirostat: z.number().optional(),

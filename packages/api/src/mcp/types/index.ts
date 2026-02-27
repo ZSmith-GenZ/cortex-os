@@ -7,7 +7,7 @@ import {
   StdioOptionsSchema,
   WebSocketOptionsSchema,
   StreamableHTTPOptionsSchema,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import type {
   EmbeddedResource,
   ListToolsResult,
@@ -16,9 +16,9 @@ import type {
   TextContent,
   Tool,
 } from '@modelcontextprotocol/sdk/types.js';
-import type { SearchResultData, UIResource, TPlugin } from 'librechat-data-provider';
-import type { TokenMethods, IUser } from '@librechat/data-schemas';
-import type { LCTool } from '@librechat/agents';
+import type { SearchResultData, UIResource, TPlugin } from '@cortex-os/data-provider';
+import type { TokenMethods, IUser } from '@cortex-os/data-schemas';
+import type { LCTool } from '@cortex-os/agents';
 import type { FlowStateManager } from '~/flow/manager';
 import type { RequestBody } from '~/types/http';
 import type * as o from '~/mcp/oauth/types';

@@ -1,4 +1,4 @@
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const { tool: toolFn, DynamicStructuredTool } = require('@langchain/core/tools');
 const {
   sleep,
@@ -8,7 +8,7 @@ const {
   createToolSearch,
   Constants: AgentConstants,
   createProgrammaticToolCallingTool,
-} = require('@librechat/agents');
+} = require('@cortex-os/agents');
 const {
   sendEvent,
   getToolkitKey,
@@ -20,7 +20,7 @@ const {
   buildWebSearchContext,
   buildImageToolContext,
   buildToolClassification,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   Time,
   Tools,
@@ -40,7 +40,7 @@ const {
   actionDomainSeparator,
   defaultAgentCapabilities,
   validateAndParseOpenAPISpec,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const {
   createActionTool,
   decryptMetadata,
@@ -406,7 +406,7 @@ async function processRequiredActions(client, requiredActions) {
  *   hasDeferredTools?: boolean;
  * }>} The agent tools and registry.
  */
-/** Native LibreChat tools that are not in the manifest */
+/** Native Cortex OS tools that are not in the manifest */
 const nativeTools = new Set([Tools.execute_code, Tools.file_search, Tools.web_search]);
 
 /** Checks if a tool name is a known built-in tool */
@@ -427,8 +427,8 @@ const isBuiltInTool = (toolName) =>
  * @param {Object} params.agent - The agent configuration
  * @param {string|null} [params.streamId] - Stream ID for resumable mode
  * @returns {Promise<{
- *   toolDefinitions?: import('@librechat/api').LCTool[];
- *   toolRegistry?: Map<string, import('@librechat/api').LCTool>;
+ *   toolDefinitions?: import('@cortex-os/api').LCTool[];
+ *   toolRegistry?: Map<string, import('@cortex-os/api').LCTool>;
  *   userMCPAuthMap?: Record<string, Record<string, string>>;
  *   hasDeferredTools?: boolean;
  * }>}
@@ -580,7 +580,7 @@ async function loadToolDefinitionsWrapper({ req, res, agent, streamId = null, to
       if (!isDomainAllowed) {
         logger.warn(
           `[Actions] Domain "${action.metadata.domain}" not in allowedDomains. ` +
-            `Add it to librechat.yaml actions.allowedDomains to enable this action.`,
+            `Add it to cortex-os.yaml actions.allowedDomains to enable this action.`,
         );
         continue;
       }
@@ -1293,7 +1293,7 @@ async function loadActionToolsForExecution({
     if (!isDomainAllowed) {
       logger.warn(
         `[Actions] Domain "${action.metadata.domain}" not in allowedDomains. ` +
-          `Add it to librechat.yaml actions.allowedDomains to enable this action.`,
+          `Add it to cortex-os.yaml actions.allowedDomains to enable this action.`,
       );
       continue;
     }

@@ -28,11 +28,11 @@ const mockGenerationJobManager = {
 const mockSaveMessage = jest.fn();
 const mockDecrementPendingRequest = jest.fn();
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: mockLogger,
 }));
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: jest.fn().mockReturnValue(false),
   GenerationJobManager: mockGenerationJobManager,
   checkAndIncrementPendingRequest: jest.fn().mockResolvedValue({ allowed: true }),

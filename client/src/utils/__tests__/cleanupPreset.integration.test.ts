@@ -1,4 +1,4 @@
-import { EModelEndpoint } from 'librechat-data-provider';
+import { EModelEndpoint } from '@cortex-os/data-provider';
 import cleanupPreset from '../cleanupPreset';
 
 /**

@@ -5,8 +5,8 @@ const {
   resolveHeaders,
   constructAzureURL,
   checkUserKeyExpiry,
-} = require('@librechat/api');
-const { ErrorTypes, EModelEndpoint, mapModelToAzureConfig } = require('librechat-data-provider');
+} = require('@cortex-os/api');
+const { ErrorTypes, EModelEndpoint, mapModelToAzureConfig } = require('@cortex-os/data-provider');
 const { getUserKeyValues, getUserKeyExpiry } = require('~/models');
 
 class Files {

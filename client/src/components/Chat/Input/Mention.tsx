@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { useCombobox } from '@librechat/client';
+import { useCombobox } from '@cortex-os/client';
 import { AutoSizer, List } from 'react-virtualized';
-import { EModelEndpoint } from 'librechat-data-provider';
-import type { TConversation } from 'librechat-data-provider';
+import { EModelEndpoint } from '@cortex-os/data-provider';
+import type { TConversation } from '@cortex-os/data-provider';
 import type { MentionOption, ConvoGenerator } from '~/common';
 import type { SetterOrUpdater } from 'recoil';
 import useSelectMention from '~/hooks/Input/useSelectMention';

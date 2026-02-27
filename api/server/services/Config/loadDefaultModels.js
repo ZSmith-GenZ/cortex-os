@@ -1,11 +1,11 @@
-const { logger } = require('@librechat/data-schemas');
-const { EModelEndpoint } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { EModelEndpoint } = require('@cortex-os/data-provider');
 const {
   getAnthropicModels,
   getBedrockModels,
   getOpenAIModels,
   getGoogleModels,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { getAppConfig } = require('./app');
 
 /**

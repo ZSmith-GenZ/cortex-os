@@ -47,7 +47,7 @@ jobs:
           output=$(npm run build:api 2>&1)
           echo "$output"
           if echo "$output" | grep -q "Circular depend"; then
-            echo "Error: Circular dependency detected in @librechat/api!"
+            echo "Error: Circular dependency detected in @cortex-os/api!"
             exit 1
           fi
 
@@ -72,11 +72,11 @@ jobs:
       - name: Run unit tests
         run: cd api && npm run test:ci
 
-      - name: Run librechat-data-provider unit tests
+      - name: Run cortex-os-data-provider unit tests
         run: cd packages/data-provider && npm run test:ci
 
-      - name: Run @librechat/data-schemas unit tests
+      - name: Run @cortex-os/data-schemas unit tests
         run: cd packages/data-schemas && npm run test:ci
 
-      - name: Run @librechat/api unit tests
+      - name: Run @cortex-os/api unit tests
         run: cd packages/api && npm run test:ci

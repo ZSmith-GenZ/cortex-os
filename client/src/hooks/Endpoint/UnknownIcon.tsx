@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { EModelEndpoint, KnownEndpoints } from 'librechat-data-provider';
-import { CustomMinimalIcon, XAIcon, MoonshotIcon } from '@librechat/client';
+import { EModelEndpoint, KnownEndpoints } from '@cortex-os/data-provider';
+import { CustomMinimalIcon, XAIcon, MoonshotIcon } from '@cortex-os/client';
 import { IconContext } from '~/common';
 import { cn } from '~/utils';
 

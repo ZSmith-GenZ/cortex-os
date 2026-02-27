@@ -1,5 +1,5 @@
-import { FileSources } from 'librechat-data-provider';
-import type { Agent, AgentAvatar, AgentModelParameters } from 'librechat-data-provider';
+import { FileSources } from '@cortex-os/data-provider';
+import type { Agent, AgentAvatar, AgentModelParameters } from '@cortex-os/data-provider';
 import type { RefreshS3UrlFn, UpdateAgentFn } from './avatars';
 import {
   MAX_AVATAR_REFRESH_AGENTS,
@@ -7,7 +7,7 @@ import {
   refreshListAvatars,
 } from './avatars';
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -15,7 +15,7 @@ jest.mock('@librechat/data-schemas', () => ({
   },
 }));
 
-import { logger } from '@librechat/data-schemas';
+import { logger } from '@cortex-os/data-schemas';
 
 describe('refreshListAvatars', () => {
   let mockRefreshS3Url: jest.MockedFunction<RefreshS3UrlFn>;

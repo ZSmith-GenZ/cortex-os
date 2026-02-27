@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { encrypt, decrypt } = require('@librechat/api');
+const { logger } = require('@cortex-os/data-schemas');
+const { encrypt, decrypt } = require('@cortex-os/api');
 const { findOnePluginAuth, updatePluginAuth, deletePluginAuth } = require('~/models');
 
 /**

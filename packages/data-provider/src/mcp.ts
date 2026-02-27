@@ -230,7 +230,7 @@ const omitServerManagedFields = <T extends z.ZodObject<z.ZodRawShape>>(schema: T
  *
  * SECURITY: Stdio transport is intentionally excluded from user input.
  * Stdio allows arbitrary command execution and should only be configured
- * by administrators via the YAML config file (librechat.yaml).
+ * by administrators via the YAML config file (cortex-os.yaml).
  * Only remote transports (SSE, HTTP, WebSocket) are allowed via the API.
  */
 export const MCPServerUserInputSchema = z.union([

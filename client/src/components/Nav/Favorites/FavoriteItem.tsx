@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import * as Menu from '@ariakit/react/menu';
 import { Ellipsis, PinOff } from 'lucide-react';
-import { DropdownPopup } from '@librechat/client';
-import { EModelEndpoint } from 'librechat-data-provider';
+import { DropdownPopup } from '@cortex-os/client';
+import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { FavoriteModel } from '~/store/favorites';
-import type t from 'librechat-data-provider';
+import type t from '@cortex-os/data-provider';
 import MinimalIcon from '~/components/Endpoints/MinimalIcon';
 import { useFavorites, useLocalize } from '~/hooks';
 import { renderAgentAvatar, cn } from '~/utils';

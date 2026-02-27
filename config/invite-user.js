@@ -1,7 +1,7 @@
 const path = require('path');
 const mongoose = require('mongoose');
-const { checkEmailConfig } = require('@librechat/api');
-const { User } = require('@librechat/data-schemas').createModels(mongoose);
+const { checkEmailConfig } = require('@cortex-os/api');
+const { User } = require('@cortex-os/data-schemas').createModels(mongoose);
 require('module-alias')({ base: path.resolve(__dirname, '..', 'api') });
 const { askQuestion, silentExit } = require('./helpers');
 const { createInvite } = require('~/models/inviteUser');

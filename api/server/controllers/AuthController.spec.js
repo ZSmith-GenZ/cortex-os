@@ -1,4 +1,4 @@
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: { error: jest.fn(), debug: jest.fn(), warn: jest.fn(), info: jest.fn() },
 }));
 jest.mock('~/server/services/GraphTokenService', () => ({
@@ -20,13 +20,13 @@ jest.mock('~/models', () => ({
   updateUser: jest.fn(),
   findUser: jest.fn(),
 }));
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: jest.fn(),
   findOpenIDUser: jest.fn(),
 }));
 
 const openIdClient = require('openid-client');
-const { isEnabled, findOpenIDUser } = require('@librechat/api');
+const { isEnabled, findOpenIDUser } = require('@cortex-os/api');
 const { graphTokenController, refreshController } = require('./AuthController');
 const { getGraphApiToken } = require('~/server/services/GraphTokenService');
 const { setOpenIDAuthTokens } = require('~/server/services/AuthService');

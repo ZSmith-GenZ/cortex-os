@@ -1,6 +1,6 @@
-import { logger } from '@librechat/data-schemas';
-import { FileSources } from 'librechat-data-provider';
-import type { Agent, AgentAvatar } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import { FileSources } from '@cortex-os/data-provider';
+import type { Agent, AgentAvatar } from '@cortex-os/data-provider';
 
 const MAX_AVATAR_REFRESH_AGENTS = 1000;
 const AVATAR_REFRESH_BATCH_SIZE = 20;

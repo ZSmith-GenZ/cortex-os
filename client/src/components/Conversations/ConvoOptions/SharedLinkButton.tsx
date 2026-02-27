@@ -12,8 +12,8 @@ import {
   OGDialogHeader,
   useToastContext,
   OGDialogContent,
-} from '@librechat/client';
-import type { TSharedLinkGetResponse } from 'librechat-data-provider';
+} from '@cortex-os/client';
+import type { TSharedLinkGetResponse } from '@cortex-os/data-provider';
 import {
   useCreateSharedLinkMutation,
   useUpdateSharedLinkMutation,

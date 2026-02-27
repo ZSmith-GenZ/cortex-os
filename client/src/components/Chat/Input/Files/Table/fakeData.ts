@@ -1,5 +1,5 @@
-import { FileSources } from 'librechat-data-provider';
-import type { TFile } from 'librechat-data-provider';
+import { FileSources } from '@cortex-os/data-provider';
+import type { TFile } from '@cortex-os/data-provider';
 
 export const files: TFile[] = [
   {

@@ -1,6 +1,6 @@
-import { QueryKeys } from 'librechat-data-provider';
+import { QueryKeys } from '@cortex-os/data-provider';
 import { useQueryClient } from '@tanstack/react-query';
-import { TooltipAnchor, Button, NewChatIcon } from '@librechat/client';
+import { TooltipAnchor, Button, NewChatIcon } from '@cortex-os/client';
 import { useChatContext } from '~/Providers';
 import { clearMessagesCache } from '~/utils';
 import { useLocalize } from '~/hooks';

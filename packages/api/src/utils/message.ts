@@ -1,5 +1,5 @@
-import { Constants } from 'librechat-data-provider';
-import type { TFile, TMessage } from 'librechat-data-provider';
+import { Constants } from '@cortex-os/data-provider';
+import type { TFile, TMessage } from '@cortex-os/data-provider';
 
 /** Minimal shape for request file entries (from `req.body.files`) */
 type RequestFile = { file_id?: string };

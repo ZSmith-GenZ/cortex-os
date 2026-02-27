@@ -1,5 +1,5 @@
 import dedent from 'dedent';
-import { shadcnComponents } from 'librechat-data-provider';
+import { shadcnComponents } from '@cortex-os/data-provider';
 import type {
   SandpackProviderProps,
   SandpackPredefinedTemplate,

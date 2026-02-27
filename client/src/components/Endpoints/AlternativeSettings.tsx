@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import { SettingsViews } from 'librechat-data-provider';
+import { SettingsViews } from '@cortex-os/data-provider';
 import type { TSettingsProps } from '~/common';
 import { Advanced } from './Settings';
 import { cn } from '~/utils';

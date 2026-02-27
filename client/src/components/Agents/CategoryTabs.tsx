@@ -1,6 +1,6 @@
 import React from 'react';
-import { useMediaQuery } from '@librechat/client';
-import type t from 'librechat-data-provider';
+import { useMediaQuery } from '@cortex-os/client';
+import type t from '@cortex-os/data-provider';
 import { useLocalize, TranslationKeys } from '~/hooks';
 import { SmartLoader } from './SmartLoader';
 import { cn } from '~/utils';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TStartupConfig } from 'librechat-data-provider';
+import { TStartupConfig } from '@cortex-os/data-provider';
 
 export interface Endpoint {
   value: string;

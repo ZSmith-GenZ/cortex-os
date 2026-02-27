@@ -1,7 +1,7 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const { logger } = require('@librechat/data-schemas');
-const { CacheKeys } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { CacheKeys } = require('@cortex-os/data-provider');
 const {
   getBasePath,
   getAccessToken,
@@ -11,7 +11,7 @@ const {
   setOAuthCsrfCookie,
   validateOAuthSession,
   OAUTH_SESSION_COOKIE,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { findToken, updateToken, createToken } = require('~/models');
 const { requireJwtAuth } = require('~/server/middleware');
 const { getFlowStateManager } = require('~/config');

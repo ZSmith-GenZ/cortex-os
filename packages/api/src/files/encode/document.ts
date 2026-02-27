@@ -1,11 +1,11 @@
-import { Providers } from '@librechat/agents';
+import { Providers } from '@cortex-os/agents';
 import {
   isOpenAILikeProvider,
   isBedrockDocumentType,
   bedrockDocumentFormats,
   isDocumentSupportedProvider,
-} from 'librechat-data-provider';
-import type { IMongoFile } from '@librechat/data-schemas';
+} from '@cortex-os/data-provider';
+import type { IMongoFile } from '@cortex-os/data-schemas';
 import type {
   AnthropicDocumentBlock,
   StrategyFunctions,

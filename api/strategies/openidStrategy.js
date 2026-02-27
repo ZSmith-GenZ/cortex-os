@@ -5,9 +5,9 @@ const passport = require('passport');
 const client = require('openid-client');
 const jwtDecode = require('jsonwebtoken/decode');
 const { HttpsProxyAgent } = require('https-proxy-agent');
-const { hashToken, logger } = require('@librechat/data-schemas');
+const { hashToken, logger } = require('@cortex-os/data-schemas');
 const { Strategy: OpenIDStrategy } = require('openid-client/passport');
-const { CacheKeys, ErrorTypes, SystemRoles } = require('librechat-data-provider');
+const { CacheKeys, ErrorTypes, SystemRoles } = require('@cortex-os/data-provider');
 const {
   isEnabled,
   logHeaders,
@@ -15,7 +15,7 @@ const {
   findOpenIDUser,
   getBalanceConfig,
   isEmailDomainAllowed,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { findUser, createUser, updateUser } = require('~/models');
 const { getAppConfig } = require('~/server/services/Config');

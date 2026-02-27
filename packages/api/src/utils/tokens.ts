@@ -1,5 +1,5 @@
 import z from 'zod';
-import { EModelEndpoint } from 'librechat-data-provider';
+import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { EndpointTokenConfig, TokenConfig } from '~/types';
 
 /**

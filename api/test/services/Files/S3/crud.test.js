@@ -1,7 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const { Readable } = require('stream');
-const { FileSources } = require('librechat-data-provider');
+const { FileSources } = require('@cortex-os/data-provider');
 const {
   PutObjectCommand,
   GetObjectCommand,
@@ -16,13 +16,13 @@ jest.mock('node-fetch');
 jest.mock('@aws-sdk/s3-request-presigner');
 jest.mock('@aws-sdk/client-s3');
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   initializeS3: jest.fn(),
   deleteRagFile: jest.fn().mockResolvedValue(undefined),
   isEnabled: jest.fn((val) => val === 'true'),
 }));
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -31,8 +31,8 @@ jest.mock('@librechat/data-schemas', () => ({
   },
 }));
 
-const { initializeS3, deleteRagFile } = require('@librechat/api');
-const { logger } = require('@librechat/data-schemas');
+const { initializeS3, deleteRagFile } = require('@cortex-os/api');
+const { logger } = require('@cortex-os/data-schemas');
 
 // Set env vars before requiring crud so module-level constants pick them up
 process.env.AWS_BUCKET_NAME = 'test-bucket';

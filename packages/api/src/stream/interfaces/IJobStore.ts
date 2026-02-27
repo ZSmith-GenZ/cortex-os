@@ -1,5 +1,5 @@
-import type { Agents } from 'librechat-data-provider';
-import type { StandardGraph } from '@librechat/agents';
+import type { Agents } from '@cortex-os/data-provider';
+import type { StandardGraph } from '@cortex-os/agents';
 
 /**
  * Job status enum

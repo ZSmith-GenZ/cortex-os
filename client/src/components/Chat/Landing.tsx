@@ -1,8 +1,8 @@
 import { useMemo, useCallback, useState, useEffect, useRef } from 'react';
 import { easings } from '@react-spring/web';
-import { EModelEndpoint, SettingsTabValues } from 'librechat-data-provider';
-import { useUserKeyQuery } from 'librechat-data-provider/react-query';
-import { BirthdayIcon, TooltipAnchor, SplitText } from '@librechat/client';
+import { EModelEndpoint, SettingsTabValues } from '@cortex-os/data-provider';
+import { useUserKeyQuery } from '@cortex-os/data-provider/react-query';
+import { BirthdayIcon, TooltipAnchor, SplitText } from '@cortex-os/client';
 import { useChatContext, useAgentsMapContext, useAssistantsMapContext } from '~/Providers';
 import { useGetEndpointsQuery, useGetStartupConfig, useGetAssistantProfile } from '~/data-provider';
 import ConvoIcon from '~/components/Endpoints/ConvoIcon';

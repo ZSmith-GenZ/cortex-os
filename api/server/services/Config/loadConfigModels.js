@@ -1,9 +1,9 @@
-const { isUserProvided, fetchModels } = require('@librechat/api');
+const { isUserProvided, fetchModels } = require('@cortex-os/api');
 const {
   EModelEndpoint,
   extractEnvVariable,
   normalizeEndpointName,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const { getAppConfig } = require('./app');
 
 /**

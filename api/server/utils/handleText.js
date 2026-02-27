@@ -7,8 +7,8 @@ const {
   defaultRetrievalModels,
   defaultAssistantsVersion,
   defaultAgentCapabilities,
-} = require('librechat-data-provider');
-const { sendEvent, isUserProvided } = require('@librechat/api');
+} = require('@cortex-os/data-provider');
+const { sendEvent, isUserProvided } = require('@cortex-os/api');
 
 const addSpaceIfNeeded = (text) => (text.length > 0 && !text.endsWith(' ') ? text + ' ' : text);
 

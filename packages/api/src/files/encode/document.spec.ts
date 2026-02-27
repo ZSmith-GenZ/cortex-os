@@ -1,6 +1,6 @@
-import { Providers } from '@librechat/agents';
-import { mbToBytes } from 'librechat-data-provider';
-import type { AppConfig, IMongoFile } from '@librechat/data-schemas';
+import { Providers } from '@cortex-os/agents';
+import { mbToBytes } from '@cortex-os/data-provider';
+import type { AppConfig, IMongoFile } from '@cortex-os/data-schemas';
 import type { ServerRequest } from '~/types';
 import { encodeAndFormatDocuments } from './document';
 

@@ -3,7 +3,7 @@ import {
   PrincipalType,
   PermissionBits,
   AccessRoleIds,
-} from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
 import type { Types, Model } from 'mongoose';
 
 export interface Principal {

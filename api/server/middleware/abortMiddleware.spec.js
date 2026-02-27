@@ -14,7 +14,7 @@ jest.mock('~/models/spendTokens', () => ({
   spendStructuredTokens: (...args) => mockSpendStructuredTokens(...args),
 }));
 
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     debug: jest.fn(),
     error: jest.fn(),
@@ -23,7 +23,7 @@ jest.mock('@librechat/data-schemas', () => ({
   },
 }));
 
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   countTokens: jest.fn().mockResolvedValue(100),
   isEnabled: jest.fn().mockReturnValue(false),
   sendEvent: jest.fn(),
@@ -33,7 +33,7 @@ jest.mock('@librechat/api', () => ({
   sanitizeMessageForTransmit: jest.fn((msg) => msg),
 }));
 
-jest.mock('librechat-data-provider', () => ({
+jest.mock('@cortex-os/data-provider', () => ({
   isAssistantsEndpoint: jest.fn().mockReturnValue(false),
   ErrorTypes: { INVALID_REQUEST: 'INVALID_REQUEST', NO_SYSTEM_MESSAGES: 'NO_SYSTEM_MESSAGES' },
 }));

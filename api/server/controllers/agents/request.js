@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { Constants, ViolationTypes } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { Constants, ViolationTypes } = require('@cortex-os/data-provider');
 const {
   sendEvent,
   getViolationInfo,
@@ -8,7 +8,7 @@ const {
   decrementPendingRequest,
   sanitizeMessageForTransmit,
   checkAndIncrementPendingRequest,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const { disposeClient, clientRegistry, requestDataMap } = require('~/server/cleanup');
 const { handleAbortError } = require('~/server/middleware');
 const { logViolation } = require('~/cache');

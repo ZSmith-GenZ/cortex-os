@@ -1,5 +1,5 @@
 const { ToolMessage } = require('@langchain/core/messages');
-const { EModelEndpoint, ContentTypes } = require('librechat-data-provider');
+const { EModelEndpoint, ContentTypes } = require('@cortex-os/data-provider');
 const { HumanMessage, AIMessage, SystemMessage } = require('@langchain/core/messages');
 
 /**

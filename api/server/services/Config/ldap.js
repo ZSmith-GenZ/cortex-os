@@ -1,4 +1,4 @@
-const { isEnabled } = require('@librechat/api');
+const { isEnabled } = require('@cortex-os/api');
 
 /** @returns {TStartupConfig['ldap'] | undefined} */
 const getLdapConfig = () => {

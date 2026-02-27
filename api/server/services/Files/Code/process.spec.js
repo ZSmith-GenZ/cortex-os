@@ -1,9 +1,9 @@
 // Configurable file size limit for tests - use a getter so it can be changed per test
 const fileSizeLimitConfig = { value: 20 * 1024 * 1024 }; // Default 20MB
 
-// Mock librechat-data-provider with configurable file size limit
-jest.mock('librechat-data-provider', () => {
-  const actual = jest.requireActual('librechat-data-provider');
+// Mock @cortex-os/data-provider with configurable file size limit
+jest.mock('@cortex-os/data-provider', () => {
+  const actual = jest.requireActual('@cortex-os/data-provider');
   return {
     ...actual,
     mergeFileConfig: jest.fn((config) => {
@@ -29,7 +29,7 @@ jest.mock('librechat-data-provider', () => {
   };
 });
 
-const { FileContext } = require('librechat-data-provider');
+const { FileContext } = require('@cortex-os/data-provider');
 
 // Mock uuid
 jest.mock('uuid', () => ({
@@ -41,7 +41,7 @@ jest.mock('axios');
 const axios = require('axios');
 
 // Mock logger
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: {
     warn: jest.fn(),
     debug: jest.fn(),
@@ -50,12 +50,12 @@ jest.mock('@librechat/data-schemas', () => ({
 }));
 
 // Mock getCodeBaseURL
-jest.mock('@librechat/agents', () => ({
+jest.mock('@cortex-os/agents', () => ({
   getCodeBaseURL: jest.fn(() => 'https://code-api.example.com'),
 }));
 
 // Mock logAxiosError and getBasePath
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   logAxiosError: jest.fn(),
   getBasePath: jest.fn(() => ''),
 }));
@@ -93,7 +93,7 @@ const { createFile, getFiles } = require('~/models');
 const { getStrategyFunctions } = require('~/server/services/Files/strategies');
 const { convertImage } = require('~/server/services/Files/images/convert');
 const { determineFileType } = require('~/server/utils');
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 
 // Import after mocks
 const { processCodeOutput } = require('./process');

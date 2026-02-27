@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useToastContext } from '@librechat/client';
-import { EToolResources } from 'librechat-data-provider';
+import { useToastContext } from '@cortex-os/client';
+import { EToolResources } from '@cortex-os/data-provider';
 import type { ExtendedFile } from '~/common';
 import { useDeleteFilesMutation } from '~/data-provider';
 import { useFileDeletion } from '~/hooks/Files';

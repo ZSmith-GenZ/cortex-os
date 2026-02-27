@@ -1,5 +1,5 @@
-const { logger } = require('@librechat/data-schemas');
-const { CacheKeys } = require('librechat-data-provider');
+const { logger } = require('@cortex-os/data-schemas');
+const { CacheKeys } = require('@cortex-os/data-provider');
 const { loadDefaultModels, loadConfigModels } = require('~/server/services/Config');
 const { getLogStores } = require('~/cache');
 

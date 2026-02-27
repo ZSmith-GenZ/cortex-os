@@ -1,5 +1,5 @@
-import type { TPreset, TPlugin } from 'librechat-data-provider';
-import { EModelEndpoint } from 'librechat-data-provider';
+import type { TPreset, TPlugin } from '@cortex-os/data-provider';
+import { EModelEndpoint } from '@cortex-os/data-provider';
 
 type TEndpoints = Array<string | EModelEndpoint>;
 

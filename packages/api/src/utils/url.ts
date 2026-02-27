@@ -1,5 +1,5 @@
-import { logger } from '@librechat/data-schemas';
-import { CohereConstants } from 'librechat-data-provider';
+import { logger } from '@cortex-os/data-schemas';
+import { CohereConstants } from '@cortex-os/data-provider';
 
 /**
  * Extracts a valid OpenAI baseURL from a given string, matching "url/v1," followed by an optional suffix.

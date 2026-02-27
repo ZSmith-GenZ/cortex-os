@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { VisuallyHidden } from '@ariakit/react';
 import { CheckCircle2, EarthIcon } from 'lucide-react';
-import { isAgentsEndpoint, isAssistantsEndpoint } from 'librechat-data-provider';
-import type { TModelSpec } from 'librechat-data-provider';
+import { isAgentsEndpoint, isAssistantsEndpoint } from '@cortex-os/data-provider';
+import type { TModelSpec } from '@cortex-os/data-provider';
 import type { Endpoint } from '~/common';
 import { useModelSelectorContext } from '../ModelSelectorContext';
 import { CustomMenuItem as MenuItem } from '../CustomMenu';

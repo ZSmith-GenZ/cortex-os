@@ -1,4 +1,4 @@
-import { PermissionBits } from 'librechat-data-provider';
+import { PermissionBits } from '@cortex-os/data-provider';
 
 /**
  * Common role combinations

@@ -1,5 +1,5 @@
-import { AuthType, EToolResources } from 'librechat-data-provider';
-import type { TPlugin } from 'librechat-data-provider';
+import { AuthType, EToolResources } from '@cortex-os/data-provider';
+import type { TPlugin } from '@cortex-os/data-provider';
 
 /**
  * Filters out duplicate plugins from the list of plugins.

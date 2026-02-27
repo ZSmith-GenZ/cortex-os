@@ -6,7 +6,7 @@ import AgentGrid from '../AgentGrid';
 import AgentCard from '../AgentCard';
 import SearchBar from '../SearchBar';
 import ErrorDisplay from '../ErrorDisplay';
-import * as t from 'librechat-data-provider';
+import * as t from '@cortex-os/data-provider';
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -112,9 +112,9 @@ jest.mock('~/Providers', () => ({
   })),
 }));
 
-// Mock @librechat/client toast context
-jest.mock('@librechat/client', () => ({
-  ...jest.requireActual('@librechat/client'),
+// Mock @cortex-os/client toast context
+jest.mock('@cortex-os/client', () => ({
+  ...jest.requireActual('@cortex-os/client'),
   useToastContext: jest.fn(() => ({
     showToast: jest.fn(),
   })),

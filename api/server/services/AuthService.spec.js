@@ -1,14 +1,14 @@
-jest.mock('@librechat/data-schemas', () => ({
+jest.mock('@cortex-os/data-schemas', () => ({
   logger: { info: jest.fn(), warn: jest.fn(), debug: jest.fn(), error: jest.fn() },
   DEFAULT_SESSION_EXPIRY: 900000,
   DEFAULT_REFRESH_TOKEN_EXPIRY: 604800000,
 }));
-jest.mock('librechat-data-provider', () => ({
+jest.mock('@cortex-os/data-provider', () => ({
   ErrorTypes: {},
   SystemRoles: { USER: 'USER', ADMIN: 'ADMIN' },
   errorsToString: jest.fn(),
 }));
-jest.mock('@librechat/api', () => ({
+jest.mock('@cortex-os/api', () => ({
   isEnabled: jest.fn((val) => val === 'true' || val === true),
   checkEmailConfig: jest.fn(),
   isEmailDomainAllowed: jest.fn(),
@@ -35,7 +35,7 @@ jest.mock('~/strategies/validators', () => ({ registerSchema: { parse: jest.fn()
 jest.mock('~/server/services/Config', () => ({ getAppConfig: jest.fn() }));
 jest.mock('~/server/utils', () => ({ sendEmail: jest.fn() }));
 
-const { shouldUseSecureCookie } = require('@librechat/api');
+const { shouldUseSecureCookie } = require('@cortex-os/api');
 const { setOpenIDAuthTokens } = require('./AuthService');
 
 /** Helper to build a mock Express response */

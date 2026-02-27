@@ -1,0 +1,16 @@
+{{- if .Values.cortex-os.imageVolume.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "cortex-os.fullname" $ }}-images
+spec:
+  accessModes:
+    - {{ .Values.cortex-os.imageVolume.accessModes }}
+{{- if .Values.cortex-os.imageVolume.storageClassName }}
+  storageClassName: {{ .Values.cortex-os.imageVolume.storageClassName }}
+{{- end }}          
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: {{ .Values.cortex-os.imageVolume.size }}
+{{- end }}

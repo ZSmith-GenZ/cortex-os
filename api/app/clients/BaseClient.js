@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const fetch = require('node-fetch');
-const { logger } = require('@librechat/data-schemas');
+const { logger } = require('@cortex-os/data-schemas');
 const {
   countTokens,
   getBalanceConfig,
@@ -9,7 +9,7 @@ const {
   encodeAndFormatAudios,
   encodeAndFormatVideos,
   encodeAndFormatDocuments,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   Constants,
   ErrorTypes,
@@ -22,7 +22,7 @@ const {
   isEphemeralAgentId,
   supportsBalanceCheck,
   isBedrockDocumentType,
-} = require('librechat-data-provider');
+} = require('@cortex-os/data-provider');
 const {
   updateMessage,
   getMessages,
@@ -78,7 +78,7 @@ class BaseClient {
     this.fetchedConvo;
     /** @type {TMessage[]} */
     this.currentMessages = [];
-    /** @type {import('librechat-data-provider').VisionModes | undefined} */
+    /** @type {import('@cortex-os/data-provider').VisionModes | undefined} */
     this.visionMode;
   }
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Clipboard, CheckMark } from '@librechat/client';
-import type { TMessage, TAttachment, SearchResultData } from 'librechat-data-provider';
+import { Clipboard, CheckMark } from '@cortex-os/client';
+import type { TMessage, TAttachment, SearchResultData } from '@cortex-os/data-provider';
 import { useLocalize, useCopyToClipboard } from '~/hooks';
 
 type THoverButtons = {

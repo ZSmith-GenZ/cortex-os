@@ -1,10 +1,10 @@
-const { FileSources } = require('librechat-data-provider');
+const { FileSources } = require('@cortex-os/data-provider');
 const {
   parseDocument,
   uploadMistralOCR,
   uploadAzureMistralOCR,
   uploadGoogleVertexMistralOCR,
-} = require('@librechat/api');
+} = require('@cortex-os/api');
 const {
   getFirebaseURL,
   prepareImageURL,

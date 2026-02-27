@@ -8,8 +8,8 @@ import {
   getEndpointField,
   isAssistantsEndpoint,
   getEndpointFileConfig,
-} from 'librechat-data-provider';
-import type { TConversation } from 'librechat-data-provider';
+} from '@cortex-os/data-provider';
+import type { TConversation } from '@cortex-os/data-provider';
 import { useGetFileConfig, useGetEndpointsQuery, useGetAgentByIdQuery } from '~/data-provider';
 import { useAgentsMapContext } from '~/Providers';
 import AttachFileMenu from './AttachFileMenu';
