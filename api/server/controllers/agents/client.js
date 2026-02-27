@@ -317,6 +317,12 @@ class AgentClient extends BaseClient {
       sharedRunContextParts.push(memoryContext);
     }
 
+    /** Assistant personality (user-defined persona from Cortex OS settings) */
+    const personality = this.options.req?.user?.assistantProfile?.personality;
+    if (personality) {
+      sharedRunContextParts.push(`# Your personality and behavior:\n${personality}`);
+    }
+
     const sharedRunContext = sharedRunContextParts.join('\n\n');
 
     /** @type {Record<string, number> | undefined} */

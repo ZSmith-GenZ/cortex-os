@@ -144,7 +144,7 @@ export default function FavoritesList({
   const listContainerRef = useRef<HTMLDivElement>(null);
 
   const handleAgentMarketplace = useCallback(() => {
-    navigate('/agents');
+    navigate('/specialists');
     if (isSmallScreen && toggleNav) {
       toggleNav();
     }

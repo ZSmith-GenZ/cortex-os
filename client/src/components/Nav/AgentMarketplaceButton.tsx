@@ -18,7 +18,7 @@ export default function AgentMarketplaceButton({
   const showAgentMarketplace = useShowMarketplace();
 
   const handleAgentMarketplace = useCallback(() => {
-    navigate('/agents');
+    navigate('/specialists');
     if (isSmallScreen) {
       toggleNav();
     }

@@ -83,7 +83,7 @@ const AgentMarketplace: React.FC<AgentMarketplaceProps> = ({ className = '' }) =
   useEffect(() => {
     if (
       !category &&
-      window.location.pathname === '/agents' &&
+      (window.location.pathname === '/specialists' || window.location.pathname === '/agents') &&
       categoriesQuery.data &&
       displayCategory === 'all'
     ) {
@@ -143,9 +143,9 @@ const AgentMarketplace: React.FC<AgentMarketplaceProps> = ({ className = '' }) =
     const currentSearchParams = searchParams.toString();
     const searchParamsStr = currentSearchParams ? `?${currentSearchParams}` : '';
     if (tabValue === 'promoted') {
-      navigate(`/agents${searchParamsStr}`);
+      navigate(`/specialists${searchParamsStr}`);
     } else {
-      navigate(`/agents/${tabValue}${searchParamsStr}`);
+      navigate(`/specialists/${tabValue}${searchParamsStr}`);
     }
 
     // Complete transition after 300ms
@@ -185,10 +185,10 @@ const AgentMarketplace: React.FC<AgentMarketplaceProps> = ({ className = '' }) =
 
     // Always preserve current category when searching or clearing search
     if (currentCategory === 'promoted') {
-      navigate(`/agents${newParams.toString() ? `?${newParams.toString()}` : ''}`);
+      navigate(`/specialists${newParams.toString() ? `?${newParams.toString()}` : ''}`);
     } else {
       navigate(
-        `/agents/${currentCategory}${newParams.toString() ? `?${newParams.toString()}` : ''}`,
+        `/specialists/${currentCategory}${newParams.toString() ? `?${newParams.toString()}` : ''}`,
       );
     }
   };

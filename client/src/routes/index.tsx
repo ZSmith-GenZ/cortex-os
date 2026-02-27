@@ -112,7 +112,7 @@ export const router = createBrowserRouter(
               element: <Search />,
             },
             {
-              path: 'agents',
+              path: 'specialists',
               element: (
                 <MarketplaceProvider>
                   <AgentMarketplace />
@@ -120,12 +120,20 @@ export const router = createBrowserRouter(
               ),
             },
             {
-              path: 'agents/:category',
+              path: 'specialists/:category',
               element: (
                 <MarketplaceProvider>
                   <AgentMarketplace />
                 </MarketplaceProvider>
               ),
+            },
+            {
+              path: 'agents',
+              element: <Navigate to="/specialists" replace={true} />,
+            },
+            {
+              path: 'agents/:category',
+              element: <Navigate to="/specialists" replace={true} />,
             },
           ],
         },
