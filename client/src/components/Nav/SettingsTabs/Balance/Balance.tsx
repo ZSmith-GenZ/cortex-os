@@ -3,6 +3,7 @@ import { useGetStartupConfig, useGetUserBalance } from '~/data-provider';
 import { useAuthContext, useLocalize } from '~/hooks';
 import TokenCreditsItem from './TokenCreditsItem';
 import AutoRefillSettings from './AutoRefillSettings';
+import SubscriptionTier from './SubscriptionTier';
 
 function Balance() {
   const localize = useLocalize();
@@ -33,6 +34,11 @@ function Balance() {
 
   return (
     <div className="flex flex-col gap-4 p-4 text-sm text-text-primary">
+      {/* Subscription tier display */}
+      <SubscriptionTier />
+
+      <hr className="border-border-light" />
+
       {/* Token credits display */}
       <TokenCreditsItem tokenCredits={tokenCredits} />
 

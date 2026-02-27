@@ -51,7 +51,7 @@ export async function initializeAnthropic({
 
     /** Memory agent uses a dedicated server-side key when ANTHROPIC_API_KEY is user_provided */
     const memoryAgentKey = process.env.MEMORY_AGENT_API_KEY;
-    const isMemoryAgent = (req as Record<string, unknown>)._isMemoryAgent === true;
+    const isMemoryAgent = (req as unknown as Record<string, unknown>)._isMemoryAgent === true;
 
     let anthropicApiKey: string | null | undefined;
     if (isMemoryAgent && isUserProvided && memoryAgentKey) {

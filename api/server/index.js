@@ -83,7 +83,13 @@ const startServer = async () => {
 
   /* Middleware */
   app.use(noIndex);
-  app.use(express.json({ limit: '3mb' }));
+  app.use((req, res, next) => {
+    // Skip JSON parsing for Stripe webhooks — they need the raw body for signature verification
+    if (req.originalUrl === '/api/webhooks/stripe') {
+      return next();
+    }
+    express.json({ limit: '3mb' })(req, res, next);
+  });
   app.use(express.urlencoded({ extended: true, limit: '3mb' }));
   app.use(handleJsonParseError);
 
@@ -162,6 +168,8 @@ const startServer = async () => {
 
   app.use('/api/tags', routes.tags);
   app.use('/api/mcp', routes.mcp);
+  app.use('/api/subscription', routes.subscription);
+  app.use('/api/webhooks', routes.webhooks);
 
   app.use(ErrorController);
 
