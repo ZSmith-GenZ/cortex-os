@@ -40,8 +40,7 @@ RUN \
     npm config set fetch-retry-mintimeout 15000 ; \
     npm ci --no-audit ; \
     # Ensure platform-specific native binaries are available (lockfile may be from a different OS)
-    npm install --no-save @rollup/rollup-linux-x64-musl || true ; \
-    npm install --no-save @img/sharp-linuxmusl-x64 || true
+    npm install --no-save @rollup/rollup-linux-x64-musl @img/sharp-linuxmusl-x64 || true
 
 COPY --chown=node:node . .
 
