@@ -39,8 +39,8 @@ RUN \
     npm config set fetch-retries 5 ; \
     npm config set fetch-retry-mintimeout 15000 ; \
     npm ci --no-audit ; \
-    # Ensure platform-specific rollup binary is available (lockfile may be from a different OS)
-    npm rebuild rollup || true
+    # Ensure platform-specific native binaries are available (lockfile may be from a different OS)
+    npm install --no-save @rollup/rollup-linux-x64-musl || true
 
 COPY --chown=node:node . .
 
