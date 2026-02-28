@@ -24,7 +24,7 @@ export default function CodeForm({
               {localize('com_agents_code_interpreter_title')}
             </span>
             <span className="text-xs text-text-secondary">
-              {localize('com_agents_by_cortex-os')}
+              {localize('com_agents_by_librechat')}
             </span>
           </div>
         </div>
