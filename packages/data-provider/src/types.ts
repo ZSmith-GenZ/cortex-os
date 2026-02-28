@@ -206,6 +206,7 @@ export type TUser = {
   personalization?: {
     memories?: boolean;
   };
+  onboardingComplete?: boolean;
   createdAt: string;
   updatedAt: string;
 };

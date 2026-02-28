@@ -169,6 +169,11 @@ const userSchema = new Schema<IUser>(
         avatar: null,
       },
     },
+    /** Whether the user has completed the onboarding wizard */
+    onboardingComplete: {
+      type: Boolean,
+      default: false,
+    },
     /** Field for external source identification (for consistency with TPrincipal schema) */
     idOnTheSource: {
       type: String,

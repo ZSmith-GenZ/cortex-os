@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useMediaQuery } from '@cortex-os/client';
 import type { ContextType } from '~/common';
@@ -17,6 +17,8 @@ import {
   FileMapContext,
 } from '~/Providers';
 import { useUserTermsQuery, useGetStartupConfig } from '~/data-provider';
+import { request } from '@cortex-os/data-provider';
+import OnboardingWizard from '~/components/Onboarding/OnboardingWizard';
 import { Nav, MobileNav, NAV_WIDTH } from '~/components/Nav';
 import { TermsAndConditionsModal } from '~/components/ui';
 import { useHealthCheck } from '~/data-provider';
@@ -24,13 +26,14 @@ import { Banner } from '~/components/Banners';
 
 export default function Root() {
   const [showTerms, setShowTerms] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
   const [bannerHeight, setBannerHeight] = useState(0);
   const [navVisible, setNavVisible] = useState(() => {
     const savedNavVisible = localStorage.getItem('navVisible');
     return savedNavVisible !== null ? JSON.parse(savedNavVisible) : true;
   });
 
-  const { isAuthenticated, logout } = useAuthContext();
+  const { isAuthenticated, logout, user } = useAuthContext();
   const isSmallScreen = useMediaQuery('(max-width: 768px)');
 
   // Global health check - runs once per authenticated session
@@ -53,6 +56,32 @@ export default function Root() {
     }
   }, [termsData]);
 
+  // Check if user needs onboarding
+  useEffect(() => {
+    if (isAuthenticated && user && user.onboardingComplete === false) {
+      setShowOnboarding(true);
+    }
+  }, [isAuthenticated, user]);
+
+  const handleOnboardingComplete = useCallback(
+    async (data: { name: string; personality: string }) => {
+      try {
+        // Update assistant profile with user's chosen name and personality
+        await request.put('/api/user/settings/assistant-profile', {
+          name: data.name,
+          personality: data.personality,
+        });
+        // Mark onboarding as complete
+        await request.post('/api/user/settings/onboarding/complete');
+        setShowOnboarding(false);
+      } catch (error) {
+        console.error('Failed to complete onboarding:', error);
+        setShowOnboarding(false);
+      }
+    },
+    [],
+  );
+
   const handleAcceptTerms = () => {
     setShowTerms(false);
   };
@@ -64,6 +93,10 @@ export default function Root() {
 
   if (!isAuthenticated) {
     return null;
+  }
+
+  if (showOnboarding) {
+    return <OnboardingWizard onComplete={handleOnboardingComplete} />;
   }
 
   return (
