@@ -51,6 +51,12 @@
   --amber-800: #92400e;
   --amber-900: #78350f;
   --amber-950: #451a03;
+  --purple-400: #a855f7;
+  --purple-500: #9333ea;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
   --brand-purple: #ab68ff;
   --gizmo-gray-500: #999;
   --gizmo-gray-600: #666;
@@ -87,8 +93,8 @@ html {
   --surface-tertiary: var(--gray-100);
   --surface-tertiary-alt: var(--white);
   --surface-dialog: var(--white);
-  --surface-submit: var(--green-700);
-  --surface-submit-hover: var(--green-800);
+  --surface-submit: var(--purple-600);
+  --surface-submit-hover: var(--purple-700);
   --surface-destructive: var(--red-700);
   --surface-destructive-hover: var(--red-800);
   --surface-chat: var(--white);
@@ -149,8 +155,8 @@ html {
   --surface-tertiary: var(--gray-700);
   --surface-tertiary-alt: var(--gray-700);
   --surface-dialog: var(--gray-850);
-  --surface-submit: var(--green-700);
-  --surface-submit-hover: var(--green-800);
+  --surface-submit: var(--purple-600);
+  --surface-submit-hover: var(--purple-700);
   --surface-destructive: var(--red-800);
   --surface-destructive-hover: var(--red-900);
   --surface-chat: var(--gray-700);

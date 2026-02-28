@@ -34,7 +34,8 @@
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
         backgroundColor = prefersDarkScheme ? '#0d0d0d' : '#ffffff';
       } else {
-        backgroundColor = '#ffffff';
+        // Default to dark when no preference is stored
+        backgroundColor = '#0d0d0d';
       }
 
       loadingContainerStyle.innerHTML = `
