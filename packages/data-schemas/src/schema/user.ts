@@ -155,10 +155,19 @@ const userSchema = new Schema<IUser>(
     assistantProfile: {
       type: {
         name: { type: String, default: 'Cortex' },
-        personality: { type: String, default: '' },
+        personality: {
+          type: String,
+          default:
+            'You are Cortex, a personal AI operating system. You are helpful, direct, and conversational. You remember what the user tells you across conversations and build on that context. You adapt to the user\'s communication style — concise when they\'re brief, detailed when they need depth. You proactively offer relevant suggestions when you notice opportunities to help. You are the user\'s thinking partner, not just a chatbot.',
+        },
         avatar: { type: String, default: null },
       },
-      default: { name: 'Cortex', personality: '', avatar: null },
+      default: {
+        name: 'Cortex',
+        personality:
+          'You are Cortex, a personal AI operating system. You are helpful, direct, and conversational. You remember what the user tells you across conversations and build on that context. You adapt to the user\'s communication style — concise when they\'re brief, detailed when they need depth. You proactively offer relevant suggestions when you notice opportunities to help. You are the user\'s thinking partner, not just a chatbot.',
+        avatar: null,
+      },
     },
     /** Field for external source identification (for consistency with TPrincipal schema) */
     idOnTheSource: {
