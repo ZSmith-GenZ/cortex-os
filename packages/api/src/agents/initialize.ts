@@ -1,4 +1,4 @@
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import {
   Constants,
   ErrorTypes,
@@ -17,13 +17,13 @@ import type {
   Agent,
   TUser,
 } from '@cortex-os/data-provider';
-import type { GenericTool, LCToolRegistry, ToolMap, LCTool } from '@cortex-os/agents';
+import type { GenericTool, LCToolRegistry, ToolMap, LCTool } from '@librechat/agents';
 import type { Response as ServerResponse } from 'express';
 import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { InitializeResultBase, ServerRequest, EndpointDbMethods } from '~/types';
 import {
   optionalChainWithEmptyCheck,
-  extractCortex OSParams,
+  extractCortexOSParams,
   getModelMaxTokens,
   getThreadData,
 } from '~/utils';
@@ -181,7 +181,7 @@ export async function initializeAgent(
     ),
   );
 
-  const { resendFiles, maxContextTokens, modelOptions } = extractCortex OSParams(
+  const { resendFiles, maxContextTokens, modelOptions } = extractCortexOSParams(
     _modelOptions as Record<string, unknown>,
   );
 

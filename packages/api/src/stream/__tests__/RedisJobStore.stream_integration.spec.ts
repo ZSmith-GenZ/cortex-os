@@ -1,7 +1,7 @@
 import { StepTypes } from '@cortex-os/data-provider';
 import type { Agents } from '@cortex-os/data-provider';
 import type { Redis, Cluster } from 'ioredis';
-import { StandardGraph } from '@cortex-os/agents';
+import { StandardGraph } from '@librechat/agents';
 
 /**
  * Integration tests for RedisJobStore.

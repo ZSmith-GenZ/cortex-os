@@ -1,4 +1,4 @@
-import type { ClientOptions, OpenAIClientOptions } from '@cortex-os/agents';
+import type { ClientOptions, OpenAIClientOptions } from '@librechat/agents';
 import type { TConfig } from '@cortex-os/data-provider';
 import type { EndpointTokenConfig, ServerRequest } from '~/types';
 

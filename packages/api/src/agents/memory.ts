@@ -4,7 +4,7 @@ import { tool } from '@langchain/core/tools';
 import { Tools } from '@cortex-os/data-provider';
 import { logger } from '@cortex-os/data-schemas';
 import { HumanMessage } from '@langchain/core/messages';
-import { Run, Providers, GraphEvents } from '@cortex-os/agents';
+import { Run, Providers, GraphEvents } from '@librechat/agents';
 import type {
   OpenAIClientOptions,
   StreamEventData,
@@ -13,7 +13,7 @@ import type {
   EventHandler,
   ToolEndData,
   LLMConfig,
-} from '@cortex-os/agents';
+} from '@librechat/agents';
 import type { ObjectId, MemoryMethods, IUser } from '@cortex-os/data-schemas';
 import type { TAttachment, MemoryArtifact } from '@cortex-os/data-provider';
 import type { BaseMessage, ToolMessage } from '@langchain/core/messages';

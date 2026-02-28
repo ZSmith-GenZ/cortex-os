@@ -1,5 +1,5 @@
 import { logger } from '@cortex-os/data-schemas';
-import { AnthropicClientOptions } from '@cortex-os/agents';
+import { AnthropicClientOptions } from '@librechat/agents';
 import {
   EModelEndpoint,
   AnthropicEffort,

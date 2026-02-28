@@ -23,7 +23,7 @@ jest.mock('@cortex-os/data-schemas', () => ({
   },
 }));
 
-jest.mock('@cortex-os/agents', () => ({
+jest.mock('@librechat/agents', () => ({
   Callback: { TOOL_ERROR: 'TOOL_ERROR' },
   ToolEndHandler: jest.fn(),
   formatAgentMessages: jest.fn().mockReturnValue({

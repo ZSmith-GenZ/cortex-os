@@ -1,7 +1,7 @@
 import { logger } from '@cortex-os/data-schemas';
 import { isAgentsEndpoint } from '@cortex-os/data-provider';
-import { labelContentByAgent, getTokenCountForMessage } from '@cortex-os/agents';
-import type { MessageContentComplex } from '@cortex-os/agents';
+import { labelContentByAgent, getTokenCountForMessage } from '@librechat/agents';
+import type { MessageContentComplex } from '@librechat/agents';
 import type { Agent, TMessage } from '@cortex-os/data-provider';
 import type { BaseMessage } from '@langchain/core/messages';
 import type { ServerRequest } from '~/types';

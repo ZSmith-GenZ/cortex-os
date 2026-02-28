@@ -1,7 +1,7 @@
 const { z } = require('zod');
 const axios = require('axios');
 const { Ollama } = require('ollama');
-const { sleep } = require('@cortex-os/agents');
+const { sleep } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const { Constants } = require('@cortex-os/data-provider');
 const { resolveHeaders, deriveBaseURL } = require('@cortex-os/api');

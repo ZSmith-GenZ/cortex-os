@@ -50,7 +50,7 @@ jest.mock('@cortex-os/data-schemas', () => ({
 }));
 
 // Mock getCodeBaseURL
-jest.mock('@cortex-os/agents', () => ({
+jest.mock('@librechat/agents', () => ({
   getCodeBaseURL: jest.fn(() => 'https://code-api.example.com'),
 }));
 

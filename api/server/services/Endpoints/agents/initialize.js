@@ -1,5 +1,5 @@
 const { logger } = require('@cortex-os/data-schemas');
-const { createContentAggregator } = require('@cortex-os/agents');
+const { createContentAggregator } = require('@librechat/agents');
 const {
   initializeAgent,
   validateAgentModel,
@@ -48,9 +48,9 @@ function createToolLoader(signal, streamId = null, definitionsOnly = false) {
    * @returns {Promise<{
    *   tools?: StructuredTool[],
    *   toolContextMap: Record<string, unknown>,
-   *   toolDefinitions?: import('@cortex-os/agents').LCTool[],
+   *   toolDefinitions?: import('@librechat/agents').LCTool[],
    *   userMCPAuthMap?: Record<string, Record<string, string>>,
-   *   toolRegistry?: import('@cortex-os/agents').LCToolRegistry
+   *   toolRegistry?: import('@librechat/agents').LCToolRegistry
    * } | undefined>}
    */
   return async function loadTools({
@@ -103,7 +103,7 @@ const initializeClient = async ({ req, res, signal, endpointOption }) => {
    *   userMCPAuthMap?: Record<string, Record<string, string>>,
    *   agent?: object,
    *   tool_resources?: object,
-   *   toolRegistry?: import('@cortex-os/agents').LCToolRegistry,
+   *   toolRegistry?: import('@librechat/agents').LCToolRegistry,
    *   openAIApiKey?: string
    * }>}
    */

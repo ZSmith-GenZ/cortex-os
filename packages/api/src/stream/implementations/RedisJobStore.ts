@@ -1,6 +1,6 @@
 import { logger } from '@cortex-os/data-schemas';
-import { createContentAggregator } from '@cortex-os/agents';
-import type { StandardGraph } from '@cortex-os/agents';
+import { createContentAggregator } from '@librechat/agents';
+import type { StandardGraph } from '@librechat/agents';
 import type { Agents } from '@cortex-os/data-provider';
 import type { Redis, Cluster } from 'ioredis';
 import type {

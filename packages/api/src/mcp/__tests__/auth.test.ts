@@ -1,5 +1,5 @@
 import type { PluginAuthMethods } from '@cortex-os/data-schemas';
-import type { GenericTool } from '@cortex-os/agents';
+import type { GenericTool } from '@librechat/agents';
 import { getPluginAuthMap } from '~/agents/auth';
 import { getUserMCPAuthMap } from '../auth';
 

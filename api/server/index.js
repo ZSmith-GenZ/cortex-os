@@ -254,7 +254,7 @@ process.on('uncaughtException', (err) => {
     return;
   }
 
-  if (err.stack && err.stack.includes('@cortex-os/agents')) {
+  if (err.stack && err.stack.includes('@librechat/agents')) {
     logger.error(
       '\n\nAn error occurred in the agents system. The error has been logged and the app will continue running.',
       {

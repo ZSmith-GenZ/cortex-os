@@ -31,8 +31,8 @@ jest.mock('~/config', () => ({
   })),
 }));
 
-jest.mock('@cortex-os/agents', () => ({
-  ...jest.requireActual('@cortex-os/agents'),
+jest.mock('@librechat/agents', () => ({
+  ...jest.requireActual('@librechat/agents'),
   createMetadataAggregator: () => ({
     handleLLMEnd: jest.fn(),
     collected: [],

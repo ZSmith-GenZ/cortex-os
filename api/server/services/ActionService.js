@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { nanoid } = require('nanoid');
 const { tool } = require('@langchain/core/tools');
-const { GraphEvents, sleep } = require('@cortex-os/agents');
+const { GraphEvents, sleep } = require('@librechat/agents');
 const { logger, encryptV2, decryptV2 } = require('@cortex-os/data-schemas');
 const {
   sendEvent,

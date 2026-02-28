@@ -1,5 +1,5 @@
 import { ProxyAgent } from 'undici';
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { KnownEndpoints, EModelEndpoint } from '@cortex-os/data-provider';
 import type * as t from '~/types';
 import { getLLMConfig as getAnthropicLLMConfig } from '~/endpoints/anthropic/llm';

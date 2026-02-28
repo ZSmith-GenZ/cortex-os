@@ -1,4 +1,4 @@
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { mbToBytes, isOpenAILikeProvider } from '@cortex-os/data-provider';
 
 export interface ValidationResult {

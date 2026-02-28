@@ -34,7 +34,7 @@ function getImporter(jsonData) {
   // For Cortex OS
   if (jsonData.conversationId && (jsonData.messagesTree || jsonData.messages)) {
     logger.info('Importing Cortex OS conversation');
-    return importCortex OSConvo;
+    return importCortexOSConvo;
   }
 
   throw new Error('Unsupported import type');
@@ -190,7 +190,7 @@ async function importClaudeConvo(
  * @param {Function} [builderFactory=createImportBatchBuilder] - The factory function to create an import batch builder.
  * @returns {Promise<void>} - A promise that resolves when the import is complete.
  */
-async function importCortex OSConvo(
+async function importCortexOSConvo(
   jsonData,
   requestUserId,
   builderFactory = createImportBatchBuilder,

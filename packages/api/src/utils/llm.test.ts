@@ -1,8 +1,8 @@
-import { extractCortex OSParams } from './llm';
+import { extractCortexOSParams } from './llm';
 
-describe('extractCortex OSParams', () => {
+describe('extractCortexOSParams', () => {
   it('should return defaults when options is undefined', () => {
-    const result = extractCortex OSParams(undefined);
+    const result = extractCortexOSParams(undefined);
 
     expect(result.resendFiles).toBe(true);
     expect(result.promptPrefix).toBeUndefined();
@@ -13,7 +13,7 @@ describe('extractCortex OSParams', () => {
   });
 
   it('should return defaults when options is null', () => {
-    const result = extractCortex OSParams();
+    const result = extractCortexOSParams();
 
     expect(result.resendFiles).toBe(true);
     expect(result.promptPrefix).toBeUndefined();
@@ -35,7 +35,7 @@ describe('extractCortex OSParams', () => {
       max_tokens: 1000,
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     expect(result.resendFiles).toBe(false);
     expect(result.promptPrefix).toBe('You are a helpful assistant');
@@ -59,7 +59,7 @@ describe('extractCortex OSParams', () => {
       model: 'claude-3',
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     expect(result.resendFiles).toBe(true);
     expect(result.promptPrefix).toBeNull();
@@ -78,7 +78,7 @@ describe('extractCortex OSParams', () => {
       temperature: 0.5,
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     expect(result.resendFiles).toBe(true); // Should use default
     expect(result.promptPrefix).toBe('Test prefix');
@@ -92,7 +92,7 @@ describe('extractCortex OSParams', () => {
   });
 
   it('should handle empty options object', () => {
-    const result = extractCortex OSParams({});
+    const result = extractCortexOSParams({});
 
     expect(result.resendFiles).toBe(true); // Should use default
     expect(result.promptPrefix).toBeUndefined();
@@ -120,7 +120,7 @@ describe('extractCortex OSParams', () => {
       customSetting: 123,
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     // Cortex OS params extracted
     expect(result.resendFiles).toBe(false);
@@ -150,7 +150,7 @@ describe('extractCortex OSParams', () => {
     };
     const originalOptions = { ...options };
 
-    extractCortex OSParams(options);
+    extractCortexOSParams(options);
 
     // Original object should remain unchanged
     expect(options).toEqual(originalOptions);
@@ -165,7 +165,7 @@ describe('extractCortex OSParams', () => {
       model: 'claude-2',
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     expect(result.resendFiles).toBe(false);
     expect(result.promptPrefix).toBeUndefined();
@@ -185,7 +185,7 @@ describe('extractCortex OSParams', () => {
       stop: ['\\n', '\\n\\n'],
     };
 
-    const result = extractCortex OSParams(options);
+    const result = extractCortexOSParams(options);
 
     expect(result.resendFiles).toBe(true); // default
     expect(result.promptPrefix).toBeNull();

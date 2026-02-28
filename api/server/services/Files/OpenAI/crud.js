@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { sleep } = require('@cortex-os/agents');
+const { sleep } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const { FilePurpose } = require('@cortex-os/data-provider');
 

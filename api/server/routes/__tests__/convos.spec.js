@@ -1,7 +1,7 @@
 const express = require('express');
 const request = require('supertest');
 
-jest.mock('@cortex-os/agents', () => ({
+jest.mock('@librechat/agents', () => ({
   sleep: jest.fn(),
 }));
 

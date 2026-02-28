@@ -1,9 +1,9 @@
-import { Constants } from '@cortex-os/agents';
+import { Constants } from '@librechat/agents';
 import type {
   ToolExecuteBatchRequest,
   ToolExecuteResult,
   ToolCallRequest,
-} from '@cortex-os/agents';
+} from '@librechat/agents';
 import { createToolExecuteHandler, ToolExecuteOptions } from './handlers';
 
 function createMockTool(name: string, capturedConfigs: Record<string, unknown>[]) {

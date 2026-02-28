@@ -48,115 +48,115 @@
 
 /**
  * @exports Graph
- * @typedef {import('@cortex-os/agents').Graph} Graph
+ * @typedef {import('@librechat/agents').Graph} Graph
  * @memberof typedefs
  */
 
 /**
  * @exports StandardGraph
- * @typedef {import('@cortex-os/agents').StandardGraph} StandardGraph
+ * @typedef {import('@librechat/agents').StandardGraph} StandardGraph
  * @memberof typedefs
  */
 
 /**
  * @exports MessageContentComplex
- * @typedef {import('@cortex-os/agents').MessageContentComplex} MessageContentComplex
+ * @typedef {import('@librechat/agents').MessageContentComplex} MessageContentComplex
  * @memberof typedefs
  */
 
 /**
  * @exports EventHandler
- * @typedef {import('@cortex-os/agents').EventHandler} EventHandler
+ * @typedef {import('@librechat/agents').EventHandler} EventHandler
  * @memberof typedefs
  */
 
 /**
  * @exports ModelEndData
- * @typedef {import('@cortex-os/agents').ModelEndData} ModelEndData
+ * @typedef {import('@librechat/agents').ModelEndData} ModelEndData
  * @memberof typedefs
  */
 
 /**
  * @exports ToolEndData
- * @typedef {import('@cortex-os/agents').ToolEndData} ToolEndData
+ * @typedef {import('@librechat/agents').ToolEndData} ToolEndData
  * @memberof typedefs
  */
 
 /**
  * @exports ToolEndCallback
- * @typedef {import('@cortex-os/agents').ToolEndCallback} ToolEndCallback
+ * @typedef {import('@librechat/agents').ToolEndCallback} ToolEndCallback
  * @memberof typedefs
  */
 
 /**
  * @exports ChatModelStreamHandler
- * @typedef {import('@cortex-os/agents').ChatModelStreamHandler} ChatModelStreamHandler
+ * @typedef {import('@librechat/agents').ChatModelStreamHandler} ChatModelStreamHandler
  * @memberof typedefs
  */
 
 /**
  * @exports ContentAggregator
- * @typedef {import('@cortex-os/agents').ContentAggregatorResult['aggregateContent']} ContentAggregator
+ * @typedef {import('@librechat/agents').ContentAggregatorResult['aggregateContent']} ContentAggregator
  * @memberof typedefs
  */
 
 /**
  * @exports GraphEvents
- * @typedef {import('@cortex-os/agents').GraphEvents} GraphEvents
+ * @typedef {import('@librechat/agents').GraphEvents} GraphEvents
  * @memberof typedefs
  */
 
 /**
  * @exports AgentRun
- * @typedef {import('@cortex-os/agents').Run} AgentRun
+ * @typedef {import('@librechat/agents').Run} AgentRun
  * @memberof typedefs
  */
 
 /**
  * @exports IState
- * @typedef {import('@cortex-os/agents').IState} IState
+ * @typedef {import('@librechat/agents').IState} IState
  * @memberof typedefs
  */
 
 /**
  * @exports ClientCallbacks
- * @typedef {import('@cortex-os/agents').ClientCallbacks} ClientCallbacks
+ * @typedef {import('@librechat/agents').ClientCallbacks} ClientCallbacks
  * @memberof typedefs
  */
 
 /**
  * @exports OpenAIClientOptions
- * @typedef {import('@cortex-os/agents').OpenAIClientOptions} OpenAIClientOptions
+ * @typedef {import('@librechat/agents').OpenAIClientOptions} OpenAIClientOptions
  * @memberof typedefs
  */
 
 /**
  * @exports AnthropicClientOptions
- * @typedef {import('@cortex-os/agents').AnthropicClientOptions} AnthropicClientOptions
+ * @typedef {import('@librechat/agents').AnthropicClientOptions} AnthropicClientOptions
  * @memberof typedefs
  */
 
 /**
  * @exports BedrockClientOptions
- * @typedef {import('@cortex-os/agents').BedrockConverseClientOptions} BedrockClientOptions
+ * @typedef {import('@librechat/agents').BedrockConverseClientOptions} BedrockClientOptions
  * @memberof typedefs
  */
 
 /**
  * @exports VertexAIClientOptions
- * @typedef {import('@cortex-os/agents').VertexAIClientOptions} VertexAIClientOptions
+ * @typedef {import('@librechat/agents').VertexAIClientOptions} VertexAIClientOptions
  * @memberof typedefs
  */
 
 /**
  * @exports GoogleClientOptions
- * @typedef {import('@cortex-os/agents').GoogleClientOptions} GoogleClientOptions
+ * @typedef {import('@librechat/agents').GoogleClientOptions} GoogleClientOptions
  * @memberof typedefs
  */
 
 /**
  * @exports StreamEventData
- * @typedef {import('@cortex-os/agents').StreamEventData} StreamEventData
+ * @typedef {import('@librechat/agents').StreamEventData} StreamEventData
  * @memberof typedefs
  */
 
@@ -489,13 +489,13 @@
 
 /**
  * @exports SearchResult
- * @typedef {import('@cortex-os/agents').SearchResult} SearchResult
+ * @typedef {import('@librechat/agents').SearchResult} SearchResult
  * @memberof typedefs
  */
 
 /**
  * @exports SearchResultData
- * @typedef {import('@cortex-os/agents').SearchResultData} SearchResultData
+ * @typedef {import('@librechat/agents').SearchResultData} SearchResultData
  * @memberof typedefs
  */
 

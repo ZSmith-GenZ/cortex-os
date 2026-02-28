@@ -8,7 +8,7 @@ const {
   createToolSearch,
   Constants: AgentConstants,
   createProgrammaticToolCallingTool,
-} = require('@cortex-os/agents');
+} = require('@librechat/agents');
 const {
   sendEvent,
   getToolkitKey,

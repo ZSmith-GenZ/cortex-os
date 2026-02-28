@@ -695,7 +695,7 @@ export interface ErrorEvent extends BaseEvent {
  * ============================================================================= */
 
 /** Attachment content types for Cortex OS extensions */
-export interface Cortex OSAttachmentContent {
+export interface CortexOSAttachmentContent {
   /** File ID in Cortex OS storage */
   file_id?: string;
   /** Original filename */
@@ -720,10 +720,10 @@ export interface Cortex OSAttachmentContent {
  * Cortex OS attachment event - custom streaming event for file/image attachments
  * Follows Open Responses extension pattern with cortex-os: prefix
  */
-export interface Cortex OSAttachmentEvent extends BaseEvent {
+export interface CortexOSAttachmentEvent extends BaseEvent {
   type: 'cortex-os:attachment';
   /** The attachment data */
-  attachment: Cortex OSAttachmentContent;
+  attachment: CortexOSAttachmentContent;
   /** Associated message ID */
   message_id?: string;
   /** Associated conversation ID */
@@ -751,7 +751,7 @@ export type ResponseEvent =
   | ReasoningDoneEvent
   | ErrorEvent
   // Cortex OS extensions (prefixed per Open Responses spec)
-  | Cortex OSAttachmentEvent;
+  | CortexOSAttachmentEvent;
 
 /* =============================================================================
  * INTERNAL TYPES

@@ -4,7 +4,7 @@ const {
   Calculator,
   createSearchTool,
   createCodeExecutionTool,
-} = require('@cortex-os/agents');
+} = require('@librechat/agents');
 const {
   checkAccess,
   createSafeUser,

@@ -1,6 +1,6 @@
 import { Dispatcher, ProxyAgent } from 'undici';
 import { logger } from '@cortex-os/data-schemas';
-import { AnthropicClientOptions } from '@cortex-os/agents';
+import { AnthropicClientOptions } from '@librechat/agents';
 import { anthropicSettings, removeNullishValues, AuthKeys } from '@cortex-os/data-provider';
 import type {
   AnthropicLLMConfigResult,

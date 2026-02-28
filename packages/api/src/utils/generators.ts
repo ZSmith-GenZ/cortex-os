@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import { logger } from '@cortex-os/data-schemas';
-import { GraphEvents, sleep } from '@cortex-os/agents';
+import { GraphEvents, sleep } from '@librechat/agents';
 import type { Response as ServerResponse } from 'express';
 import type { ServerSentEvent } from '~/types';
 import { sendEvent } from './events';

@@ -755,7 +755,7 @@ describe('importChatGptConvo', () => {
   });
 });
 
-describe('importCortex OSConvo', () => {
+describe('importCortexOSConvo', () => {
   const jsonDataNonRecursiveBranches = JSON.parse(
     fs.readFileSync(path.join(__dirname, '__data__', 'cortex-os-opts-nonr-branches.json'), 'utf8'),
   );

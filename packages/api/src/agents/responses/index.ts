@@ -94,8 +94,8 @@ export type {
   ErrorEvent,
   ResponseEvent,
   // Cortex OS extensions
-  Cortex OSAttachmentContent,
-  Cortex OSAttachmentEvent,
+  CortexOSAttachmentContent,
+  CortexOSAttachmentEvent,
   // Internal
   ResponseContext,
   RequestValidationResult,

@@ -2,7 +2,7 @@ const path = require('path');
 const { v4 } = require('uuid');
 const axios = require('axios');
 const { logger } = require('@cortex-os/data-schemas');
-const { getCodeBaseURL } = require('@cortex-os/agents');
+const { getCodeBaseURL } = require('@librechat/agents');
 const { logAxiosError, getBasePath } = require('@cortex-os/api');
 const {
   Tools,

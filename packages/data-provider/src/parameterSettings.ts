@@ -91,7 +91,7 @@ const createDefinition = (
   return { ...base, ...overrides } as SettingDefinition;
 };
 
-export const cortex-os = {
+export const cortexOS = {
   modelLabel: {
     key: 'modelLabel',
     label: 'com_endpoint_custom_name',
@@ -156,10 +156,10 @@ export const cortex-os = {
 
 const openAIParams: Record<string, SettingDefinition> = {
   chatGptLabel: {
-    ...cortex-os.modelLabel,
+    ...cortexOS.modelLabel,
     key: 'chatGptLabel',
   },
-  promptPrefix: cortex-os.promptPrefix,
+  promptPrefix: cortexOS.promptPrefix,
   temperature: createDefinition(baseDefinitions.temperature, {
     default: openAISettings.temperature.default,
     range: {
@@ -664,50 +664,50 @@ const google: Record<string, SettingDefinition> = {
 };
 
 const googleConfig: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   google.maxOutputTokens,
   google.temperature,
   google.topP,
   google.topK,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   google.thinking,
   google.thinkingBudget,
   google.web_search,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const googleCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const googleCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   google.maxOutputTokens,
   google.temperature,
   google.topP,
   google.topK,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   google.thinking,
   google.thinkingBudget,
   google.web_search,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const openAI: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   openAIParams.max_tokens,
   openAIParams.temperature,
   openAIParams.top_p,
   openAIParams.frequency_penalty,
   openAIParams.presence_penalty,
   baseDefinitions.stop,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   baseDefinitions.imageDetail,
   openAIParams.web_search,
   openAIParams.reasoning_effort,
@@ -715,24 +715,24 @@ const openAI: SettingsConfiguration = [
   openAIParams.reasoning_summary,
   openAIParams.verbosity,
   openAIParams.disableStreaming,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const openAICol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const openAICol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   openAIParams.max_tokens,
   openAIParams.temperature,
   openAIParams.top_p,
   openAIParams.frequency_penalty,
   openAIParams.presence_penalty,
   baseDefinitions.stop,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   baseDefinitions.imageDetail,
   openAIParams.reasoning_effort,
   openAIParams.reasoning_summary,
@@ -740,203 +740,203 @@ const openAICol2: SettingsConfiguration = [
   openAIParams.useResponsesApi,
   openAIParams.web_search,
   openAIParams.disableStreaming,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const anthropicConfig: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   anthropic.maxOutputTokens,
   anthropic.temperature,
   anthropic.topP,
   anthropic.topK,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   anthropic.promptCache,
   anthropic.thinking,
   anthropic.thinkingBudget,
   anthropic.effort,
   anthropic.web_search,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const anthropicCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const anthropicCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   anthropic.maxOutputTokens,
   anthropic.temperature,
   anthropic.topP,
   anthropic.topK,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   anthropic.promptCache,
   anthropic.thinking,
   anthropic.thinkingBudget,
   anthropic.effort,
   anthropic.web_search,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockAnthropic: SettingsConfiguration = [
-  cortex-os.modelLabel,
+  cortexOS.modelLabel,
   bedrock.system,
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   bedrock.temperature,
   bedrock.topP,
   bedrock.topK,
   baseDefinitions.stop,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
   bedrock.promptCache,
   anthropic.thinking,
   anthropic.thinkingBudget,
   anthropic.effort,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockMistral: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   mistral.temperature,
   mistral.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockCohere: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   cohere.temperature,
   cohere.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockGeneral: SettingsConfiguration = [
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
-  cortex-os.maxContextTokens,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
+  cortexOS.maxContextTokens,
   meta.temperature,
   meta.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
   bedrock.promptCache,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockAnthropicCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
+  cortexOS.modelLabel,
   bedrock.system,
   baseDefinitions.stop,
 ];
 
 const bedrockAnthropicCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   bedrock.temperature,
   bedrock.topP,
   bedrock.topK,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
   bedrock.promptCache,
   anthropic.thinking,
   anthropic.thinkingBudget,
   anthropic.effort,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockMistralCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const bedrockMistralCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   mistral.temperature,
   mistral.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockCohereCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const bedrockCohereCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   bedrock.maxTokens,
   cohere.temperature,
   cohere.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockGeneralCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
-  cortex-os.promptPrefix,
+  cortexOS.modelLabel,
+  cortexOS.promptPrefix,
 ];
 
 const bedrockGeneralCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   meta.temperature,
   meta.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
   bedrock.promptCache,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockMoonshot: SettingsConfiguration = [
-  cortex-os.modelLabel,
+  cortexOS.modelLabel,
   bedrock.system,
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   createDefinition(bedrock.maxTokens, {
     default: 16384,
   }),
   bedrock.temperature,
   bedrock.topP,
   baseDefinitions.stop,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 const bedrockMoonshotCol1: SettingsConfiguration = [
   baseDefinitions.model as SettingDefinition,
-  cortex-os.modelLabel,
+  cortexOS.modelLabel,
   bedrock.system,
   baseDefinitions.stop,
 ];
 
 const bedrockMoonshotCol2: SettingsConfiguration = [
-  cortex-os.maxContextTokens,
+  cortexOS.maxContextTokens,
   createDefinition(bedrock.maxTokens, {
     default: 16384,
   }),
   bedrock.temperature,
   bedrock.topP,
-  cortex-os.resendFiles,
+  cortexOS.resendFiles,
   bedrock.region,
-  cortex-os.fileTokenLimit,
+  cortexOS.fileTokenLimit,
 ];
 
 export const paramSettings: Record<string, SettingsConfiguration | undefined> = {

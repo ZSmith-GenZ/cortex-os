@@ -158,7 +158,7 @@ export interface OpenAIStreamHandlerConfig {
 }
 
 /**
- * Graph event types from @cortex-os/agents
+ * Graph event types from @librechat/agents
  */
 export const GraphEvents = {
   CHAT_MODEL_END: 'on_chat_model_end',

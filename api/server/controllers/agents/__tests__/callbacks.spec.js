@@ -15,8 +15,8 @@ jest.mock('@cortex-os/data-schemas', () => ({
   },
 }));
 
-jest.mock('@cortex-os/agents', () => ({
-  ...jest.requireActual('@cortex-os/agents'),
+jest.mock('@librechat/agents', () => ({
+  ...jest.requireActual('@librechat/agents'),
   getMessageId: jest.fn(),
   ToolEndHandler: jest.fn(),
   handleToolCalls: jest.fn(),

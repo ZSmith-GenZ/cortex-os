@@ -1,4 +1,4 @@
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { TEndpoint } from '@cortex-os/data-provider';
 import type { AppConfig } from '@cortex-os/data-schemas';

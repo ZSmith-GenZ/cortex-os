@@ -18,7 +18,7 @@ import type {
 } from '@modelcontextprotocol/sdk/types.js';
 import type { SearchResultData, UIResource, TPlugin } from '@cortex-os/data-provider';
 import type { TokenMethods, IUser } from '@cortex-os/data-schemas';
-import type { LCTool } from '@cortex-os/agents';
+import type { LCTool } from '@librechat/agents';
 import type { FlowStateManager } from '~/flow/manager';
 import type { RequestBody } from '~/types/http';
 import type * as o from '~/mcp/oauth/types';

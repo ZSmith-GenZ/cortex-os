@@ -1,4 +1,4 @@
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { isDocumentSupportedProvider } from '@cortex-os/data-provider';
 import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { ServerRequest, StrategyFunctions, VideoResult } from '~/types';

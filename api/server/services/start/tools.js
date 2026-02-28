@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Tool } = require('@langchain/core/tools');
-const { Calculator } = require('@cortex-os/agents');
+const { Calculator } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const { zodToJsonSchema } = require('zod-to-json-schema');
 const { Tools, ImageVisionTool } = require('@cortex-os/data-provider');

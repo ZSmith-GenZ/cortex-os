@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { Tools } from '@cortex-os/data-provider';
 import type { MemoryArtifact } from '@cortex-os/data-provider';
 import { createMemoryTool, processMemory } from '../memory';
@@ -29,8 +29,8 @@ jest.mock('~/utils', () => ({
 }));
 
 // Mock the Run module
-jest.mock('@cortex-os/agents', () => ({
-  ...jest.requireActual('@cortex-os/agents'),
+jest.mock('@librechat/agents', () => ({
+  ...jest.requireActual('@librechat/agents'),
   Run: {
     create: jest.fn(),
   },
@@ -198,7 +198,7 @@ describe('processMemory - GPT-5+ handling', () => {
     };
 
     // Setup the Run.create mock
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     (Run.create as jest.Mock).mockResolvedValue({
       processStream: jest.fn().mockResolvedValue('Memory processed'),
     });
@@ -223,7 +223,7 @@ describe('processMemory - GPT-5+ handling', () => {
       },
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({
@@ -265,7 +265,7 @@ describe('processMemory - GPT-5+ handling', () => {
       },
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({
@@ -304,7 +304,7 @@ describe('processMemory - GPT-5+ handling', () => {
       },
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({
@@ -334,7 +334,7 @@ describe('processMemory - GPT-5+ handling', () => {
 
     for (const { model, shouldTransform } of testCases) {
       jest.clearAllMocks();
-      const { Run } = jest.requireMock('@cortex-os/agents');
+      const { Run } = jest.requireMock('@librechat/agents');
       (Run.create as jest.Mock).mockResolvedValue({
         processStream: jest.fn().mockResolvedValue('Memory processed'),
       });
@@ -386,7 +386,7 @@ describe('processMemory - GPT-5+ handling', () => {
       // No llmConfig provided
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({
@@ -418,7 +418,7 @@ describe('processMemory - GPT-5+ handling', () => {
       },
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({
@@ -452,7 +452,7 @@ describe('processMemory - GPT-5+ handling', () => {
       },
     });
 
-    const { Run } = jest.requireMock('@cortex-os/agents');
+    const { Run } = jest.requireMock('@librechat/agents');
     expect(Run.create).toHaveBeenCalledWith(
       expect.objectContaining({
         graphConfig: expect.objectContaining({

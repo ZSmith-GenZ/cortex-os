@@ -1,5 +1,5 @@
 const { klona } = require('klona');
-const { sleep } = require('@cortex-os/agents');
+const { sleep } = require('@librechat/agents');
 const { sendEvent } = require('@cortex-os/api');
 const { logger } = require('@cortex-os/data-schemas');
 const {

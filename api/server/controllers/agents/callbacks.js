@@ -1,6 +1,6 @@
 const { nanoid } = require('nanoid');
 const { logger } = require('@cortex-os/data-schemas');
-const { Constants, EnvVar, GraphEvents, ToolEndHandler } = require('@cortex-os/agents');
+const { Constants, EnvVar, GraphEvents, ToolEndHandler } = require('@librechat/agents');
 const { Tools, StepTypes, FileContext, ErrorTypes } = require('@cortex-os/data-provider');
 const {
   sendEvent,

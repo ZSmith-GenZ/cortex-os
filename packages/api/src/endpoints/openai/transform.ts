@@ -1,6 +1,6 @@
 import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { GoogleAIToolType } from '@langchain/google-common';
-import type { ClientOptions } from '@cortex-os/agents';
+import type { ClientOptions } from '@librechat/agents';
 import type * as t from '~/types';
 import { knownOpenAIParams } from './llm';
 

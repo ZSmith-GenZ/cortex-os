@@ -31,7 +31,7 @@ const {
   formatMessage,
   formatAgentMessages,
   createMetadataAggregator,
-} = require('@cortex-os/agents');
+} = require('@librechat/agents');
 const {
   Constants,
   Permissions,
@@ -987,7 +987,7 @@ class AgentClient extends BaseClient {
     const appConfig = req.config;
     let endpoint = agent.endpoint;
 
-    /** @type {import('@cortex-os/agents').ClientOptions} */
+    /** @type {import('@librechat/agents').ClientOptions} */
     let clientOptions = {
       model: agent.model || agent.model_parameters.model,
     };
@@ -1062,7 +1062,7 @@ class AgentClient extends BaseClient {
       provider = Providers.AZURE;
     }
 
-    /** @type {import('@cortex-os/agents').ClientOptions} */
+    /** @type {import('@librechat/agents').ClientOptions} */
     clientOptions = { ...options.llmConfig };
     if (options.configOptions) {
       clientOptions.configuration = options.configOptions;

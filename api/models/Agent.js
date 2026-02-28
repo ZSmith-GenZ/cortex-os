@@ -96,7 +96,7 @@ const getAgents = async (searchParameter) => await Agent.find(searchParameter).l
  * @param {string} params.spec
  * @param {string} params.agent_id
  * @param {string} params.endpoint
- * @param {import('@cortex-os/agents').ClientOptions} [params.model_parameters]
+ * @param {import('@librechat/agents').ClientOptions} [params.model_parameters]
  * @returns {Promise<Agent|null>} The agent document as a plain object, or null if not found.
  */
 const loadEphemeralAgent = async ({ req, spec, endpoint, model_parameters: _m }) => {
@@ -207,7 +207,7 @@ const loadEphemeralAgent = async ({ req, spec, endpoint, model_parameters: _m })
  * @param {string} params.spec
  * @param {string} params.agent_id
  * @param {string} params.endpoint
- * @param {import('@cortex-os/agents').ClientOptions} [params.model_parameters]
+ * @param {import('@librechat/agents').ClientOptions} [params.model_parameters]
  * @returns {Promise<Agent|null>} The agent document as a plain object, or null if not found.
  */
 const loadAgent = async ({ req, spec, agent_id, endpoint, model_parameters }) => {

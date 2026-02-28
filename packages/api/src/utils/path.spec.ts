@@ -1,5 +1,5 @@
 import { logger } from '@cortex-os/data-schemas';
-import type { Logger } from '@cortex-os/agents';
+import type { Logger } from '@librechat/agents';
 import { getBasePath } from './path';
 
 describe('getBasePath', () => {

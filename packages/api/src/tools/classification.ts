@@ -13,7 +13,7 @@ import {
   ToolSearchToolDefinition,
   createProgrammaticToolCallingTool,
   ProgrammaticToolCallingDefinition,
-} from '@cortex-os/agents';
+} from '@librechat/agents';
 import type { AgentToolOptions } from '@cortex-os/data-provider';
 import type {
   LCToolRegistry,
@@ -21,7 +21,7 @@ import type {
   AllowedCaller,
   GenericTool,
   LCTool,
-} from '@cortex-os/agents';
+} from '@librechat/agents';
 
 export type { LCTool, LCToolRegistry, AllowedCaller, JsonSchemaType };
 

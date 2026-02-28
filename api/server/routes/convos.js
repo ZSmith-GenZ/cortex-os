@@ -1,6 +1,6 @@
 const multer = require('multer');
 const express = require('express');
-const { sleep } = require('@cortex-os/agents');
+const { sleep } = require('@librechat/agents');
 const { isEnabled } = require('@cortex-os/api');
 const { logger } = require('@cortex-os/data-schemas');
 const { CacheKeys, EModelEndpoint } = require('@cortex-os/data-provider');

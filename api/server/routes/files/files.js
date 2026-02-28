@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 const express = require('express');
-const { EnvVar } = require('@cortex-os/agents');
+const { EnvVar } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const {
   Time,

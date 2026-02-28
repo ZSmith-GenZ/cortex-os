@@ -1,5 +1,5 @@
 const { v4 } = require('uuid');
-const { sleep } = require('@cortex-os/agents');
+const { sleep } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const { sendEvent, getBalanceConfig, getModelMaxTokens, countTokens } = require('@cortex-os/api');
 const {

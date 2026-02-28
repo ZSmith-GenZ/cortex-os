@@ -1,9 +1,9 @@
-const { Providers } = require('@cortex-os/agents');
+const { Providers } = require('@librechat/agents');
 const { Constants, EModelEndpoint } = require('@cortex-os/data-provider');
 const AgentClient = require('./client');
 
-jest.mock('@cortex-os/agents', () => ({
-  ...jest.requireActual('@cortex-os/agents'),
+jest.mock('@librechat/agents', () => ({
+  ...jest.requireActual('@librechat/agents'),
   createMetadataAggregator: () => ({
     handleLLMEnd: jest.fn(),
     collected: [],

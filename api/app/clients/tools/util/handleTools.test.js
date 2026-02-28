@@ -30,7 +30,7 @@ jest.mock('~/server/services/Config', () => ({
   }),
 }));
 
-const { Calculator } = require('@cortex-os/agents');
+const { Calculator } = require('@librechat/agents');
 
 const { User } = require('~/db/models');
 const PluginService = require('~/server/services/PluginService');

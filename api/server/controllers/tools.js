@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid');
-const { EnvVar } = require('@cortex-os/agents');
+const { EnvVar } = require('@librechat/agents');
 const { logger } = require('@cortex-os/data-schemas');
 const { checkAccess, loadWebSearchAuth } = require('@cortex-os/api');
 const {

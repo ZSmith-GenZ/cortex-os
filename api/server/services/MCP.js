@@ -5,7 +5,7 @@ const {
   StepTypes,
   GraphEvents,
   Constants: AgentConstants,
-} = require('@cortex-os/agents');
+} = require('@librechat/agents');
 const {
   sendEvent,
   MCPOAuthHandler,
@@ -88,7 +88,7 @@ function createRunStepDeltaEmitter({ res, stepId, toolCall, streamId = null }) {
  */
 function createRunStepEmitter({ res, runId, stepId, toolCall, index, streamId = null }) {
   return async function () {
-    /** @type {import('@cortex-os/agents').RunStep} */
+    /** @type {import('@librechat/agents').RunStep} */
     const data = {
       runId: runId ?? Constants.USE_PRELIM_RESPONSE_MESSAGE_ID,
       id: stepId,

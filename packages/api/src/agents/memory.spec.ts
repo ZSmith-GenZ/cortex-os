@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { Run, Providers } from '@cortex-os/agents';
+import { Run, Providers } from '@librechat/agents';
 import type { IUser } from '@cortex-os/data-schemas';
 import type { Response } from 'express';
 import { processMemory } from './memory';
@@ -37,8 +37,8 @@ jest.mock('~/utils', () => ({
 
 const { createSafeUser } = jest.requireMock('~/utils');
 
-jest.mock('@cortex-os/agents', () => {
-  const actual = jest.requireActual('@cortex-os/agents');
+jest.mock('@librechat/agents', () => {
+  const actual = jest.requireActual('@librechat/agents');
   return {
     Run: {
       create: jest.fn(() => ({

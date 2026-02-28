@@ -4,7 +4,7 @@ jest.mock('@cortex-os/data-schemas', () => ({
   logger: { warn: jest.fn(), debug: jest.fn(), error: jest.fn() },
 }));
 
-jest.mock('@cortex-os/agents', () => ({
+jest.mock('@librechat/agents', () => ({
   EnvVar: { CODE_API_KEY: 'CODE_API_KEY' },
 }));
 

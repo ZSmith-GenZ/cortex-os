@@ -1,4 +1,4 @@
-const { Providers } = require('@cortex-os/agents');
+const { Providers } = require('@librechat/agents');
 const { EModelEndpoint } = require('@cortex-os/data-provider');
 const { getCustomEndpointConfig } = require('@cortex-os/api');
 const initAnthropic = require('~/server/services/Endpoints/anthropic/initialize');

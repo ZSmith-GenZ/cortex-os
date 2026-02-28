@@ -1,7 +1,7 @@
 const { nanoid } = require('nanoid');
 const { v4: uuidv4 } = require('uuid');
 const { logger } = require('@cortex-os/data-schemas');
-const { Callback, ToolEndHandler, formatAgentMessages } = require('@cortex-os/agents');
+const { Callback, ToolEndHandler, formatAgentMessages } = require('@librechat/agents');
 const { EModelEndpoint, ResourceType, PermissionBits } = require('@cortex-os/data-provider');
 const {
   createRun,

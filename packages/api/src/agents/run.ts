@@ -1,4 +1,4 @@
-import { Run, Providers, Constants } from '@cortex-os/agents';
+import { Run, Providers, Constants } from '@librechat/agents';
 import { providerEndpointMap, KnownEndpoints } from '@cortex-os/data-provider';
 import type { BaseMessage } from '@langchain/core/messages';
 import type {
@@ -11,7 +11,7 @@ import type {
   RunConfig,
   IState,
   LCTool,
-} from '@cortex-os/agents';
+} from '@librechat/agents';
 import type { IUser } from '@cortex-os/data-schemas';
 import type { Agent } from '@cortex-os/data-provider';
 import type * as t from '~/types';

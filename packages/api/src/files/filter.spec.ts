@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { IMongoFile } from '@cortex-os/data-schemas';
 import type { ServerRequest } from '~/types';

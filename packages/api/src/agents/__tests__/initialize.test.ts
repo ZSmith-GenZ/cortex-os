@@ -1,4 +1,4 @@
-import { Providers } from '@cortex-os/agents';
+import { Providers } from '@librechat/agents';
 import { EModelEndpoint } from '@cortex-os/data-provider';
 import type { Agent } from '@cortex-os/data-provider';
 import type { ServerRequest, InitializeResultBase } from '~/types';
@@ -21,13 +21,13 @@ jest.mock('winston', () => ({
   },
 }));
 
-const mockExtractCortex OSParams = jest.fn();
+const mockExtractCortexOSParams = jest.fn();
 const mockGetModelMaxTokens = jest.fn();
 const mockOptionalChainWithEmptyCheck = jest.fn();
 const mockGetThreadData = jest.fn();
 
 jest.mock('~/utils', () => ({
-  extractCortex OSParams: (...args: unknown[]) => mockExtractCortex OSParams(...args),
+  extractCortexOSParams: (...args: unknown[]) => mockExtractCortexOSParams(...args),
   getModelMaxTokens: (...args: unknown[]) => mockGetModelMaxTokens(...args),
   optionalChainWithEmptyCheck: (...args: unknown[]) => mockOptionalChainWithEmptyCheck(...args),
   getThreadData: (...args: unknown[]) => mockGetThreadData(...args),
@@ -93,8 +93,8 @@ function createMocks(overrides?: {
     overrideProvider: Providers.OPENAI,
   });
 
-  // extractCortex OSParams returns maxContextTokens when provided in model_parameters
-  mockExtractCortex OSParams.mockReturnValue({
+  // extractCortexOSParams returns maxContextTokens when provided in model_parameters
+  mockExtractCortexOSParams.mockReturnValue({
     resendFiles: false,
     maxContextTokens,
     modelOptions: { model: 'test-model' },
