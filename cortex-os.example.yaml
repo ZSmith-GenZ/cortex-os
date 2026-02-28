@@ -336,6 +336,21 @@ endpoints:
   #     #     deploymentName: claude-3-5-haiku@20241022  # Override for this model
 
   custom:
+    # Cortex Free — Default endpoint for all users (no API key required)
+    # Uses the MEMORY_AGENT_API_KEY to provide free-tier access via Claude Haiku
+    # Credit usage is tracked by the balance system (100K credits/month free tier)
+    - name: 'Cortex Free'
+      apiKey: '${MEMORY_AGENT_API_KEY}'
+      baseURL: 'https://api.anthropic.com/v1'
+      models:
+        default: ['claude-haiku-4-5-20251001']
+        fetch: false
+      titleConvo: true
+      titleModel: 'claude-haiku-4-5-20251001'
+      modelDisplayLabel: 'Cortex Free'
+      iconURL: '/assets/logo.svg'
+      summarize: false
+
     # Groq Example
     - name: 'groq'
       apiKey: '${GROQ_API_KEY}'

@@ -138,7 +138,7 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
     return margin;
   }, [lineCount, description, textHasMultipleLines, contentHeight]);
 
-  const assistantName = assistantProfile?.name || 'Cortex';
+  const assistantName = assistantProfile?.name || 'Cortex OS';
   const isDefaultState = !((isAgent || isAssistant) && name) && !name;
 
   const greetingText =
@@ -243,13 +243,13 @@ export default function Landing({ centerFormOnLanding }: { centerFormOnLanding: 
         {isDefaultState && !anthropicKey?.expiresAt && !openaiKey?.expiresAt && (
           <div className="animate-fadeIn mt-6 flex flex-col items-center gap-2">
             <p className="text-sm text-text-secondary">
-              {localize('com_onboarding_cta_text')}
+              Start chatting — Cortex Free is ready to go
             </p>
             <button
               onClick={() => setShowSettings(true)}
-              className="rounded-lg bg-surface-contrast px-4 py-2 text-sm font-medium text-white transition-colors hover:opacity-90"
+              className="rounded-lg border border-border-medium px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-hover"
             >
-              {localize('com_onboarding_cta_button')}
+              Or bring your own API keys for more models
             </button>
           </div>
         )}
